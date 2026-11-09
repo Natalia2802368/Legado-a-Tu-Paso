@@ -1,0 +1,7 @@
+# Netlify / Cloudflare Pages
+# El sitio que se publica es la carpeta sitio/.
+[build]
+  publish = "sitio"
+
+# Netlify y Cloudflare Pages leen las cabeceras de sitio/_headers.
+# No se necesita build: el sitio es estático y ya está generado.

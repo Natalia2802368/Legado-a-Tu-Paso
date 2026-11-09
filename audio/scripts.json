@@ -1,0 +1,450 @@
+[
+ {
+  "city": "avila",
+  "index": 1,
+  "title": "Centro de Recepción de Visitantes",
+  "text": "“Bienvenido a Ávila. Este es el Centro de Recepción de Visitantes, el mejor punto para empezar. Aquí puedes pedir un plano accesible, consultar la guía de recursos y, si lo necesitas, solicitar el préstamo gratuito de una silla de ruedas. También encontrarás maquetas táctiles de la muralla, materiales en braille y un punto multimedia con lengua de signos. Antes de salir, pregunta por el estado de los accesos y por la ruta que mejor se adapte a tu ritmo.”",
+  "file": "audio/avila/01.wav"
+ },
+ {
+  "city": "avila",
+  "index": 2,
+  "title": "Basílica de San Vicente",
+  "text": "“Estás ante la Basílica de San Vicente, una de las joyas del románico español. Sus tres ábsides y su torre forman una silueta inconfundible junto a la muralla. Fíjate en la piedra: siglos de historia, tallada a mano. Si el acceso principal no se adapta a tus necesidades, pregunta en el Centro de Recepción por la alternativa más cómoda. Tómate tu tiempo: el exterior también cuenta la historia de la ciudad.”",
+  "file": "audio/avila/02.wav"
+ },
+ {
+  "city": "avila",
+  "index": 3,
+  "title": "Puerta del Puente",
+  "text": "“Estás en la Puerta del Puente, uno de los accesos históricos a la muralla. Durante siglos controlaba la entrada a la ciudad. Hoy permite asomarse a un tramo del adarve mediante rampas y un elevador, pensado para que la muralla también sea patrimonio de las personas con movilidad reducida. Antes de subir, fíjate en el grosor de los muros: más de dos metros y medio de piedra. Si el acceso no es posible para ti, en el Centro de Recepción encontrarás maquetas táctiles para conocer la muralla con las manos.”",
+  "file": "audio/avila/03.wav"
+ },
+ {
+  "city": "avila",
+  "index": 4,
+  "title": "Catedral del Salvador",
+  "text": "“La Catedral del Salvador es una catedral-fortaleza. Su ábside parece un castillo adosado a la muralla, y esa doble condición de iglesia y defensa la hace única. En el interior, la piedra y la luz cambian según la hora. Si usas audioguía, puedes seguir la visita a tu ritmo; si prefieres leer, pide el material con texto ampliado. Antes de entrar, confirma el acceso adaptado y los recorridos disponibles.”",
+  "file": "audio/avila/04.wav"
+ },
+ {
+  "city": "avila",
+  "index": 5,
+  "title": "Plaza del Mercado Chico",
+  "text": "“Esta es la Plaza del Mercado Chico, el centro civil de Ávila. Aquí está el Ayuntamiento y aquí se reúne la vida diaria de la ciudad. La plaza es amplia y llana, con bancos para descansar. Desde aquí parten calles comerciales y peatonales que conectan con la catedral y el Mercado Grande. Mira a tu alrededor: las casas porticadas y los soportales han sido durante siglos el escenario del mercado y de la conversación.”",
+  "file": "audio/avila/05.wav"
+ },
+ {
+  "city": "avila",
+  "index": 6,
+  "title": "Iglesia de San Pedro",
+  "text": "“La Iglesia de San Pedro cierra el eje monumental del casco histórico, junto al Mercado Grande. Es románica, del siglo XII, y su torre se ve desde buena parte de la ciudad. El exterior invita a rodearla y a mirar los detalles de las portadas. Si necesitas una ruta más corta o evitar un tramo, este es un buen punto para decidir el regreso. Consulta el plano accesible y elige la alternativa que mejor te funcione.”",
+  "file": "audio/avila/06.wav"
+ },
+ {
+  "city": "avila",
+  "index": 7,
+  "title": "Paseo del Rastro",
+  "text": "“El Paseo del Rastro bordea la muralla por el exterior. Es uno de los mejores balcones de Ávila: a un lado, la piedra; al otro, la ciudad. Aquí puedes caminar sin entrar en el adarve y parar en los bancos cuando lo necesites. Fíjate en las torres y en las puertas: cada una tiene su historia. Si el pavimento o la pendiente no son cómodos, vuelve sobre tus pasos y elige un tramo más llano.”",
+  "file": "audio/avila/07.wav"
+ },
+ {
+  "city": "avila",
+  "index": 8,
+  "title": "Puerta de la Santa",
+  "text": "“Terminamos en la Puerta de la Santa, junto al convento de Santa Teresa. Ávila es la ciudad natal de Teresa de Jesús, y este rincón conecta la muralla con su legado. Antes de despedirte, mira atrás: has recorrido siglos de historia a tu propio ritmo. Si quieres seguir, pregunta en el Centro de Recepción por las visitas accesibles a los espacios teresianos y por los materiales en lectura fácil.”",
+  "file": "audio/avila/08.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 1,
+  "title": "Plaza de Cervantes",
+  "text": "“Estás en la Plaza de Cervantes, el corazón de Alcalá. Esta plaza fue mercado, escenario y lugar de encuentro durante siglos. Hoy tiene soportales, bancos y sombra parcial. Mira la estatua: Cervantes está de pie, mirando hacia el paseo. Él nació muy cerca de aquí, en la Calle Mayor. Antes de seguir, fíjate en el suelo: es llano y firme, bueno para caminar sin prisa. Si necesitas descansar, hay bancos alrededor.”",
+  "file": "audio/alcala-de-henares/01.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 2,
+  "title": "Universidad: Colegio de San Ildefonso",
+  "text": "“Esta es la fachada de la Universidad de Alcalá. Parece una iglesia, pero es una escuela. La mandó construir el cardenal Cisneros en mil cuatrocientos noventa y nueve. Su portada está llena de símbolos: santos, escudos y medallones. Aquí se formaron generaciones de estudiantes, y este modelo viajó a América. La fachada está a nivel de calle. El interior tiene patios y escaleras: pregunta en la entrada por el recorrido más cómodo.”",
+  "file": "audio/alcala-de-henares/02.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 3,
+  "title": "Corral de Comedias",
+  "text": "“Estás ante el Corral de Comedias. En el siglo diecisiete, el teatro no se hacía en edificios como hoy: se hacía en patios rodeados de casas. El público miraba de pie, en los balcones o en el patio. Este corral se conservó y hoy sigue funcionando como teatro. La entrada es estrecha y el patio tiene desnivel. Si vienes en silla de ruedas, pregunta por la puerta y las butacas reservadas antes de la función.”",
+  "file": "audio/alcala-de-henares/03.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 4,
+  "title": "Catedral Magistral",
+  "text": "“La Catedral Magistral está dedicada a los Santos Niños Justo y Pastor. Según la tradición, murieron aquí siendo niños, en el siglo tres. Por eso la ciudad se llamó Complutum y por eso esta catedral tiene el título de magistral: sus canónigos debían ser maestros en teología. La plaza es llana. Para entrar, confirma en la puerta si hay rampa o acceso adaptado, porque el templo tiene escalones históricos.”",
+  "file": "audio/alcala-de-henares/04.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 5,
+  "title": "Palacio Arzobispal",
+  "text": "“Este es el Palacio Arzobispal. Fue residencia de los arzobispos de Toledo, que gobernaban también la ciudad. Su torre y su fachada recuerdan que Alcalá fue sede de poder religioso y político. Aquí se alojaron reyes y se tomaron decisiones importantes. Hoy el edificio tiene uso institucional y solo se visita en ocasiones. Desde la calle puedes ver la fachada completa. Si quieres entrar, pregunta en la Oficina de Turismo por las visitas concertadas.”",
+  "file": "audio/alcala-de-henares/05.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 6,
+  "title": "Casa Natal de Cervantes",
+  "text": "“Esta es la Casa Natal de Cervantes. Aquí nació Miguel de Cervantes en mil quinientos cuarenta y siete. La casa se ha reconstruido y hoy es un museo. Sus salas muestran cómo vivía una familia acomodada del siglo dieciséis: muebles, utensilios, libros. Es una casa histórica, con umbrales y escalones. Antes de entrar, pregunta por el recorrido accesible y por los materiales de lectura fácil.”",
+  "file": "audio/alcala-de-henares/06.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 7,
+  "title": "Calle Mayor",
+  "text": "“La Calle Mayor es el eje de Alcalá. Une la Puerta de Madrid con la Plaza de Cervantes y ha sido mercado, desfile y paseo durante siglos. Buena parte es peatonal y llana. Los soportales dan sombra, pero sus columnas estrechan el paso: con silla de ruedas o carrito, conviene ir por el centro de la calle. Fíjate en los edificios: algunos conservan escudos y balcones de madera.”",
+  "file": "audio/alcala-de-henares/07.wav"
+ },
+ {
+  "city": "alcala-de-henares",
+  "index": 8,
+  "title": "Puerta de Madrid",
+  "text": "“Terminamos en la Puerta de Madrid. Se construyó en el siglo dieciocho como entrada monumental a la ciudad, en el camino hacia la capital. Su arco y sus columnas anunciaban a los viajeros que llegaban a Alcalá. Hoy es un punto de paso con tráfico. Cruza por los pasos señalizados y mira la puerta desde la acera. Si sigues recto, vuelves al centro. Si necesitas ayuda, la Oficina de Turismo está a pocos minutos, en la Plaza de Cervantes.”",
+  "file": "audio/alcala-de-henares/08.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 1,
+  "title": "Mezquita-Catedral",
+  "text": "“Estás ante la Mezquita-Catedral de Córdoba. Al principio era una mezquita. Dentro se conservan ochocientas columnas y arcos de dos colores. Cuando los cristianos conquistaron la ciudad, no la demolieron: construyeron una catedral en el centro. Por eso hoy caminas por un bosque de arcos y, de pronto, entras en una nave renacentista. Es un edificio que cuenta un cambio de religión sin borrar el pasado. Antes de entrar, pregunta en taquilla por la puerta adaptada.”",
+  "file": "audio/cordoba/01.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 2,
+  "title": "Puente Romano",
+  "text": "“Este es el Puente Romano sobre el Guadalquivir. Tiene dieciséis arcos y casi dos mil años de historia. Durante siglos fue la única entrada a la ciudad. Desde aquí se ve la Mezquita con su torre, y al fondo la Calahorra. El suelo es de piedra irregular y hay una pendiente suave. Camina despacio y usa la barandilla. Si el viento sopla, el río se ve con ondas: es uno de los mejores momentos para una foto.”",
+  "file": "audio/cordoba/02.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 3,
+  "title": "Alcázar de los Reyes Cristianos",
+  "text": "“Este es el Alcázar de los Reyes Cristianos. Fue fortaleza, residencia real y sede de la Inquisición. Aquí recibieron los Reyes Católicos a Cristóbal Colón antes de su primer viaje. Lo mejor son los jardines: estanques, naranjos y sombra. Los jardines son amplios y se recorren bien. El interior tiene escaleras. Pregunta en la entrada por el itinerario sin escalones y por los aseos adaptados.”",
+  "file": "audio/cordoba/03.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 4,
+  "title": "Calleja de las Flores",
+  "text": "“Esta es la Calleja de las Flores. Es una calle muy estrecha, con macetas blancas y geranios. Al final se abre una vista perfecta de la torre de la Mezquita. Es la imagen más famosa de Córdoba. El suelo es irregular y la calle puede estar llena. Si vienes en silla de ruedas o con carrito, mira antes el ancho de paso. Puedes conseguir una vista parecida desde la calle paralela, sin entrar en la calleja.”",
+  "file": "audio/cordoba/04.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 5,
+  "title": "Sinagoga",
+  "text": "“Esta es la Sinagoga de Córdoba. Es una de las pocas sinagogas medievales que se conservan en España. Se construyó en el siglo catorce, en el barrio judío. Mira las paredes: tienen yeserías con versos y motivos geométricos. No hay imágenes de personas, porque la tradición judía no las permite. El edificio es pequeño y la entrada tiene un umbral. Confirma el ancho de paso antes de entrar.”",
+  "file": "audio/cordoba/05.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 6,
+  "title": "Torre de la Calahorra",
+  "text": "“La Torre de la Calahorra está al otro lado del Puente Romano. Era una torre defensiva: controlaba quién entraba y salía de la ciudad. Hoy es un museo que explica la convivencia de las tres culturas: musulmana, judía y cristiana. Para llegar hay que cruzar el Puente. La torre tiene escaleras. Si no puedes subir, pregunta por la alternativa audiovisual o visita el exterior, que ya cuenta la historia de la defensa del río.”",
+  "file": "audio/cordoba/06.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 7,
+  "title": "Plaza de las Tendillas",
+  "text": "“Esta es la Plaza de las Tendillas, el centro moderno de Córdoba. Aquí están las tiendas, los bancos y las paradas de autobús. Es llana, amplia y tiene bancos para descansar. El reloj de la plaza marca las horas con un toque especial. Desde aquí se vuelve al casco histórico en pocos minutos. Si necesitas transporte adaptado o un taxi, este es un buen punto para esperar, porque el acceso es fácil.”",
+  "file": "audio/cordoba/07.wav"
+ },
+ {
+  "city": "cordoba",
+  "index": 8,
+  "title": "Plaza del Potro",
+  "text": "“Terminamos en la Plaza del Potro. Su nombre viene de la fuente con forma de potro que está en el centro. Aquí había una posada donde se alojaban los viajeros, y Cervantes la menciona en el Quijote. Hoy la plaza acoge el Museo de Bellas Artes y el Museo Julio Romero de Torres. Es llana y tranquila. Antes de irte, mira los soportales y las fachadas: son la memoria del comercio y de los viajes.”",
+  "file": "audio/cordoba/08.wav"
+ },
+ {
+  "city": "merida",
+  "index": 1,
+  "title": "Teatro Romano",
+  "text": "“Estás en el Teatro Romano de Mérida. Se construyó hace más de dos mil años, cuando la ciudad se llamaba Augusta Emerita. Mira las gradas: podían sentarse miles de personas. La orchestra era el espacio del coro, y el escenario tenía columnas y estatuas. Lo increíble es que sigue funcionando: cada verano acoge el Festival de Teatro Clásico. Las gradas tienen escalones. Pregunta por la ruta adaptada y por las plazas reservadas para sillas de ruedas.”",
+  "file": "audio/merida/01.wav"
+ },
+ {
+  "city": "merida",
+  "index": 2,
+  "title": "Anfiteatro",
+  "text": "“Este es el Anfiteatro. Aquí se celebraban luchas de gladiadores y espectáculos con animales. La arena era el escenario, y las gradas rodeaban todo el recinto. Fíjate en los pasillos y en las puertas: estaban pensados para mover a mucha gente deprisa. Hoy se usa para conciertos y eventos. El acceso a las gradas tiene escalones; si necesitas una ruta sin ellos, consulta en la entrada del conjunto monumental.”",
+  "file": "audio/merida/02.wav"
+ },
+ {
+  "city": "merida",
+  "index": 3,
+  "title": "Museo Nacional de Arte Romano",
+  "text": "“Este museo lo diseñó Rafael Moneo. Dentro se guardan esculturas, mosaicos, monedas y objetos de la vida cotidiana romana. Es la mejor forma de entender lo que acabas de ver fuera. El edificio tiene ascensor, rampas y aseos adaptados. Si vienes con poco tiempo, empieza por la planta principal: allí están las piezas más importantes. Y si hace calor, este es el lugar más fresco de la ruta.”",
+  "file": "audio/merida/03.wav"
+ },
+ {
+  "city": "merida",
+  "index": 4,
+  "title": "Casa del Mitreo",
+  "text": "“Estás en la Casa del Mitreo. Era una casa grande, de una familia rica. Tenía patios, habitaciones y mosaicos en el suelo. Junto a ella se encontró un mitreo, un templo dedicado al dios Mitra, muy popular entre los soldados romanos. El yacimiento está al aire libre y se recorre por pasarelas. Mira el suelo: los mosaicos siguen ahí, con sus colores. Camina despacio y no salgas de las pasarelas.”",
+  "file": "audio/merida/04.wav"
+ },
+ {
+  "city": "merida",
+  "index": 5,
+  "title": "Circo Romano",
+  "text": "“Este es el Circo Romano. Tenía capacidad para unas treinta mil personas y se usaba para carreras de carros. Los equipos competían por colores: azul, verde, rojo y blanco. La pista era larga y estrecha, y en el centro estaba la spina, con monumentos y marcadores. Hoy queda la explanada y parte de las gradas. Es un espacio abierto, sin sombra. Lleva agua y protección solar si vienes en verano.”",
+  "file": "audio/merida/05.wav"
+ },
+ {
+  "city": "merida",
+  "index": 6,
+  "title": "Acueducto de los Milagros",
+  "text": "“Este es el Acueducto de los Milagros. Llevaba agua a la ciudad desde un embalse cercano. Sus arcos han aguantado casi dos mil años, y por eso la gente lo llamó milagroso. Fíjate en los ladrillos y en la piedra: alternan para dar resistencia. El paseo junto al río es agradable, pero el suelo es irregular. Si vienes con silla, ven por el lado del parque, donde el firme es mejor.”",
+  "file": "audio/merida/06.wav"
+ },
+ {
+  "city": "merida",
+  "index": 7,
+  "title": "Templo de Diana",
+  "text": "“Este es el Templo de Diana. Aunque se llama así, estaba dedicado al culto imperial, no a la diosa Diana. Se construyó en el siglo primero y luego fue reutilizado: sus columnas se integraron en un palacio. Por eso lo ves dentro de un edificio moderno. Es la prueba de que Mérida no abandonó sus piedras, las reutilizó. Está en pleno centro, con aceras y tráfico. Cruza por los pasos señalizados.”",
+  "file": "audio/merida/07.wav"
+ },
+ {
+  "city": "merida",
+  "index": 8,
+  "title": "Puente Romano",
+  "text": "“Terminamos en el Puente Romano sobre el Guadiana. Tiene casi sesenta arcos y más de setecientos metros. Durante siglos fue la única entrada a la ciudad. Desde aquí se ve el río y, al fondo, la ciudad. Es un paseo peatonal, con barandilla y suelo de piedra. Al atardecer, la luz cambia y el puente se vuelve dorado. Si te quedas, busca un banco y descansa: has recorrido veinte siglos en una tarde.”",
+  "file": "audio/merida/08.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 1,
+  "title": "Plaza Mayor",
+  "text": "“Estás en la Plaza Mayor de Salamanca. Es del siglo dieciocho y es uno de los espacios más armónicos de Europa. Mira los soportales: son iguales en los cuatro lados, y eso da la sensación de que la plaza te abraza. Aquí se celebra el mercado, los conciertos y las fiestas. El suelo es llano y hay bancos. Siéntate un momento y mira la piedra: por la tarde se vuelve dorada. Esa luz es la que hace famosa a la ciudad.”",
+  "file": "audio/salamanca/01.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 2,
+  "title": "Escuelas Mayores",
+  "text": "“Esta es la fachada de las Escuelas Mayores, la Universidad de Salamanca. Es plateresca, llena de detalles. Busca una calavera con una rana encima: es el símbolo más famoso y, según la tradición, trae suerte a los estudiantes. La fachada está a nivel de calle y se ve bien desde la plaza. El interior tiene escaleras y patios. Pregunta en la entrada por el recorrido adaptado y por el aula de Fray Luis de León.”",
+  "file": "audio/salamanca/02.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 3,
+  "title": "Catedral Nueva",
+  "text": "“La Catedral Nueva se empezó en el siglo dieciséis y se terminó en el dieciocho. Por eso mezcla estilos: gótico, renacimiento y barroco. Está pegada a la Catedral Vieja, que es más pequeña y más antigua. Juntas forman un conjunto único. La fachada se ve desde la plaza. Para entrar, confirma en la puerta si hay acceso adaptado y si el ascensor a la torre está disponible.”",
+  "file": "audio/salamanca/03.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 4,
+  "title": "Casa de las Conchas",
+  "text": "“Esta es la Casa de las Conchas. Su fachada está cubierta por más de trescientas conchas de piedra. Eran el símbolo de la orden de Santiago, y también un mensaje: aquí vivía alguien poderoso. El edificio es gótico, con ventanas decoradas y un patio interior. Hoy es una biblioteca pública. La entrada tiene un umbral; si vienes en silla, pregunta antes por el ancho de paso.”",
+  "file": "audio/salamanca/04.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 5,
+  "title": "La Clerecía",
+  "text": "“La Clerecía era un colegio jesuita. Su iglesia tiene dos torres y una fachada barroca enorme. La escalera interior es famosa por su forma y su luz. Hoy el edificio pertenece a la Universidad Pontificia. Desde la calle se ve la fachada completa, y merece la pena mirar los detalles de las torres. Si quieres subir, confirma si hay ascensor y si el acceso es adaptado.”",
+  "file": "audio/salamanca/05.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 6,
+  "title": "Convento de San Esteban",
+  "text": "“Este es el Convento de San Esteban, de los dominicos. Su fachada es plateresca y cuenta la historia de la orden: mártires, escudos y una cruz. Aquí estudiaron y vivieron frailes que marcharon a América y a Asia. El claustro es una de las joyas del renacimiento español. La fachada se ve desde la calle. Para entrar, confirma el horario y si el recorrido tiene escalones.”",
+  "file": "audio/salamanca/06.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 7,
+  "title": "Puente Romano",
+  "text": "“Este es el Puente Romano sobre el Tormes. Tiene veintiséis arcos y fue la entrada de peregrinos y estudiantes durante siglos. Al otro lado está el toro de piedra, el Verraco, que los estudiantes intentaban ver desde lejos. El puente es peatonal, con suelo de piedra irregular. Camina despacio y usa la barandilla. Al atardecer, la vista de la ciudad desde aquí es una de las mejores.”",
+  "file": "audio/salamanca/07.wav"
+ },
+ {
+  "city": "salamanca",
+  "index": 8,
+  "title": "Patio de Escuelas Menores",
+  "text": "“Terminamos en el Patio de Escuelas Menores. Aquí se enseñaba antes de entrar en la Universidad. En una de las salas está el Cielo de Salamanca: un fresco del siglo quince que representa el zodiaco y las estrellas. Es una imagen del cosmos tal como se entendía entonces. El patio tiene escalones. Si no puedes subir, pregunta por la reproducción o por la visita alternativa.”",
+  "file": "audio/salamanca/08.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 1,
+  "title": "Catedral: Praza do Obradoiro",
+  "text": "“Estás en la Praza do Obradoiro, la meta del Camino de Santiago. La fachada barroca que ves se construyó en el siglo dieciocho para proteger la catedral románica. Aquí llegan cada año miles de peregrinos, con mochila y polvo. La plaza es amplia y llana. Si quieres entrar en la catedral, pregunta por la puerta adaptada y por el recorrido sin escalones. Y si necesitas descansar, hay bancos junto a la fachada.”",
+  "file": "audio/santiago-de-compostela/01.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 2,
+  "title": "Praza das Praterías",
+  "text": "“Esta es la Praza das Praterías. Su nombre viene de los plateros que trabajaban aquí. En el centro está la fuente de los caballos, y al fondo la puerta de las Platerías, con la portada románica más antigua de la catedral. Fíjate en las figuras: están gastadas por el tiempo y la lluvia. Entre esta plaza y la catedral hay escalones. Si vienes en silla, pregunta por el rodeo adaptado antes de subir.”",
+  "file": "audio/santiago-de-compostela/02.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 3,
+  "title": "Praza da Quintana",
+  "text": "“La Praza da Quintana tiene dos niveles. En el superior está la Puerta Santa, que solo se abre en Año Santo. En el inferior, la fuente y la vida diaria. La escalera que une los dos niveles es monumental, pero no es la única forma de pasar: hay un rodeo por la calle lateral. Si necesitas evitar escalones, pregunta en la oficina de turismo por la ruta más cómoda.”",
+  "file": "audio/santiago-de-compostela/03.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 4,
+  "title": "Mercado de Abastos",
+  "text": "“Este es el Mercado de Abastos. Aquí se venden pescados, mariscos, verduras y quesos de Galicia. Los puestos se colocan bajo soportales, y alrededor hay bares donde se cocina lo que se compra. Es un lugar vivo, sobre todo por la mañana. Las naves son amplias y el suelo es firme. Si vienes con silla o carrito, entra por la plaza y evita las horas de más gente.”",
+  "file": "audio/santiago-de-compostela/04.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 5,
+  "title": "Mosteiro de San Martiño Pinario",
+  "text": "“Este es el Mosteiro de San Martiño Pinario. Fue uno de los monasterios más poderosos de Galicia. Su fachada barroca impone, y el interior guarda una iglesia y un claustro enormes. Hoy parte del edificio es seminario y hotel. La fachada se ve desde la calle. Para visitar el interior, confirma horarios y si el recorrido tiene escalones, porque el monasterio es antiguo.”",
+  "file": "audio/santiago-de-compostela/05.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 6,
+  "title": "Colexio de Fonseca",
+  "text": "“El Colexio de Fonseca es del siglo dieciséis. Lo fundó el arzobispo Alonso de Fonseca para estudiantes pobres. Su patio renacentista es uno de los rincones más tranquilos de Santiago. Hoy es sede de la universidad y de exposiciones. El patio tiene un umbral y puede tener escalones. Asómate desde la entrada: si no puedes pasar, al menos verás la arquitectura y el jardín.”",
+  "file": "audio/santiago-de-compostela/06.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 7,
+  "title": "Alameda",
+  "text": "“La Alameda es el parque histórico de Santiago. Desde aquí se ve la catedral entera, con sus torres y su cúpula. Es el mejor sitio para una foto y para descansar. El paseo tiene una pendiente suave y bancos de piedra. Si llueve, el granito brilla y resbala: camina despacio. Los jardines tienen sombra y árboles antiguos, algunos traídos de América.”",
+  "file": "audio/santiago-de-compostela/07.wav"
+ },
+ {
+  "city": "santiago-de-compostela",
+  "index": 8,
+  "title": "Praza de Cervantes",
+  "text": "“Terminamos en la Praza de Cervantes. Es una plaza de barrio, con soportales, mercado y terrazas. Aquí se ve la Santiago cotidiana, la que no vive del peregrino. La plaza es llana y tiene bancos. Alrededor hay tiendas y bares. Si quieres probar la gastronomía gallega sin prisas, este es un buen lugar para sentarse. Y si necesitas ayuda, la oficina de turismo está cerca.”",
+  "file": "audio/santiago-de-compostela/08.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 1,
+  "title": "Acueducto",
+  "text": "“Estás ante el Acueducto de Segovia. Es romano, del siglo primero, y llevaba agua a la ciudad desde la sierra. Mira los bloques de granito: están colocados sin argamasa, solo por su peso y su forma. Tiene más de ciento sesenta arcos y casi treinta metros de altura. La plaza del Azoguejo es llana. Si quieres verlo desde arriba, hay miradores con escaleras. Pregunta por el acceso más cómodo.”",
+  "file": "audio/segovia/01.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 2,
+  "title": "Casa de los Picos",
+  "text": "“Esta es la Casa de los Picos. Su fachada está cubierta de puntas de piedra, como si fuera una armadura. Se construyó en el siglo quince para una familia poderosa. Es un ejemplo de cómo las casas nobles competían por llamar la atención. La calle sube, así que camina con calma. Desde aquí ya se ve la Plaza Mayor y, al fondo, la torre de la catedral.”",
+  "file": "audio/segovia/02.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 3,
+  "title": "Plaza Mayor",
+  "text": "“La Plaza Mayor de Segovia es el centro de la ciudad. Tiene soportales, bancos y el Ayuntamiento. Aquí se celebra el mercado y las fiestas. Es uno de los pocos espacios llanos del casco alto, así que es un buen lugar para descansar antes de seguir subiendo. Mira las casas: tienen galerías de madera y colores distintos. Si necesitas un taxi, aquí es fácil encontrarlo.”",
+  "file": "audio/segovia/03.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 4,
+  "title": "Catedral",
+  "text": "“La Catedral de Segovia es gótica, del siglo dieciséis. Es la última gran catedral gótica construida en España. Su interior tiene una nave muy alta y vidrieras que llenan el suelo de color. El claustro es tranquilo y tiene naranjos. Para entrar, confirma en la puerta si hay acceso adaptado, porque el templo tiene escalones históricos. Pregunta también por el recorrido sin escalones y por los aseos.”",
+  "file": "audio/segovia/04.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 5,
+  "title": "Judería",
+  "text": "“Estás en la Judería de Segovia. Aquí vivió una comunidad judía importante hasta mil cuatrocientos noventa y dos, cuando fueron expulsados. Las calles son estrechas y empedradas, y algunas tienen escalones. Fíjate en las casas de ladrillo y en las puertas. Si vienes en silla de ruedas, esta parte puede ser difícil: puedes recorrer la parte alta desde la Plaza Mayor y ver la Judería desde fuera.”",
+  "file": "audio/segovia/05.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 6,
+  "title": "Puerta de San Andrés",
+  "text": "“Esta es la Puerta de San Andrés. Formaba parte de la muralla que rodeaba la ciudad. Por aquí entraban los viajeros y se controlaba el paso. Mira los muros: son de piedra y ladrillo, y han aguantado siglos. Hoy es un paso urbano, con pavimento irregular. Cruza con cuidado y sigue subiendo hacia el Alcázar: la cuesta es fuerte, pero las vistas compensan.”",
+  "file": "audio/segovia/06.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 7,
+  "title": "Alcázar",
+  "text": "“El Alcázar de Segovia parece un castillo de cuento. Está sobre una roca, con forma de proa de barco. Fue fortaleza, palacio y prisión. Aquí vivieron reyes de Castilla, y desde sus torres se controlaba el valle. La subida es la parte más dura de la ruta. Si vienes en silla, pregunta por el acceso adaptado y el ascensor. Dentro, las salas tienen techos mudéjares y armaduras.”",
+  "file": "audio/segovia/07.wav"
+ },
+ {
+  "city": "segovia",
+  "index": 8,
+  "title": "Iglesia de la Vera Cruz",
+  "text": "“Terminamos en la Iglesia de la Vera Cruz. Está fuera de las murallas, en un camino tranquilo. Tiene planta poligonal, como una tienda de campaña de piedra. La construyó la Orden del Santo Sepulcro en el siglo doce. El camino tiene tierra y piedra, y puede estar irregular. Si el firme no es cómodo, puedes verla desde la carretera y volver al centro. Has terminado la ruta de Segovia.”",
+  "file": "audio/segovia/08.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 1,
+  "title": "Puerta de Bisagra",
+  "text": "“Estás en la Puerta de Bisagra. Era la entrada principal de Toledo para quien llegaba desde el norte. Mira el escudo imperial de Carlos V: la ciudad quería mostrar su poder antes de que entraras. La puerta tiene dos cuerpos y un patio entre ellos, pensado para controlar el paso. Hoy hay tráfico. Cruza por el paso de peatones y mira la piedra: sigue ahí, casi igual que hace siglos.”",
+  "file": "audio/toledo/01.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 2,
+  "title": "Plaza de Zocodover",
+  "text": "“Esta es la Plaza de Zocodover. Su nombre viene del árabe y significa mercado de bestias. Aquí se vendían caballos y se celebraban fiestas. Hoy es el centro de Toledo: bares, tiendas y autobuses. Es llana y amplia, y aquí llegan las escaleras mecánicas que suben desde el río. Si vienes con movilidad reducida, este es el punto más cómodo para empezar la visita.”",
+  "file": "audio/toledo/02.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 3,
+  "title": "Alcázar",
+  "text": "“El Alcázar de Toledo domina la ciudad desde lo más alto. Fue fortaleza romana, palacio visigodo, residencia de Carlos V y academia militar. Durante la Guerra Civil quedó en ruinas y se reconstruyó. Hoy es el Museo del Ejército. La subida desde Zocodover es corta pero empinada. Pregunta por el ascensor y el recorrido adaptado antes de entrar. Desde el exterior ya se entiende su posición defensiva.”",
+  "file": "audio/toledo/03.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 4,
+  "title": "Catedral Primada",
+  "text": "“La Catedral Primada es gótica, del siglo trece, y es enorme. Tiene cinco naves y una capilla mayor con rejería. En la sacristía hay obras de El Greco, Goya y Velázquez. El transparente, detrás del altar, es una escultura de mármol y luz. Para entrar, confirma la puerta adaptada y el itinerario sin escalones. La catedral es oscura y fresca: un buen refugio en verano.”",
+  "file": "audio/toledo/04.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 5,
+  "title": "Iglesia de Santo Tomé",
+  "text": "“Esta es la Iglesia de Santo Tomé. Dentro está el Entierro del conde Orgaz, la obra más famosa de El Greco. El cuadro muestra el entierro del señor de Orgaz y, arriba, la gloria. Fíjate en los rostros: muchos son retratos de toledanos de la época. La iglesia está en una calle estrecha, con umbral en la entrada. Confirma el acceso antes de entrar y no te pierdas los detalles del cuadro.”",
+  "file": "audio/toledo/05.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 6,
+  "title": "Sinagoga del Tránsito",
+  "text": "“La Sinagoga del Tránsito es del siglo catorce. Fue construida por Samuel ha-Leví, tesorero del rey Pedro I. Mira las paredes: están cubiertas de yeserías con versos y motivos vegetales. No hay imágenes, porque la tradición judía no las permite. Hoy es el Museo Sefardí y cuenta la historia de los judíos en España. Pregunta por el ascensor y el recorrido adaptado.”",
+  "file": "audio/toledo/06.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 7,
+  "title": "Monasterio de San Juan de los Reyes",
+  "text": "“Este es el Monasterio de San Juan de los Reyes. Lo mandaron construir los Reyes Católicos para conmemorar la victoria de Toro. Su fachada está llena de cadenas: son las de los cristianos liberados de Granada. El claustro es gótico isabelino, con arcos y jardín. La calle sube y el pavimento es irregular. Si necesitas evitar la cuesta, puedes ver la fachada desde abajo y volver por la misma calle.”",
+  "file": "audio/toledo/07.wav"
+ },
+ {
+  "city": "toledo",
+  "index": 8,
+  "title": "Puente de San Martín",
+  "text": "“Terminamos en el Puente de San Martín. Es medieval, con dos torres, y cruza el Tajo. Era la entrada desde el oeste y servía para controlar el camino. Desde aquí se ve Toledo entera, subida a su roca. El puente es peatonal, con piedra irregular y pendiente. Camina despacio y usa la barandilla. Si puedes, espera al atardecer: la ciudad se vuelve naranja y el río refleja las murallas.”",
+  "file": "audio/toledo/08.wav"
+ }
+]

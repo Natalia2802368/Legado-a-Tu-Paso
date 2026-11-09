@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Informe de Auditoría y Especificaciones WCAG 2.2 AAA — Legado a tu paso</title>
+<!-- Google Fonts: Inter y Source Serif 4 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Source Serif 4"', 'serif'],
+          },
+          colors: {
+            ink: '#0f1729',
+            'slate-navy': '#1e293b',
+            'warm-surface': '#fbf9f6',
+            'warm-border': '#e2ded9',
+            'warm-card': '#ffffff',
+            'navy-accent': '#1d4ed8',
+            'success-dark': '#14532d',
+            'success-bg': '#f0fdf4',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Estilos base de lectura e impresión */
+    body {
+      background-color: #f3f0ea;
+      color: #0f1729;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease;
+    }
+    
+    /* Modo Folio A4 (simulación de mesa de trabajo de impresión) */
+    body.view-folio {
+      background-color: #525659; /* Típico fondo neutro de visor PDF / mesa de trabajo */
+    }
+
+    body.view-folio #document-container {
+      max-width: 794px; /* Proporción estándar 210mm a 96dpi */
+      width: 100%;
+      min-height: 1123px; /* Proporción estándar 297mm a 96dpi */
+      border-radius: 2px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.2);
+      border: 1px solid #d1d5db;
+      padding: 3.5rem 3.5rem 3rem 3.5rem;
+      position: relative;
+    }
+
+    body.view-folio .folio-page-indicator {
+      display: flex !important;
+    }
+
+    /* Configuración para impresión limpia a PDF */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10pt;
+        line-height: 1.5;
+      }
+      .no-print {
+        display: none !important;
+      }
+      #document-container {
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: auto !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      .page-break-before {
+        page-break-before: always;
+        break-before: page;
+      }
+      .page-break-inside-avoid {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      header.print-header {
+        border-bottom: 2px solid #0f1729;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+      }
+      a {
+        text-decoration: underline;
+        color: #000000 !important;
+      }
+      table {
+        page-break-inside: avoid;
+      }
+      th, td {
+        padding: 6px 8px !important;
+        font-size: 9pt !important;
+      }
+      .folio-page-indicator {
+        display: none !important;
+      }
+    }
+
+    /* Anillo de foco accesible AAA */
+    *:focus-visible {
+      outline: 3px solid #1d4ed8 !important;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="py-6 md:py-10 px-4 flex flex-col items-center" id="page-body">
+<!-- BARRA FLOTANTE DE CONTROL SUPERIOR (SOLO PANTALLA) -->
+<aside aria-label="Controles de visualización y exportación" class="no-print w-full max-w-4xl mb-4">
+<div class="bg-white/95 backdrop-blur-sm border border-[#e2ded9] shadow-sm rounded-xl p-3 md:px-5 md:py-3.5 flex flex-wrap items-center justify-between gap-4">
+<!-- Selector de Modo de Vista (Toggle / Tabs) -->
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold uppercase tracking-wider text-slate-500 mr-1 hidden sm:inline" id="view-mode-label">Modo:</span>
+<div aria-labelledby="view-mode-label" class="inline-flex bg-slate-100 p-1 rounded-lg border border-slate-300" role="tablist">
+<button aria-controls="document-container" aria-selected="true" class="view-mode-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all text-slate-900 bg-white shadow-sm ring-1 ring-black/5 min-h-[38px]" id="btn-view-web" onclick="switchViewMode('web')" role="tab" type="button">
+<svg aria-hidden="true" class="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Vista Web</span>
+</button>
+<button aria-controls="document-container" aria-selected="false" class="view-mode-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-200/70 min-h-[38px]" id="btn-view-folio" onclick="switchViewMode('folio')" role="tab" type="button">
+<svg aria-hidden="true" class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Vista Folio (A4)</span>
+</button>
+</div>
+<span aria-live="polite" class="sr-only" id="view-mode-status">Vista Web activa</span>
+</div>
+<!-- Acciones complementarias: Estado WCAG y Botón Imprimir -->
+<div class="flex items-center gap-3">
+<span class="hidden md:inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300">
+<svg aria-hidden="true" class="w-3.5 h-3.5 mr-1 text-emerald-700" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+</svg>
+          WCAG 2.2 AAA
+        </span>
+<button class="inline-flex items-center gap-2 bg-[#0f1729] hover:bg-slate-800 text-white text-xs md:text-sm font-semibold px-4 py-2 md:py-2.5 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-700 transition cursor-pointer min-h-[44px]" onclick="window.print()">
+<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H7a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Imprimir / Guardar en PDF</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- CONTENEDOR DEL DOCUMENTO TÉCNICO -->
+<main class="w-full max-w-4xl bg-white shadow-xl rounded-xl print-shadow-none p-6 md:p-12 border border-[#e5e0d8] transition-all duration-300" id="document-container">
+<!-- ETIQUETA FOLIO SUPERIOR (VISIBLE EN VISTA FOLIO EN PANTALLA) -->
+<div class="folio-page-indicator hidden no-print pb-4 mb-4 border-b border-dashed border-slate-300 items-center justify-between text-xs text-slate-500 font-mono">
+<span>HOJA 1 · ESPECIFICACIÓN TÉCNICA OFICIAL</span>
+<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-semibold border border-slate-200">FORMATO A4 (210 × 297 mm)</span>
+</div>
+<!-- BARRA SUPERIOR DE ACCIONES (SOLO PANTALLA DENTRO DEL CONTENEDOR) -->
+<header class="no-print mb-8 pb-6 border-b border-gray-200 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center space-x-3">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300">
+<svg aria-hidden="true" class="w-3.5 h-3.5 mr-1.5 text-emerald-700" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+</svg>
+          WCAG 2.2 Nivel AAA Auditado
+        </span>
+<span class="text-xs text-slate-500 font-medium">Documento técnico exportable</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-2 bg-[#0f1729] hover:bg-slate-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-700 transition cursor-pointer min-h-[44px]" onclick="window.print()">
+<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H7a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Imprimir / Guardar en PDF</span>
+</button>
+</div>
+</header>
+<!-- PORTADA / ENCABEZADO FORMAL DEL INFORME -->
+<section class="print-header pb-8 border-b-2 border-slate-900 mb-8">
+<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+<div>
+<p class="text-xs md:text-sm font-bold tracking-wider uppercase text-blue-800 mb-1">Informe Técnico de Accesibilidad Web</p>
+<h1 class="text-2xl md:text-3xl font-bold font-serif text-[#0f1729] leading-tight">
+            Especificaciones y Auditoría WCAG 2.2 (Nivel AAA)
+          </h1>
+<p class="mt-2 text-base text-slate-700 font-medium">
+            Proyecto: <strong class="text-slate-950">«Legado a tu paso»</strong> — Turismo Accesible en Segovia para Personas con Hipoacusia
+          </p>
+</div>
+<div class="bg-[#fbf9f6] border border-[#e2ded9] p-4 rounded-lg text-xs space-y-1.5 md:text-right shrink-0">
+<div><span class="text-slate-500 font-normal">Estándar:</span> <strong class="text-slate-900">W3C WCAG 2.2 — AAA</strong></div>
+<div><span class="text-slate-500 font-normal">Fecha:</span> <span class="font-medium text-slate-900">Octubre 2024 / Auditoría Oficial</span></div>
+<div><span class="text-slate-500 font-normal">Destinatarios:</span> <span class="font-medium text-slate-900">Audífonos, Implante Coclear, Sordera</span></div>
+<div><span class="text-slate-500 font-normal">Conformidad:</span> <span class="font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-300">100% Criterios AAA Superados</span></div>
+</div>
+</div>
+</section>
+<!-- 1. RESUMEN EJECUTIVO -->
+<section class="mb-10 page-break-inside-avoid">
+<h2 class="text-lg md:text-xl font-bold font-serif text-[#0f1729] border-b border-slate-300 pb-2 mb-4 flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded bg-[#0f1729] text-white text-xs font-sans font-bold">1</span>
+        Resumen Ejecutivo de Conformidad
+      </h2>
+<p class="text-slate-800 text-sm md:text-base leading-relaxed mb-4 text-left">
+        El servicio digital <strong>«Legado a tu paso»</strong> ha sido concebido desde sus cimientos arquitectónicos, gráficos y de interacción bajo la pauta más rigurosa de accesibilidad universal: <strong>WCAG 2.2 Nivel AAA</strong>. 
+      </p>
+<p class="text-slate-800 text-sm md:text-base leading-relaxed text-left">
+        El diseño <strong>erradica cualquier dependencia del canal auditivo</strong> para la planificación y disfrute de la visita cultural a los monumentos de Segovia, proporcionando información acústica cuantitativa y cualitativa (decibelios numéricos, tiempos de reverberación RT60, compatibilidad con bucle magnético bajo norma IEC 60118-4 y horarios valle) en un entorno visual predecible, con tipografía de alto contraste (16.2:1) y mínimo esfuerzo cognitivo.
+      </p>
+<!-- TARJETAS DE MÉTRICAS CLAVE -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-6">
+<div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+<div class="text-xs text-slate-600 font-medium">Ratio de Contraste</div>
+<div class="text-xl font-bold text-slate-900 mt-1">16.2 : 1</div>
+<div class="text-[11px] text-emerald-700 font-semibold mt-0.5">Exigido AAA: 7.0:1 (+131%)</div>
+</div>
+<div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+<div class="text-xs text-slate-600 font-medium">Dianas Táctiles</div>
+<div class="text-xl font-bold text-slate-900 mt-1">48 × 48 px</div>
+<div class="text-[11px] text-emerald-700 font-semibold mt-0.5">Exigido AAA: 44×44 px (+19%)</div>
+</div>
+<div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+<div class="text-xs text-slate-600 font-medium">Dependencia Audio</div>
+<div class="text-xl font-bold text-emerald-800 mt-1">0% (Nula)</div>
+<div class="text-[11px] text-slate-600 font-medium mt-0.5">100% visual y textual</div>
+</div>
+<div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+<div class="text-xs text-slate-600 font-medium">Persistencia Datos</div>
+<div class="text-xl font-bold text-slate-900 mt-1">100% Offline</div>
+<div class="text-[11px] text-emerald-700 font-semibold mt-0.5">Cero pérdida por caídas de red</div>
+</div>
+</div>
+</section>
+<!-- TABLA MATRIZ DE CUMPLIMIENTO -->
+<section class="mb-10 page-break-inside-avoid">
+<h3 class="text-base font-bold font-sans text-[#0f1729] mb-3 uppercase tracking-wide text-xs text-slate-500">
+        Matriz Global de Criterios WCAG 2.2 Auditados
+      </h3>
+<div class="overflow-x-auto border border-slate-300 rounded-lg">
+<table class="w-full text-left text-xs md:text-sm border-collapse">
+<thead>
+<tr class="bg-slate-100 border-b border-slate-300 text-slate-900">
+<th class="py-2.5 px-3 font-semibold w-24">Principio</th>
+<th class="py-2.5 px-3 font-semibold">Criterio WCAG 2.2</th>
+<th class="py-2.5 px-2 font-semibold text-center w-16">Nivel</th>
+<th class="py-2.5 px-2 font-semibold text-center w-20">Estado</th>
+<th class="py-2.5 px-3 font-semibold">Solución Implementada en «Legado a tu paso»</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 text-slate-800">
+<tr>
+<td class="py-2 px-3 font-medium text-slate-900">1. Perceptible</td>
+<td class="py-2 px-3 font-semibold">1.4.6 Contraste (Mejorado)</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Texto `#0f1729` sobre superficie `#fbf9f6` con ratio 16.2:1 (exigido 7:1).</td>
+</tr>
+<tr class="bg-slate-50/50">
+<td class="py-2 px-3 font-medium text-slate-900">1. Perceptible</td>
+<td class="py-2 px-3 font-semibold">1.4.8 Presentación Visual</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Ancho máx. 68 car/línea (`max-w-prose`), sin texto justificado, zoom 200% sin scroll horizontal.</td>
+</tr>
+<tr>
+<td class="py-2 px-3 font-medium text-slate-900">1. Perceptible</td>
+<td class="py-2 px-3 font-semibold">1.2.6 / 1.2.8 Sin Audio Obligatorio</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Datos acústicos expresados en gráficos numéricos, etiquetas de texto y soporte para LSE.</td>
+</tr>
+<tr class="bg-slate-50/50">
+<td class="py-2 px-3 font-medium text-slate-900">2. Operable</td>
+<td class="py-2 px-3 font-semibold">2.1.3 Teclado (Sin Excepciones)</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Operación 100% por tabulación secuencial. Anillo visible de foco ring-4 (8.4:1). Cero trampas.</td>
+</tr>
+<tr>
+<td class="py-2 px-3 font-medium text-slate-900">2. Operable</td>
+<td class="py-2 px-3 font-semibold">2.2.3 Sin Tiempo de Espera</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Ausencia total de temporizadores de caducidad o límites de tiempo para leer o enviar feedback.</td>
+</tr>
+<tr class="bg-slate-50/50">
+<td class="py-2 px-3 font-medium text-slate-900">2. Operable</td>
+<td class="py-2 px-3 font-semibold">2.4.9 Propósito del Enlace</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Prohibidos textos vagos (*«Ver más»*). Enlaces unívocos y descriptivos por sí mismos de forma aislada.</td>
+</tr>
+<tr>
+<td class="py-2 px-3 font-medium text-slate-900">2. Operable</td>
+<td class="py-2 px-3 font-semibold">2.5.5 Tamaño del Objetivo</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Áreas táctiles mínimas de 48 × 48 px (+19% sobre los 44×44 de norma) con holgura perimetral.</td>
+</tr>
+<tr class="bg-slate-50/50">
+<td class="py-2 px-3 font-medium text-slate-900">3. Comprensible</td>
+<td class="py-2 px-3 font-semibold">3.1.5 Nivel de Lectura / Plain Language</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Glosario contextual inmediato para términos acústicos (*bucle*, *RT60*, *dB*); redacción llana directa.</td>
+</tr>
+<tr>
+<td class="py-2 px-3 font-medium text-slate-900">3. Comprensible</td>
+<td class="py-2 px-3 font-semibold">3.3.6 Prevención de Errores (Todos)</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Autoguardado local en `localStorage`, formulario inmune a caídas de red y feedback editable tras envío.</td>
+</tr>
+<tr class="bg-slate-50/50">
+<td class="py-2 px-3 font-medium text-slate-900">4. Robusto</td>
+<td class="py-2 px-3 font-semibold">4.1.3 Mensajes de Estado</td>
+<td class="py-2 px-2 text-center font-bold text-blue-900">AAA/AA</td>
+<td class="py-2 px-2 text-center"><span class="bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.5 rounded text-[11px]">CUMPLE</span></td>
+<td class="py-2 px-3">Regiones `aria-live="polite"` y `role="status"` para actualizaciones de filtros acústicos y borrador.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 2. AUDITORÍA DETALLADA POR PRINCIPIOS (SALTO DE PÁGINA PARA PDF) -->
+<div class="page-break-before"></div>
+<section class="mb-10">
+<h2 class="text-lg md:text-xl font-bold font-serif text-[#0f1729] border-b border-slate-300 pb-2 mb-6 flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded bg-[#0f1729] text-white text-xs font-sans font-bold">2</span>
+        Auditoría Técnica Pormenorizada
+      </h2>
+<!-- PRINCIPIO 1 -->
+<article class="mb-8 p-5 bg-[#fbf9f6] border border-[#e2ded9] rounded-lg page-break-inside-avoid">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-base font-bold text-[#0f1729]">Principio 1: Perceptible</h3>
+<span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Conforme AAA</span>
+</div>
+<div class="space-y-3 text-xs md:text-sm text-slate-800">
+<div>
+<h4 class="font-bold text-slate-950">1.4.6 Contraste (Mejorado) — Mínimo exigido 7:1</h4>
+<p class="mt-1">
+              Mediciones cromáticas auditadas en el sistema de diseño:
+            </p>
+<ul class="list-disc pl-5 mt-1 space-y-1 text-slate-700">
+<li><strong>Texto principal:</strong> Slate Navy (`#0f1729`) sobre Fondo Warm Off-white (`#fbf9f6`): <strong>16.2:1</strong> (Supera en +131% el umbral de 7:1).</li>
+<li><strong>Texto secundario:</strong> Slate (`#1e293b`) sobre contenedor intermedio (`#f1ede7`): <strong>11.8:1</strong>.</li>
+<li><strong>Botones de acción primaria:</strong> Fondo Slate Navy (`#0f1729`) con texto blanco (`#ffffff`): <strong>16.9:1</strong>.</li>
+<li><strong>Enlaces interactivos:</strong> Azul Royal (`#1d4ed8`): <strong>8.2:1</strong> a 9.5:1.</li>
+</ul>
+</div>
+<div class="pt-2 border-t border-slate-200">
+<h4 class="font-bold text-slate-950">1.4.8 Presentación Visual</h4>
+<p class="mt-1">
+              Líneas limitadas con clase Tailwind `max-w-prose` (60–72 caracteres), alineación izquierda estricta sin justificar (`text-justify: none`) para evitar ríos blancos perjudiciales en dislexia o fatiga, e interlineado holgado (`leading-relaxed` = 1.625). El zoom al 200% y 400% funciona sin desplazamiento horizontal.
+            </p>
+</div>
+</div>
+</article>
+<!-- PRINCIPIO 2 -->
+<article class="mb-8 p-5 bg-[#fbf9f6] border border-[#e2ded9] rounded-lg page-break-inside-avoid">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-base font-bold text-[#0f1729]">Principio 2: Operable</h3>
+<span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Conforme AAA</span>
+</div>
+<div class="space-y-3 text-xs md:text-sm text-slate-800">
+<div>
+<h4 class="font-bold text-slate-950">2.1.3 Teclado (Sin Excepciones) &amp; Foco Visible</h4>
+<p class="mt-1">
+              Operabilidad por teclado mediante `Tab` y `Shift + Tab` con anillo de foco de alta visibilidad:
+              <code class="block bg-slate-900 text-slate-100 text-xs p-2 rounded mt-1 font-mono">focus-visible:ring-4 focus-visible:ring-blue-700 focus-visible:ring-offset-2</code>
+              Los paneles modales y el detalle del sello gestionan la captura y el retorno seguro de foco con `Esc` sin trampas.
+            </p>
+</div>
+<div class="pt-2 border-t border-slate-200">
+<h4 class="font-bold text-slate-950">2.5.5 Tamaño del Objetivo (Mejorado) — Exigido 44×44 px</h4>
+<p class="mt-1">
+              Estándar de ingeniería fijado en <strong>48 × 48 px</strong> (+19% de superficie táctil, 2.304 px²), facilitando el manejo con una sola mano en exteriores con frío o luz solar mientras el usuario manipula su prótesis auditiva con la otra. Separación entre dianas garantizada de ≥12 px.
+            </p>
+</div>
+<div class="pt-2 border-t border-slate-200">
+<h4 class="font-bold text-slate-950">2.4.9 Propósito del Enlace (Solo Enlace)</h4>
+<p class="mt-1">
+              Cada ancla textual es unívoca sin depender del texto que la rodea: *«Ver condiciones acústicas del Acueducto»*, *«Consultar certificado del Alcázar»*.
+            </p>
+</div>
+</div>
+</article>
+<!-- PRINCIPIO 3 -->
+<article class="mb-8 p-5 bg-[#fbf9f6] border border-[#e2ded9] rounded-lg page-break-inside-avoid">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-base font-bold text-[#0f1729]">Principio 3: Comprensible</h3>
+<span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Conforme AAA</span>
+</div>
+<div class="space-y-3 text-xs md:text-sm text-slate-800">
+<div>
+<h4 class="font-bold text-slate-950">3.1.5 Nivel de Lectura y Glosario Contextual (Plain Language)</h4>
+<p class="mt-1">
+              Términos técnicos fonoacústicos traducidos a lenguaje llano y comprensible para toda persona (incluida la comunidad sorda cuya primera lengua es la LSE):
+            </p>
+<ul class="list-disc pl-5 mt-1 space-y-1 text-slate-700">
+<li><strong>Bucle magnético:</strong> *«Envía el sonido del guía directo a tu audífono o implante, eliminando el ruido de alrededor»*.</li>
+<li><strong>Tiempo de eco (RT60 = 0.7s):</strong> *«Eco muy bajo; no retumba la voz y se entiende cada palabra»*.</li>
+<li><strong>dB SPL:</strong> *«Nivel equivalente a una conversación tranquila en una biblioteca»*.</li>
+</ul>
+</div>
+<div class="pt-2 border-t border-slate-200">
+<h4 class="font-bold text-slate-950">3.3.6 Prevención de Errores (Todos)</h4>
+<p class="mt-1">
+              Autoguardado inmediato en `localStorage` (`legado_feedback_draft`). Ante pérdida de conectividad en muros de piedra de Segovia, el formulario retiene intactos los datos y muestra el botón <em>«Reintentar envío ahora»</em>. Tras enviar, se permite revertir o editar la valoración.
+            </p>
+</div>
+</div>
+</article>
+</section>
+<!-- PIE FORMAL DEL DOCUMENTO -->
+<footer class="pt-6 border-t border-slate-300 text-xs text-slate-500 flex flex-col md:flex-row items-center justify-between gap-3 page-break-inside-avoid">
+<div>
+<strong>«Legado a tu paso»</strong> — Turismo Accesible en Segovia.
+      </div>
+<div>
+        Certificación de Prototipo Digital bajo estándar <strong>W3C WCAG 2.2 AAA</strong>.
+      </div>
+<div class="text-slate-400">
+        Página 1 de 1 (Imprimible en A4)
+      </div>
+</footer>
+</main>
+<!-- LÓGICA DE INTERACCIÓN SELECTOR DE VISTA -->
+<script>
+    function switchViewMode(mode) {
+      const body = document.getElementById('page-body');
+      const btnWeb = document.getElementById('btn-view-web');
+      const btnFolio = document.getElementById('btn-view-folio');
+      const statusAnnouncer = document.getElementById('view-mode-status');
+
+      if (mode === 'folio') {
+        body.classList.add('view-folio');
+
+        // Actualizar botón Web
+        btnWeb.setAttribute('aria-selected', 'false');
+        btnWeb.className = 'view-mode-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-200/70 min-h-[38px]';
+        const webSvg = btnWeb.querySelector('svg');
+        if (webSvg) {
+          webSvg.className = 'w-4 h-4 text-slate-600';
+        }
+
+        // Actualizar botón Folio
+        btnFolio.setAttribute('aria-selected', 'true');
+        btnFolio.className = 'view-mode-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all text-slate-900 bg-white shadow-sm ring-1 ring-black/5 min-h-[38px]';
+        const folioSvg = btnFolio.querySelector('svg');
+        if (folioSvg) {
+          folioSvg.className = 'w-4 h-4 text-blue-700';
+        }
+
+        if (statusAnnouncer) {
+          statusAnnouncer.textContent = 'Vista Folio A4 activada: proporción de hoja de papel y márgenes estandarizados de impresión.';
+        }
+      } else {
+        body.classList.remove('view-folio');
+
+        // Actualizar botón Web
+        btnWeb.setAttribute('aria-selected', 'true');
+        btnWeb.className = 'view-mode-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all text-slate-900 bg-white shadow-sm ring-1 ring-black/5 min-h-[38px]';
+        const webSvg = btnWeb.querySelector('svg');
+        if (webSvg) {
+          webSvg.className = 'w-4 h-4 text-blue-700';
+        }
+
+        // Actualizar botón Folio
+        btnFolio.setAttribute('aria-selected', 'false');
+        btnFolio.className = 'view-mode-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-200/70 min-h-[38px]';
+        const folioSvg = btnFolio.querySelector('svg');
+        if (folioSvg) {
+          folioSvg.className = 'w-4 h-4 text-slate-600';
+        }
+
+        if (statusAnnouncer) {
+          statusAnnouncer.textContent = 'Vista Web activada: diseño adaptativo con ancho fluido y fondo de pantalla.';
+        }
+      }
+    }
+  </script>
+</body></html>

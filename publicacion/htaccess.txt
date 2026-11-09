@@ -1,0 +1,63 @@
+# Apache 2.4 · copiar como sitio/.htaccess
+# Requiere mod_headers, mod_expires, mod_deflate y mod_mime.
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https://tile.openstreetmap.org; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://api.open-meteo.com; media-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
+
+  # HSTS: activar solo cuando el dominio funcione por HTTPS en todas sus rutas.
+  # Header always set Strict-Transport-Security "max-age=31536000"
+
+  # El service worker debe actualizarse: nunca se cachea a largo plazo.
+  <Files "sw.js">
+    Header unset Expires
+    Header set Cache-Control "no-cache, must-revalidate"
+  </Files>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType text/html .html
+  AddType text/css .css
+  AddType text/javascript .js
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType audio/wav .wav
+  AddType audio/mpeg .mp3
+  AddType application/manifest+json .webmanifest
+  AddType application/xml .xml
+  AddType text/csv .csv
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript text/xml \
+    image/svg+xml application/manifest+json application/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType audio/wav "access plus 7 days"
+  ExpiresByType audio/mpeg "access plus 7 days"
+  ExpiresByType application/manifest+json "access plus 7 days"
+</IfModule>
+
+# Redirigir a HTTPS cuando el certificado ya esté instalado.
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} !=on
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Captura</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #faf9f7; }
+  iframe { display: block; width: 100vw; height: 100vh; border: 0; }
+</style>
+</head>
+<body>
+<iframe id="pagina" title="Vista para captura"></iframe>
+<script>
+  var params = new URLSearchParams(location.search);
+  var url = params.get("u") || "index.html";
+  var selector = params.get("s") || "";
+  var off = Number(params.get("off") || 90);
+  var y = Number(params.get("y") || 0);
+  var marca = params.get("marca") || "";
+  var marco = document.getElementById("pagina");
+
+  function marcar() {
+    if (!marca) return;
+    try {
+      var el = marco.contentWindow.document.querySelector(marca);
+      if (el) {
+        el.style.boxShadow = "inset 0 0 0 4px #ff0000";
+      }
+    } catch (error) {
+      /* nada */
+    }
+  }
+
+  function colocar() {
+    try {
+      var ventana = marco.contentWindow;
+      var destino = y;
+      if (selector) {
+        var el = ventana.document.querySelector(selector);
+        if (el) {
+          destino = el.getBoundingClientRect().top + ventana.scrollY - off;
+        }
+      }
+      var raiz = ventana.document.documentElement;
+      raiz.style.scrollBehavior = "auto";
+      ventana.scrollTo({ top: destino, left: 0, behavior: "instant" });
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  marco.addEventListener("load", function () {
+    colocar();
+    var intentos = 0;
+    var reloj = window.setInterval(function () {
+      colocar();
+      marcar();
+      intentos += 1;
+      if (intentos > 30) window.clearInterval(reloj);
+    }, 120);
+  });
+
+  marco.src = url;
+</script>
+</body>
+</html>

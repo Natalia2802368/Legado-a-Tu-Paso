@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Marca | Legado a Tu Paso</title>
+<style>
+  @font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("sitio/assets/fuente/literata-600-latin-ext.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("sitio/assets/fuente/literata-600-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("sitio/assets/fuente/atkinson-400-latin.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("sitio/assets/fuente/atkinson-700-latin.woff2") format("woff2");
+  }
+
+  :root {
+    --papel: #faf9f7;
+    --tinta: #30160d;
+    --teja: #5e2e1b;
+    --claro: #e8d9ce;
+    --linea: #dcd6d0;
+    --display: "Literata", Georgia, "Times New Roman", serif;
+    --texto: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--texto);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  main {
+    width: min(72rem, 100% - 2.5rem);
+    margin: 0 auto;
+    padding: 2.5rem 0 5rem;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--linea);
+  }
+
+  header p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--teja);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    line-height: 1.12;
+    text-wrap: balance;
+    margin: 0 0 0.5em;
+  }
+
+  h1 { font-size: clamp(2rem, 5vw, 3.25rem); max-width: 20ch; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+  h3 { font-size: 1.2rem; }
+
+  p { max-width: 68ch; margin: 0 0 1em; }
+
+  .entradilla { font-size: 1.2rem; max-width: 58ch; }
+
+  section {
+    margin-top: 3.25rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--linea);
+  }
+
+  .rejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .panel {
+    border: 1px solid var(--linea);
+    border-radius: 14px;
+    padding: 1.5rem;
+    background: #fff;
+  }
+
+  .panel--tinta {
+    background: var(--tinta);
+    border-color: var(--tinta);
+    color: var(--papel);
+  }
+
+  .panel__etiqueta {
+    margin: 0 0 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teja);
+  }
+
+  .panel--tinta .panel__etiqueta { color: var(--claro); }
+
+  .logo {
+    display: block;
+    width: min(100%, 20rem);
+    height: auto;
+  }
+
+  .logo--claro { width: min(100%, 18rem); }
+
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .pieza { text-align: center; }
+  .pieza img { display: block; margin: 0 auto 0.5rem; }
+  .pieza figcaption { font-size: 0.8rem; color: var(--teja); }
+
+  .version {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .version a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.9rem;
+    border: 1px solid var(--linea);
+    border-radius: 999px;
+    color: var(--teja);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .version a:hover { border-color: var(--teja); }
+
+  .muestra p { margin-bottom: 0.35rem; }
+
+  .muestra .detalle {
+    font-size: 0.8rem;
+    color: var(--teja);
+    margin-bottom: 1.1rem;
+  }
+
+  .escala-grande {
+    font-family: var(--display);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+
+  .escala-media {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .alfa {
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .cuerpo-muestra { max-width: 60ch; }
+
+  .paleta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .color {
+    border: 1px solid var(--linea);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .color__muestra { height: 5.5rem; }
+  .color__datos { padding: 0.7rem 0.9rem; font-size: 0.85rem; }
+  .color__datos strong { display: block; }
+  .color__datos span { color: var(--teja); }
+
+  .notas { padding-left: 1.2rem; }
+  .notas li { margin-bottom: 0.6rem; max-width: 65ch; }
+
+  code {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 0.9em;
+    background: #f0ece8;
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+
+  .nota-final {
+    margin-top: 3rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--teja);
+    background: #fff;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    main { width: min(100% - 1.75rem, 72rem); }
+    .panel { padding: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p><strong>Legado a Tu Paso</strong> · Hoja de marca</p>
+    <p>Versión 1.0 · 7 de noviembre de 2026</p>
+  </header>
+
+  <h1>Un legado que se recorre sin barreras.</h1>
+  <p class="entradilla">Logotipo, emblema y tipografías definitivas. Todo el material
+  es propio, se autoaloja y funciona sin depender de fuentes instaladas.</p>
+
+  <section aria-labelledby="s-lockup">
+    <h2 id="s-lockup">Logotipo</h2>
+    <p>El lockup horizontal combina el emblema —un círculo con una puerta recortada
+    abierta por abajo— con el nombre en Literata. «Legado» va en tinta y «a Tu Paso»
+    en teja.</p>
+
+    <div class="rejilla">
+      <div class="panel">
+        <p class="panel__etiqueta">Sobre papel · uso principal</p>
+        <img class="logo" src="sitio/assets/logo.svg" width="321" height="64"
+             alt="Legado a Tu Paso">
+      </div>
+      <div class="panel panel--tinta">
+        <p class="panel__etiqueta">Sobre tinta · versión clara</p>
+        <img class="logo logo--claro" src="sitio/assets/logo-claro.svg" width="321" height="64"
+             alt="Legado a Tu Paso">
+      </div>
+    </div>
+
+    <ul class="version">
+      <li><a href="sitio/assets/logo.svg" download>logo.svg</a></li>
+      <li><a href="sitio/assets/logo-claro.svg" download>logo-claro.svg</a></li>
+      <li><a href="sitio/assets/logo-emblema.svg" download>logo-emblema.svg</a></li>
+      <li><a href="sitio/assets/logo-emblema-claro.svg" download>logo-emblema-claro.svg</a></li>
+      <li><a href="sitio/assets/favicon.svg" download>favicon.svg</a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="s-emblema">
+    <h2 id="s-emblema">Emblema y favicon</h2>
+    <p>La puerta se lee a cualquier tamaño porque el hueco llega hasta el borde
+    inferior. El favicon reutiliza la misma silueta sobre una teja redondeada.</p>
+
+    <div class="rejilla">
+      <div class="panel">
+        <p class="panel__etiqueta">Emblema · tinta</p>
+        <div class="fila">
+          <figure class="pieza">
+            <img src="sitio/assets/logo-emblema.svg" width="96" height="96" alt="">
+            <figcaption>96 px</figcaption>
+          </figure>
+          <figure class="pieza">
+            <img src="sitio/assets/logo-emblema.svg" width="48" height="48" alt="">
+            <figcaption>48 px</figcaption>
+          </figure>
+          <figure class="pieza">
+            <img src="sitio/assets/favicon.svg" width="32" height="32" alt="">
+            <figcaption>Favicon 32 px</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="panel panel--tinta">
+        <p class="panel__etiqueta">Emblema · papel</p>
+        <div class="fila">
+          <figure class="pieza">
+            <img src="sitio/assets/logo-emblema-claro.svg" width="96" height="96" alt="">
+            <figcaption>96 px</figcaption>
+          </figure>
+          <figure class="pieza">
+            <img src="sitio/assets/logo-emblema-claro.svg" width="48" height="48" alt="">
+            <figcaption>48 px</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-tipo">
+    <h2 id="s-tipo">Tipografía</h2>
+    <p><strong>Literata 600</strong> para titulares, cifras destacadas y marca.
+    <strong>Atkinson Hyperlegible 400/700</strong> para cuerpo, interfaz, botones y
+    formularios. Ambas con licencia SIL Open Font License y subconjuntos latin y
+    latin-ext autoalojados.</p>
+
+    <div class="rejilla">
+      <div class="panel muestra">
+        <p class="panel__etiqueta">Literata 600</p>
+        <p class="escala-grande">Ciudades con historia, rutas sin barreras.</p>
+        <p class="detalle">Titular · clamp 2–3,35 rem · interlineado 1,15</p>
+        <p class="escala-media">Ávila, Toledo y Segovia</p>
+        <p class="detalle">Subtítulo · 1,5 rem · peso 600</p>
+        <p class="alfa">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br>abcdefghijklmnñopqrstuvwxyz<br>ÁÉÍÓÚÜáéíóúü · 0123456789</p>
+        <p class="detalle">Solo se sirve el peso 600. No se sintetizan 400 ni 700.</p>
+      </div>
+      <div class="panel muestra">
+        <p class="panel__etiqueta">Atkinson Hyperlegible 400/700</p>
+        <p class="cuerpo-muestra"><strong>El patrimonio se explica, se recorre y se
+        disfruta sin barreras.</strong> Cada ficha indica fuente, fecha y estado del
+        dato de accesibilidad. Si algo no está verificado, se dice.</p>
+        <p class="cuerpo-muestra">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br>
+        abcdefghijklmnñopqrstuvwxyz<br>
+        ÁÉÍÓÚÜáéíóúü · 0123456789 · ¿? ¡! € %</p>
+        <p class="detalle">Cuerpo 17 px (16 px en móvil) · interlineado 1,65</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-color">
+    <h2 id="s-color">Color</h2>
+    <p>La paleta se mantiene corta. El gris queda reservado para texto grande e
+    iconos; ningún estado se comunica solo con color.</p>
+
+    <div class="paleta">
+      <div class="color">
+        <div class="color__muestra" style="background:#faf9f7"></div>
+        <div class="color__datos"><strong>Papel</strong><span>#FAF9F7 · fondo</span></div>
+      </div>
+      <div class="color">
+        <div class="color__muestra" style="background:#30160d"></div>
+        <div class="color__datos"><strong>Tinta</strong><span>#30160D · texto y emblema</span></div>
+      </div>
+      <div class="color">
+        <div class="color__muestra" style="background:#5e2e1b"></div>
+        <div class="color__datos"><strong>Teja</strong><span>#5E2E1B · enlaces y acentos</span></div>
+      </div>
+      <div class="color">
+        <div class="color__muestra" style="background:#e8d9ce"></div>
+        <div class="color__datos"><strong>Teja claro</strong><span>#E8D9CE · marca sobre tinta</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-uso">
+    <h2 id="s-uso">Reglas de uso</h2>
+    <ul class="notas">
+      <li>Altura mínima del lockup: 32 px. Por debajo, usar solo el emblema.</li>
+      <li>Área de respeto: la mitad de la altura del emblema en todos los lados.</li>
+      <li>No deformar, rotar, cambiar los colores ni añadir sombras o contornos.</li>
+      <li>Sobre fondos claros, usar <code>logo.svg</code>; sobre tinta o fotografía
+      oscura, <code>logo-claro.svg</code>.</li>
+      <li>El nombre se escribe siempre «Legado a Tu Paso», con «a» minúscula y «Tu
+      Paso» en mayúscula inicial.</li>
+      <li>El wordmark está vectorizado: no hay que instalar Literata para verlo
+      correctamente.</li>
+    </ul>
+  </section>
+
+  <p class="nota-final">Para reconstruir todos los archivos:
+  <code>python herramientas/crear_marca.py</code>. La fuente variable de origen y
+  la licencia completa están en <code>herramientas/fuentes/</code>; las WOFF2
+  publicadas y su licencia, en <code>sitio/assets/fuente/</code>.</p>
+</main>
+</body>
+</html>

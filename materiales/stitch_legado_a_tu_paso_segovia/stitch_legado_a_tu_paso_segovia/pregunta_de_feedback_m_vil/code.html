@@ -1,0 +1,370 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}:focus-visible{outline:3px solid #825500;outline-offset:2px;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#131b2d", "on-secondary-fixed": "#291800", "inverse-surface": "#30312f", "on-primary-fixed-variant": "#3f465b", "surface-tint": "#565e73", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#633f00", "outline-variant": "#c6c6cd", "surface-container-low": "#f5f3f0", "tertiary-container": "#00210c", "error": "#ba1a1a", "on-surface-variant": "#45464c", "on-background": "#1b1c1a", "on-tertiary-container": "#47935d", "error-container": "#ffdad6", "primary": "#000000", "inverse-on-surface": "#f2f0ed", "surface-dim": "#dbdad7", "on-error-container": "#93000a", "secondary-fixed-dim": "#fabb61", "outline": "#76777d", "inverse-primary": "#bec6df", "secondary-container": "#fdbe63", "on-tertiary-fixed": "#00210c", "tertiary-fixed-dim": "#8ad89c", "secondary": "#825500", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-container": "#131b2d", "primary-fixed": "#dbe2fb", "surface-bright": "#fbf9f6", "surface": "#fbf9f6", "surface-container": "#efeeeb", "tertiary": "#000000", "secondary-fixed": "#ffddb4", "surface-variant": "#e4e2df", "background": "#fbf9f6", "primary-fixed-dim": "#bec6df", "on-primary": "#ffffff", "tertiary-fixed": "#a5f4b6", "on-surface": "#1b1c1a", "surface-container-highest": "#e4e2df", "surface-container-high": "#eae8e5", "on-tertiary-fixed-variant": "#005227", "on-primary-container": "#7c839a", "on-tertiary": "#ffffff", "on-secondary-container": "#754c00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "2.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "caption": [ "Atkinson Hyperlegible Next" ], "display-mobile": [ "\"Source Serif 4\"" ], "label-md": [ "Atkinson Hyperlegible Next" ], "headline-lg": [ "\"Source Serif 4\"" ], "headline-md": [ "\"Source Serif 4\"" ], "headline-lg-mobile": [ "\"Source Serif 4\"" ], "label-lg": [ "Atkinson Hyperlegible Next" ], "headline-sm": [ "\"Source Serif 4\"" ], "display": [ "\"Source Serif 4\"" ], "body-md": [ "Atkinson Hyperlegible Next" ], "body-lg": [ "Atkinson Hyperlegible Next" ], "body-strong": [ "Atkinson Hyperlegible Next" ] }, "fontSize": { "caption": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "fontWeight": "700" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "fontWeight": "600" } ], "label-lg": [ "15px", { "lineHeight": "20px", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "display": [ "44px", { "lineHeight": "52px", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-strong": [ "16px", { "lineHeight": "24px", "fontWeight": "700" } ] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter-mobile flex flex-col justify-between py-1"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><img alt="Logo Legado a tu paso" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrCtqi-Ckqi2aRE_2BCuBQl6enX7qyMD5uwx0UbuuTsDIiv2tu4N7NE2G7M_MfA_sYvcCSGycSxpV9WAsC3RKWT_GzkqA6Vgd8RcLkeJTUSTMVuHiN2LJcqOc8QmYkp9BK7bNhawIDMH7Ty2AKA6ZpBT4zlrIBhMtf7nKRnFNwtmbRQT-W9ZxMYclwt6LFz7jF3U2ivLPwCGkuhGy_7PP2o_EgsKZSyTA8wQk-djsQ"><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-secondary leading-none uppercase tracking-wide truncate">Legado a tu paso</span><span class="font-headline-sm text-headline-sm text-on-surface truncate">Monumentos</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><svg aria-hidden="true" class="w-12 h-6 text-on-surface/15 hidden sm:block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 64 24"><path d="M2 22V10C2 5.58 6 2 11 2s9 3.58 9 8v12M20 22V10C20 5.58 24 2 29 2s9 3.58 9 8v12M38 22V10C38 5.58 42 2 47 2s9 3.58 9 8v12"></path></svg><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center gap-space-sm overflow-x-auto pb-0.5"><a class="min-h-[44px] px-space-sm py-1 flex items-center gap-1 font-label-md text-label-md text-on-surface hover:text-secondary rounded-lg" data-path="monumentos" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span>Monumentos</a><a class="min-h-[44px] px-space-sm py-1 flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-secondary-container rounded-lg bg-surface-container-low" data-path="como-funciona-el-sello" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>¿Cómo funciona el sello?</a></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 px-gutter-mobile bg-surface flex-grow"><div class="flex flex-col w-full max-w-[420px] mx-auto pb-6">
+<!-- Herramienta de Demostración: Selector de Estado del Prototipo -->
+<nav aria-label="Flujo del prototipo" class="w-full mb-space-sm bg-surface-container-low rounded-xl p-1.5 shadow-sm border border-outline-variant/30"><div class="flex items-center justify-between gap-1 overflow-x-auto pb-0.5"><a class="flex-1 min-h-[44px] px-2 py-1.5 flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all text-center whitespace-nowrap" data-path="monumentos" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-[12px] font-bold flex-shrink-0">1</span><span class="">Listado</span></a><a class="flex-1 min-h-[44px] px-2 py-1.5 flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all text-center whitespace-nowrap" data-path="ficha-monumento" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-[12px] font-bold flex-shrink-0">2</span><span class="">Ficha</span></a><a class="flex-1 min-h-[44px] px-2 py-1.5 flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all text-center whitespace-nowrap" data-path="como-funciona-el-sello" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-[12px] font-bold flex-shrink-0">3</span><span class="">El Sello</span></a><a aria-current="step" class="flex-1 min-h-[44px] px-2 py-1.5 flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-all text-center whitespace-nowrap" data-path="feedback" href="#"><span class="w-5 h-5 rounded-full bg-on-primary text-primary flex items-center justify-center text-[12px] font-bold flex-shrink-0">4</span><span class="">Feedback</span></a></div></nav><aside aria-label="Selector de estado del prototipo" class="w-full mb-space-sm bg-surface-container rounded-xl p-space-sm shadow-sm">
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+        Simulador de estados (Prototipo UX)
+      </span>
+<span class="font-caption text-caption text-secondary font-bold">Interactivo</span>
+</div>
+<div aria-label="Alternar vista del prototipo" class="grid grid-cols-3 gap-1.5" role="group">
+<button class="py-2 px-1 text-center font-label-md text-label-md rounded-lg transition-all shadow-sm flex flex-col items-center justify-center min-h-[44px] bg-surface-container-highest text-on-surface-variant" id="sim-btn-initial" onclick="setScreenState('initial')" type="button">
+<span class="">1. Inicial</span>
+</button>
+<button class="py-2 px-1 text-center font-label-md text-label-md rounded-lg hover:text-on-surface transition-all flex flex-col items-center justify-center min-h-[44px] bg-primary text-on-primary" id="sim-btn-success" onclick="setScreenState('success')" type="button">
+<span class="">2. Enviado</span>
+</button>
+<button class="py-2 px-1 text-center font-label-md text-label-md rounded-lg hover:text-on-surface transition-all flex flex-col items-center justify-center min-h-[44px] bg-primary text-on-primary" id="sim-btn-error" onclick="setScreenState('error')" type="button">
+<span class="">3. Error</span>
+</button>
+</div>
+</aside>
+<!-- Encabezado de retorno accesible -->
+<header class="w-full mb-space-sm flex flex-col gap-1">
+<a aria-label="Volver a la ficha del monumento Alcázar de Segovia" class="inline-flex items-center gap-space-xs min-h-[44px] py-2 text-on-surface hover:text-secondary focus-visible:text-secondary rounded-lg transition-colors group" href="#">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-surface-container-highest transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface">arrow_back</span>
+</span>
+<span class="font-body-strong text-body-strong underline underline-offset-4 decoration-outline-variant group-hover:decoration-secondary">
+        Volver a la ficha del monumento
+      </span>
+</a>
+<div class="flex items-center gap-1.5 px-1 text-on-surface-variant">
+<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-secondary">hearing</span>
+<p class="font-caption text-caption">Tu opinión nos ayuda a auditar Segovia</p>
+</div>
+</header>
+<!-- VISTA 1: FORMULARIO PRINCIPAL -->
+<section class="w-full flex flex-col hidden" id="state-initial">
+<!-- Tarjeta Principal de Feedback -->
+<article class="w-full bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-sm flex flex-col">
+<!-- Icono temático e Introducción -->
+<div class="flex items-start gap-space-sm mb-space-sm">
+<div aria-hidden="true" class="w-11 h-11 rounded-xl bg-secondary-fixed/40 flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[26px]">chat_bubble_outline</span>
+</div>
+<div class="flex flex-col min-w-0 pt-0.5">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Tu experiencia previa</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight mt-0.5">
+            ¿Esto te ha ahorrado llamar o dudar?
+          </h1>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+        Cuéntanos si los datos de bucle magnético (telebobina) y audioguías subtituladas te han servido para preparar tu visita con tranquilidad.
+      </p>
+<!-- Los 3 Botones Grandes de Respuesta -->
+<fieldset aria-labelledby="rating-legend" aria-required="true" class="w-full mb-space-md" role="radiogroup">
+<legend class="font-label-lg text-label-lg text-on-surface mb-space-sm flex items-center justify-between" id="rating-legend">
+<span class="">Selecciona una opción:</span>
+<span class="font-caption text-caption text-on-surface-variant">Obligatorio</span>
+</legend>
+<div class="flex flex-col gap-2.5">
+<!-- Opción 1: Sí, mucho -->
+<label class="relative flex items-center justify-between min-h-[58px] px-space-md py-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all select-none" id="rating-label-mucho">
+<input class="sr-only" name="utility_rating" onchange="selectRating('mucho')" type="radio" value="mucho">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">thumb_up</span>
+</span>
+<span class="font-body-strong text-body-strong text-on-surface">Sí, mucho</span>
+</div>
+<span aria-hidden="true" class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-on-primary opacity-0 transition-opacity" id="rating-check-mucho">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</label>
+<!-- Opción 2: Algo -->
+<label class="relative flex items-center justify-between min-h-[58px] px-space-md py-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all select-none" id="rating-label-algo">
+<input class="sr-only" name="utility_rating" onchange="selectRating('algo')" type="radio" value="algo">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">balance</span>
+</span>
+<span class="font-body-strong text-body-strong text-on-surface">Algo</span>
+</div>
+<span aria-hidden="true" class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-on-primary opacity-0 transition-opacity" id="rating-check-algo">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</label>
+<!-- Opción 3: No -->
+<label class="relative flex items-center justify-between min-h-[58px] px-space-md py-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all select-none" id="rating-label-no">
+<input class="sr-only" name="utility_rating" onchange="selectRating('no')" type="radio" value="no">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">thumb_down</span>
+</span>
+<span class="font-body-strong text-body-strong text-on-surface">No</span>
+</div>
+<span aria-hidden="true" class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-on-primary opacity-0 transition-opacity" id="rating-check-no">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</label>
+</div>
+</fieldset>
+<!-- Chips de dispositivo (Pregunta secundaria) -->
+<fieldset aria-labelledby="device-legend" class="w-full mb-space-md" role="radiogroup">
+<legend class="font-label-lg text-label-lg text-on-surface mb-2 flex items-center gap-1" id="device-legend">
+<span class="material-symbols-outlined text-[18px] text-secondary">hearing_disabled</span>
+<span class="">¿Qué dispositivo auditivo utilizas?</span>
+</legend>
+<p class="font-caption text-caption text-on-surface-variant mb-space-sm">Opcional: nos ayuda a clasificar la compatibilidad del monumento.</p>
+<div class="flex flex-wrap gap-2">
+<button class="min-h-[44px] px-3.5 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all text-left" id="chip-audifono" onclick="toggleDevice('audifono')" type="button">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+<span class="">Audífono (Posición T)</span>
+</button>
+<button class="min-h-[44px] px-3.5 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all text-left" id="chip-implante" onclick="toggleDevice('implante')" type="button">
+<span class="material-symbols-outlined text-[18px]">settings_input_antenna</span>
+<span class="">Implante coclear</span>
+</button>
+<button class="min-h-[44px] px-3.5 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all text-left" id="chip-ninguno" onclick="toggleDevice('ninguno')" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span class="">Acompañante / Otro</span>
+</button>
+</div>
+</fieldset>
+<!-- Campo de Comentario Opcional -->
+<div class="w-full mb-space-md flex flex-col">
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="feedback-comment">
+            Comentario adicional (opcional)
+          </label>
+<span aria-live="polite" class="font-caption text-caption text-on-surface-variant" id="char-counter">
+            0/280
+          </span>
+</div>
+<textarea class="w-full min-h-[96px] p-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:bg-surface-container-lowest transition-colors resize-none outline-none shadow-sm" id="feedback-comment" maxlength="280" oninput="updateCharCount(this)" placeholder="Ej.: En taquilla el bucle funcionaba nítido, pero en el patio había eco..." rows="3"></textarea>
+</div>
+<!-- Botón de Envío Principal -->
+<button class="w-full min-h-[50px] py-3 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-tint active:bg-primary-container transition-all shadow-md" id="submit-btn" onclick="handleSubmitForm()" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span class="">Enviar valoración</span>
+</button>
+<!-- Recordatorio de Privacidad -->
+<p class="font-caption text-caption text-center text-on-surface-variant mt-3 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="">Participación 100% anónima. Sin registros ni cookies.</span>
+</p>
+</article>
+</section>
+<!-- VISTA 2: ESTADO ENVIADO (ÉXITO) -->
+<section class="w-full flex-col" id="state-success">
+<article class="w-full bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Icono de Éxito Accesible con Doble Codificación -->
+<div aria-hidden="true" class="w-16 h-16 rounded-full bg-on-tertiary-container/15 text-on-tertiary-container flex items-center justify-center mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+        Respuesta guardada
+      </span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">
+        ¡Muchas gracias por colaborar!
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md max-w-[340px]">
+        Tu valoración ayuda a que más personas con audífonos e implantes cocleares visiten el patrimonio de Segovia sin barreras ni sorpresas acústicas.
+      </p>
+<!-- Resumen visual amable de la contribución -->
+<div class="w-full bg-surface-container-low rounded-xl p-3.5 mb-space-md text-left flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5">hotel_class</span>
+<div class="flex flex-col min-w-0">
+<p class="font-body-strong text-body-strong text-on-surface">Auditoría colaborativa 2025</p>
+<p class="font-caption text-caption text-on-surface-variant">Revisamos periódicamente los bucles con las asociaciones de personas sordas de Castilla y León.</p>
+</div>
+</div>
+<!-- Acciones de continuidad -->
+<div class="w-full flex flex-col gap-2.5">
+<a class="w-full min-h-[48px] py-3 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-tint transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+<span class="">Volver al monumento</span>
+</a>
+<a class="w-full min-h-[48px] py-3 px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">map</span>
+<span class="">Ver otros monumentos accesibles</span>
+</a>
+</div>
+</article>
+</section>
+<!-- VISTA 3: ESTADO ERROR DE CONEXIÓN -->
+<section class="w-full flex-col" id="state-error">
+<article class="w-full bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Icono de Alerta Accesible -->
+<div aria-hidden="true" class="w-16 h-16 rounded-full bg-error-container text-error flex items-center justify-center mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">cloud_off</span>
+</div>
+<span class="font-label-md text-label-md text-error uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+        Incidencia de conexión
+      </span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">
+        No se pudo enviar tu respuesta
+      </h2>
+<div class="bg-error-container/30 rounded-xl p-3.5 mb-space-md text-left w-full">
+<p class="font-body-md text-body-md text-on-surface mb-1">
+          Parece que hay un problema temporal con la red móvil cerca del monumento.
+        </p>
+<p class="font-body-strong text-body-strong text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span class="">No te preocupes: tu texto y selección no se han borrado.</span>
+</p>
+</div>
+<!-- Acciones de recuperación -->
+<div class="w-full flex flex-col gap-2.5">
+<button class="w-full min-h-[48px] py-3 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-tint transition-all shadow-md" onclick="handleSubmitForm()" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+<span class="">Reintentar envío ahora</span>
+</button>
+<button class="w-full min-h-[48px] py-3 px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all" onclick="setScreenState('initial')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span class="">Volver al formulario para editar</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Pie de página del prototipo -->
+<footer class="w-full mt-space-md pt-space-xs text-center flex flex-col items-center gap-1">
+<div class="h-0.5 w-12 bg-surface-container-high rounded-full mb-1"></div>
+<p class="font-caption text-caption text-on-surface-variant max-w-[320px]">
+      Datos de ejemplo para el prototipo de investigación y accesibilidad. Monumentos reales de Segovia.
+    </p>
+</footer>
+</div>
+<script>
+  // Almacén de estado local para micro-interacciones
+  const feedbackState = {
+    selectedRating: null,
+    selectedDevice: null,
+    commentText: ''
+  };
+
+  // Alternar vista del prototipo (Simulador de estados)
+  function setScreenState(state) {
+    const sInitial = document.getElementById('state-initial');
+    const sSuccess = document.getElementById('state-success');
+    const sError = document.getElementById('state-error');
+
+    const btnInit = document.getElementById('sim-btn-initial');
+    const btnSucc = document.getElementById('sim-btn-success');
+    const btnErr = document.getElementById('sim-btn-error');
+
+    // Ocultar todas las pantallas
+    sInitial.classList.add('hidden');
+    sSuccess.classList.add('hidden');
+    sError.classList.add('hidden');
+
+    // Resetear botones del simulador
+    [btnInit, btnSucc, btnErr].forEach(btn => {
+      btn.className = "py-2 px-1 text-center font-label-md text-label-md rounded-lg bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all flex flex-col items-center justify-center min-h-[44px]";
+    });
+
+    if (state === 'initial') {
+      sInitial.classList.remove('hidden');
+      btnInit.className = "py-2 px-1 text-center font-label-md text-label-md rounded-lg bg-primary text-on-primary transition-all shadow-sm flex flex-col items-center justify-center min-h-[44px]";
+    } else if (state === 'success') {
+      sSuccess.classList.remove('hidden');
+      btnSucc.className = "py-2 px-1 text-center font-label-md text-label-md rounded-lg bg-on-tertiary-container text-surface-container-lowest transition-all shadow-sm flex flex-col items-center justify-center min-h-[44px]";
+    } else if (state === 'error') {
+      sError.classList.remove('hidden');
+      btnErr.className = "py-2 px-1 text-center font-label-md text-label-md rounded-lg bg-error text-on-error transition-all shadow-sm flex flex-col items-center justify-center min-h-[44px]";
+    }
+  }
+
+  // Selección de los 3 botones principales
+  function selectRating(val) {
+    feedbackState.selectedRating = val;
+    const ratings = ['mucho', 'algo', 'no'];
+
+    ratings.forEach(item => {
+      const lbl = document.getElementById(`rating-label-${item}`);
+      const chk = document.getElementById(`rating-check-${item}`);
+
+      if (item === val) {
+        // Marcado activo con alto contraste accesible
+        lbl.className = "relative flex items-center justify-between min-h-[58px] px-space-md py-3 rounded-xl bg-primary text-on-primary cursor-pointer transition-all select-none shadow-sm";
+        // Actualizar textos e iconos internos
+        const titleSpan = lbl.querySelector('.font-body-strong');
+        if (titleSpan) titleSpan.className = "font-body-strong text-body-strong text-on-primary";
+        const iconContainer = lbl.querySelector('div > span:first-child');
+        if (iconContainer) iconContainer.className = "w-8 h-8 rounded-lg bg-surface-container-lowest/20 flex items-center justify-center text-on-primary flex-shrink-0 shadow-sm";
+
+        // Check visible
+        chk.classList.remove('opacity-0');
+        chk.classList.add('opacity-100');
+        chk.className = "w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center opacity-100 transition-opacity";
+      } else {
+        // No seleccionado
+        lbl.className = "relative flex items-center justify-between min-h-[58px] px-space-md py-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all select-none";
+        const titleSpan = lbl.querySelector('.font-body-strong');
+        if (titleSpan) titleSpan.className = "font-body-strong text-body-strong text-on-surface";
+        const iconContainer = lbl.querySelector('div > span:first-child');
+        if (iconContainer) iconContainer.className = "w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm";
+
+        chk.classList.add('opacity-0');
+        chk.classList.remove('opacity-100');
+      }
+    });
+  }
+
+  // Selección de tags / chips de dispositivo
+  function toggleDevice(device) {
+    const devices = ['audifono', 'implante', 'ninguno'];
+    
+    if (feedbackState.selectedDevice === device) {
+      feedbackState.selectedDevice = null;
+    } else {
+      feedbackState.selectedDevice = device;
+    }
+
+    devices.forEach(d => {
+      const chip = document.getElementById(`chip-${d}`);
+      if (d === feedbackState.selectedDevice) {
+        chip.className = "min-h-[44px] px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 transition-all text-left shadow-sm";
+      } else {
+        chip.className = "min-h-[44px] px-3.5 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all text-left hover:bg-surface-container";
+      }
+    });
+  }
+
+  // Contador de caracteres de textarea
+  function updateCharCount(textarea) {
+    feedbackState.commentText = textarea.value;
+    const count = textarea.value.length;
+    const counterEl = document.getElementById('char-counter');
+    counterEl.textContent = `${count}/280`;
+  }
+
+  // Envío del formulario
+  function handleSubmitForm() {
+    // Si no ha seleccionado ninguna valoración, pre-seleccionamos "mucho" para guiar de forma amable
+    if (!feedbackState.selectedRating) {
+      selectRating('mucho');
+    }
+
+    const btn = document.getElementById('submit-btn');
+    const originalText = btn.innerHTML;
+    
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span><span>Enviando...</span>`;
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      setScreenState('success');
+    }, 450);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-body-strong"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="monumentos" href="#"><span class="material-symbols-outlined text-[24px]">account_balance</span><span class="font-caption text-caption">Monumentos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="como-funciona-el-sello" href="#"><span class="material-symbols-outlined text-[24px]">verified</span><span class="font-caption text-caption">El Sello</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="guia-de-accesibilidad-acustica" href="#"><span class="material-symbols-outlined text-[24px]">hearing</span><span class="font-caption text-caption">Guía Acústica</span></a></div></nav>
+
+</body></html>

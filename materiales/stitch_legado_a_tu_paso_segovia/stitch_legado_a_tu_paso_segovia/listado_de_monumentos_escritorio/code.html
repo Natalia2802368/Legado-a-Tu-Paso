@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#e4e2df","surface-bright":"#fbf9f6","outline":"#76777d","tertiary-fixed-dim":"#8ad89c","primary-container":"#131b2d","on-surface":"#1b1c1a","error-container":"#ffdad6","on-primary-container":"#7c839a","on-primary-fixed":"#131b2d","on-secondary-fixed-variant":"#633f00","on-error-container":"#93000a","on-surface-variant":"#45464c","surface-container-lowest":"#ffffff","surface-container":"#efeeeb","primary-fixed":"#dbe2fb","on-secondary-container":"#754c00","on-error":"#ffffff","background":"#fbf9f6","surface-dim":"#dbdad7","secondary":"#825500","secondary-container":"#fdbe63","inverse-primary":"#bec6df","inverse-on-surface":"#f2f0ed","on-secondary":"#ffffff","secondary-fixed":"#ffddb4","surface-container-highest":"#e4e2df","tertiary-container":"#00210c","surface-container-low":"#f5f3f0","error":"#ba1a1a","on-tertiary-fixed-variant":"#005227","surface":"#fbf9f6","tertiary":"#000000","on-primary":"#ffffff","surface-tint":"#565e73","inverse-surface":"#30312f","primary-fixed-dim":"#bec6df","on-tertiary-container":"#47935d","on-primary-fixed-variant":"#3f465b","tertiary-fixed":"#a5f4b6","surface-container-high":"#eae8e5","secondary-fixed-dim":"#fabb61","on-tertiary-fixed":"#00210c","on-tertiary":"#ffffff","primary":"#000000","on-background":"#1b1c1a","outline-variant":"#c6c6cd","on-secondary-fixed":"#291800"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","margin":"2.5rem","gutter":"1.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xl":"2.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem"},"fontFamily":{"display":["\"Source Serif 4\""],"body-md":["Atkinson Hyperlegible Next"],"body-strong":["Atkinson Hyperlegible Next"],"headline-sm":["\"Source Serif 4\""],"label-lg":["Atkinson Hyperlegible Next"],"headline-lg":["\"Source Serif 4\""],"display-mobile":["\"Source Serif 4\""],"headline-md":["\"Source Serif 4\""],"headline-lg-mobile":["\"Source Serif 4\""],"label-md":["Atkinson Hyperlegible Next"],"body-lg":["Atkinson Hyperlegible Next"],"caption":["Atkinson Hyperlegible Next"]},"fontSize":{"display":["44px",{"lineHeight":"52px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-strong":["16px",{"lineHeight":"24px","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["15px",{"lineHeight":"20px","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}],"display-mobile":["32px",{"lineHeight":"40px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-24 max-w-[1280px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-4 min-w-0"><div aria-hidden="true" class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-surface-container-high shrink-0 text-on-surface"><svg class="w-9 h-9 opacity-80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 36 36"><path d="M2 28h32"></path><path d="M5 28V14a4 4 0 0 1 8 0v14"></path><path d="M15 28V14a4 4 0 0 1 8 0v14"></path><path d="M25 28V14a4 4 0 0 1 8 0v14"></path><path d="M2 14h32"></path><path d="M5 14V8a3 3 0 0 1 6 0v6"></path><path d="M15 14V8a3 3 0 0 1 6 0v6"></path><path d="M25 14V8a3 3 0 0 1 6 0v6"></path><path d="M2 8h32"></path></svg></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary-container truncate tracking-tight">Legado a tu paso</span><span class="font-caption text-caption text-on-surface-variant truncate">Accesibilidad auditiva en monumentos de Segovia</span></div></div><div class="flex items-center gap-6 shrink-0"><nav class="flex items-center gap-2" data-active-classes="bg-surface-container text-on-surface font-body-strong"><a aria-current="page" class="px-4 py-2.5 rounded-lg transition-colors bg-surface-container text-on-surface font-body-strong" data-path="monumentos" href="#">Monumentos</a><a class="px-4 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="como-funciona-el-sello" href="#">¿Cómo funciona el sello?</a></nav><div aria-label="Perfil de usuario" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-24 bg-background min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<!-- Banner Contextual Superior & Hero Accesible -->
+<section class="w-full bg-surface py-8">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col gap-6">
+<!-- Fila superior: Badge de frescura técnica y migas semánticas -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Guía acústica Segovia • Actualizado hoy</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Norma UNE-EN 60118-4 • Doble verificación presencial</span>
+</div>
+</div>
+<!-- Título principal editorial con escala asimétrica -->
+<div class="flex flex-col gap-3 max-w-[880px]">
+<h1 class="font-display text-display text-primary-container tracking-tight">
+          Monumentos accesibles de Segovia
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Descubre qué monumentos de Segovia puedes disfrutar con tu audífono o implante coclear antes de tu visita.
+        </p>
+</div>
+<!-- Caja informativa destacada: Tranquilidad antes de ir -->
+<div class="p-4 sm:p-5 rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5 min-w-0">
+<div aria-hidden="true" class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[22px]">hearing</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-strong text-body-strong text-primary-container">
+              Información contrastada antes de ir: sin barreras sorpresa ni esperas innecesarias en taquilla.
+            </span>
+<span class="font-caption text-caption text-on-surface-variant">
+              Revisamos la inducción magnética (telecoil), inteligibilidad en salas de piedra y guías con lazo inductivo individual.
+            </span>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2 self-end sm:self-center">
+<a aria-label="Ver manual de compatibilidad con posición T" class="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors inline-flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>¿Cómo usar la posición T?</span>
+</a>
+</div>
+</div>
+<!-- Barra de pruebas de prototipo: Selección de Estados UI para Evaluación Técnica -->
+<div class="pt-2 flex flex-wrap items-center justify-between gap-3 bg-surface-container-high/60 p-3 rounded-xl">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">developer_mode</span>
+<span>Simulador de estados del catálogo:</span>
+</div>
+<div aria-label="Estados de catálogo para evaluación técnica" class="flex flex-wrap items-center gap-2" role="tablist">
+<button aria-selected="true" class="h-10 px-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm" id="btn-state-list" onclick="setAppState('list')" role="tab">
+<span class="material-symbols-outlined text-[16px]">format_list_bulleted</span>
+<span>Listado activo (6)</span>
+</button>
+<button aria-selected="false" class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="btn-state-empty" onclick="setAppState('empty')" role="tab">
+<span class="material-symbols-outlined text-[16px]">filter_list_off</span>
+<span>Sin resultados (Vacío)</span>
+</button>
+<button aria-selected="false" class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="btn-state-loading" onclick="setAppState('loading')" role="tab">
+<span class="material-symbols-outlined text-[16px]">hourglass_empty</span>
+<span>Cargando (Esqueletos)</span>
+</button>
+<button aria-selected="false" class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="btn-state-error" onclick="setAppState('error')" role="tab">
+<span class="material-symbols-outlined text-[16px]">cloud_off</span>
+<span>Error de conexión</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contenedor Maestro: Inspiración Google Maps (Split de Control Lateral + Rejilla Editorial a 1280px) -->
+<section class="w-full pb-16">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- PANEL LATERAL DE FILTROS Y CONTROL (4 Columnas en Desktop) -->
+<aside class="lg:col-span-4 flex flex-col gap-6 sticky top-28 bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="font-headline-sm text-headline-sm text-primary-container">Filtros acústicos</h2>
+</div>
+<button aria-label="Limpiar todos los filtros aplicados" class="text-secondary font-label-md text-label-md hover:underline inline-flex items-center gap-1 py-1" onclick="resetFilters()">
+<span>Limpiar filtros</span>
+</button>
+</div>
+<!-- Filtro: Recursos Acústicos Clave -->
+<div class="flex flex-col gap-3">
+<span class="font-caption text-caption text-on-surface-variant font-bold uppercase tracking-wider">
+              Equipamiento técnico
+            </span>
+<div class="flex flex-col gap-2.5">
+<label class="flex items-center gap-3 min-h-[44px] cursor-pointer group px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer" onchange="toggleFilter(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Con bucle de inducción</span>
+<span class="font-caption text-caption text-on-surface-variant">Mostradores o salas con bucle fijo</span>
+</div>
+</label>
+<label class="flex items-center gap-3 min-h-[44px] cursor-pointer group px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer" onchange="toggleFilter(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Audioguía compatible con T</span>
+<span class="font-caption text-caption text-on-surface-variant">Lazo de cuello individual telecoil</span>
+</div>
+</label>
+<label class="flex items-center gap-3 min-h-[44px] cursor-pointer group px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<input class="w-5 h-5 rounded accent-primary cursor-pointer" onchange="toggleFilter(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Subtitulado o transcripción</span>
+<span class="font-caption text-caption text-on-surface-variant">Pantallas o folletos de lectura fácil</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Filtro: Estado del Sello de Verificación -->
+<div class="flex flex-col gap-3 pt-2">
+<span class="font-caption text-caption text-on-surface-variant font-bold uppercase tracking-wider">
+              Estado de verificación
+            </span>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 min-h-[44px] cursor-pointer group px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer" onchange="toggleFilter(this)" type="checkbox"/>
+<span class="inline-flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-[#1B6B3A]"></span>
+<span>Verificado (reciente)</span>
+</span>
+</label>
+<label class="flex items-center gap-3 min-h-[44px] cursor-pointer group px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer" onchange="toggleFilter(this)" type="checkbox"/>
+<span class="inline-flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-[#4A5568]"></span>
+<span>Sin verificar (provisional)</span>
+</span>
+</label>
+<label class="flex items-center gap-3 min-h-[44px] cursor-pointer group px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer" onchange="toggleFilter(this)" type="checkbox"/>
+<span class="inline-flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-[#9B2C2C]"></span>
+<span>Desfasado (&gt; 12 meses)</span>
+</span>
+</label>
+</div>
+</div>
+<!-- Filtro: Tipo de Espacio -->
+<div class="flex flex-col gap-3 pt-2">
+<span class="font-caption text-caption text-on-surface-variant font-bold uppercase tracking-wider">
+              Tipo de espacio monumental
+            </span>
+<div class="flex flex-wrap gap-2">
+<button class="h-10 px-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md">Todos</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md">Castillos y Palacios</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md">Museos</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md">Aire libre</button>
+</div>
+</div>
+<!-- Ayuda de Contacto Rápido / Notificar Desajuste -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-2 mt-2">
+<span class="font-label-md text-label-md text-primary-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">contact_support</span>
+<span>¿Has visitado alguno hoy?</span>
+</span>
+<p class="font-caption text-caption text-on-surface-variant">
+              Ayúdanos a mantener la precisión acústica informando sobre la señal del lazo inductivo o el personal de taquilla.
+            </p>
+</div>
+</aside>
+<!-- PANEL PRINCIPAL (8 Columnas en Desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Barra de Control y Conteo Activo -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">format_list_bulleted</span>
+<p class="font-body-strong text-body-strong text-primary-container" id="counter-text">
+                Mostrando 6 monumentos con recursos acústicos en Segovia
+              </p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span>Ordenar por:</span>
+<select aria-label="Criterio de ordenación" class="bg-surface-container px-3 py-1.5 rounded-lg text-on-surface border-none focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option>Mayor nivel de verificación</option>
+<option>Alfabético (A - Z)</option>
+<option>Proximidad centro histórico</option>
+</select>
+</div>
+</div>
+<!-- CONTENIDO CONDICIONAL: 1. LISTADO COMPLETO (6 TARJETAS REALES) -->
+<div class="flex flex-col gap-6" id="view-list">
+<!-- 1. Alcázar de Segovia -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary font-bold">
+                    Monumento Histórico y Museo Militar • Plaza Reina Victoria Eugenia, s/n
+                  </span>
+<h3 class="font-headline-md text-headline-md text-primary-container">
+                    Alcázar de Segovia
+                  </h3>
+</div>
+<!-- Sello: Verificado (Verde #1B6B3A) con doble codificación -->
+<div class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#EBF7EE] text-[#1B6B3A] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Verificado</span>
+</div>
+</div>
+<!-- Imagen representativa -->
+<div class="w-full h-48 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Fotografía panorámica del majestuoso Alcázar de Segovia recortado sobre un cielo despejado de Castilla, con sus torres cilíndricas de pizarra, murallas de mampostería de piedra caliza y foso verde, iluminación cálida de atardecer, estética cuidada y nítida." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2st88SRGDlOuYBuoLdK3aC_CzD883Mj-_R9iIellstd9tFlFlQ3lSSQQVbJ4lIP1b6H80VSRC89GJ6vJtaFgB_NA5cUOsspA_Bab37JYc7YqZPyksmJRDcX5rxdsGL_2w5m3lBz-EyGoIbBirOAKTEq-9gCmYYCD3dH1yD8QUJO82jqpG-neTQdVUR0UN6hPzD7rxHoYOVrvo7wxtWvq-o3naXI-F4rv6zPIlpQ"/>
+</div>
+<!-- Bloque Técnico Acústico -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Bucle de inducción magnética</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Bucle de inducción activo en taquillas y visitas guiadas oficiales de 11:30 y 16:30.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">headphones</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Audioguía y compatibilidad T</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Audioguía individual con lazo inductivo telecoil regulable y toma estándar.</span>
+</div>
+</div>
+</div>
+<!-- Auditoría y Acción -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-caption text-caption text-[#1B6B3A] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Comprobado el 14 oct. 2026 en visita técnica presencial.</span>
+</span>
+<button aria-label="Ver ficha completa y detalles acústicos del Alcázar de Segovia" class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2">
+<span>Ver ficha y detalles acústicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- 2. Catedral de Segovia -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary font-bold">
+                    Templo Gótico y Museo Catedralicio • Plaza Mayor, s/n
+                  </span>
+<h3 class="font-headline-md text-headline-md text-primary-container">
+                    Catedral de Segovia (Nuestra Señora de la Asunción)
+                  </h3>
+</div>
+<!-- Sello: Sin verificar (Gris #4A5568) con doble codificación -->
+<div class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#EDF2F7] text-[#4A5568] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Sin verificar</span>
+</div>
+</div>
+<div class="w-full h-48 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vista de la majestuosa nave central de la Catedral de Segovia con sus altísimas bóvedas de crucería góticas, columnas de piedra arenisca rubia, vidrieras iluminando con luz tenue el interior sereno del templo histórico castellano." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzRJ00QUD4FDNThJhPRpAuV-VeOlbQJspljNmbbUIjxD3L5k5qS9wy11mkD8csHbjOSRszSzbmqNA4XAhho3U1d5h-DML6hIBDzw1_b-uimdwzqfQKf5J9qu5u7YqAKZ6NMxu2FTcj2reU_p03nLfUSPaPJS6ObIB8nlifVNDZN_PRHWBsFFRptGCVBO1EgoxGv_UZ52TzqX2y-M0la3WdsUh5qo033F5Zp7XkQ"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Bucle de inducción magnética</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Bucle de mostrador disponible en recepción y punto de información central.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">headphones</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Audioguía y compatibilidad T</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Audioguía compatible con posición T y conector para streamers personales.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-caption text-caption text-[#4A5568] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Pendiente de visita técnica (Dato informativo web 2025).</span>
+</span>
+<button aria-label="Ver ficha completa y detalles acústicos de la Catedral de Segovia" class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2">
+<span>Ver ficha y detalles acústicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- 3. Real Casa de Moneda -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary font-bold">
+                    Museo Industrial y Entorno Fluvial • Calle de la Moneda, s/n
+                  </span>
+<h3 class="font-headline-md text-headline-md text-primary-container">
+                    Real Casa de Moneda de Segovia
+                  </h3>
+</div>
+<!-- Sello: Verificado (Verde #1B6B3A) -->
+<div class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#EBF7EE] text-[#1B6B3A] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Verificado</span>
+</div>
+</div>
+<div class="w-full h-48 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Complejo histórico de la Real Casa de Moneda de Segovia a orillas del río Eresma, con ruedas hidráulicas de madera, muros de sillería de granito y el frondoso bosque de ribera reflejado en el agua tranquila." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvc3JNXxkkx3A2qRO73OfEz2I-tTTr5fpwlYwMUMoXah0pFP_cM5JffW06valj61NpQFmjEX653OYvyVnJv6jxCj_F4Wp0LoIrrGwJsM_eHvWvqB6AqvRb1iqL3t0RYKmNKnKengVKV_FW8BYJpJulxikjas5VPlHwPhR0TEgcAAiCQSQW4IWdBo8s45L3XQexpcHDsiEB-ql1bbU5sE_VFQbo74Dj8gR7ncQ2Ew"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Bucle perimetral de inducción</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Bucle perimetral completo instalado en sala de acuñación e interpretación.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">subtitles</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Transcripciones y multimedia</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Guías multimedia con transcripción escrita completa y compatibilidad bluetooth/telecoil.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-caption text-caption text-[#1B6B3A] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Comprobado el 28 sep. 2026 por llamada técnica y visita.</span>
+</span>
+<button aria-label="Ver ficha completa de la Real Casa de Moneda" class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2">
+<span>Ver ficha y detalles acústicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- 4. Acueducto Romano -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary font-bold">
+                    Monumento al Aire Libre • Plaza del Azoguejo, s/n
+                  </span>
+<h3 class="font-headline-md text-headline-md text-primary-container">
+                    Acueducto Romano de Segovia
+                  </h3>
+</div>
+<!-- Sello: Desfasado (Rojo ladrillo #9B2C2C) con doble codificación -->
+<div class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FDE8E8] text-[#9B2C2C] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Desfasado (&gt; 12 meses)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">location_off</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Sin bucle fijo</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Sin bucle fijo por tratarse de monumento exterior al aire libre con dispersión sonora.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">podcasts</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Receptor FM para grupos</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Rutas guiadas exteriores con receptor FM y lazo de cuello bajo petición en Centro de Visitantes.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-caption text-caption text-[#9B2C2C] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>Revisado hace más de 12 meses (jun. 2025). Requiere actualización técnica.</span>
+</span>
+<button aria-label="Ver ficha del Acueducto Romano" class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2">
+<span>Ver ficha y detalles acústicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- 5. Centro Didáctico de la Judería -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary font-bold">
+                    Espacio Expositivo y Didáctico • Calle Judería Vieja, 12
+                  </span>
+<h3 class="font-headline-md text-headline-md text-primary-container">
+                    Centro Didáctico de la Judería
+                  </h3>
+</div>
+<!-- Sello: Verificado (Verde #1B6B3A) -->
+<div class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#EBF7EE] text-[#1B6B3A] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Verificado</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Bucle y subtítulos</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Bucle de mostrador activo. Subtitulado de vídeos expositivos completo.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">devices</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Dispositivos en recepción</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Dispositivos adaptados disponibles en mostrador bajo petición previa.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-caption text-caption text-[#1B6B3A] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Comprobado el 02 nov. 2026.</span>
+</span>
+<button aria-label="Ver ficha del Centro Didáctico de la Judería" class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2">
+<span>Ver ficha y detalles acústicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- 6. Museo de Segovia -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex flex-col gap-1.5 min-w-0">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary font-bold">
+                    Museo Provincial de Bellas Artes y Arqueología • Calle Socorro, 11
+                  </span>
+<h3 class="font-headline-md text-headline-md text-primary-container">
+                    Museo de Segovia (Casa del Sol)
+                  </h3>
+</div>
+<!-- Sello: Sin verificar (Gris #4A5568) -->
+<div class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#EDF2F7] text-[#4A5568] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Sin verificar</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Bucle portátil en recepción</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Sin bucle en salas de exposición permanente. Bucle portátil en recepción bajo petición.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">save_as</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary-container">Audioguía convencional</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Audioguía sin lazo inductivo individual disponible actualmente.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-caption text-caption text-[#4A5568] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Reporte colaborativo de usuario pendiente de validar por técnico acústico.</span>
+</span>
+<button aria-label="Ver ficha del Museo de Segovia" class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2">
+<span>Ver ficha y detalles acústicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+<!-- CONTENIDO CONDICIONAL: 2. ESTADO VACÍO (SIN RESULTADOS) -->
+<div class="hidden flex-col items-center justify-center p-12 bg-surface-container-lowest rounded-2xl shadow-sm text-center" id="view-empty">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-[32px]">filter_alt_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary-container mb-2">
+              No encontramos monumentos con esa combinación de filtros
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[540px] mb-6">
+              Prueba a desmarcar algún filtro o restablecer la búsqueda para explorar todos los espacios catalogados en Segovia.
+            </p>
+<button class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors inline-flex items-center gap-2" onclick="resetFilters()">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Restablecer filtros</span>
+</button>
+</div>
+<!-- CONTENIDO CONDICIONAL: 3. ESTADO CARGANDO (ESQUELETOS CON SHIMMER) -->
+<div class="hidden flex-col gap-6" id="view-loading">
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined animate-spin text-[20px] text-secondary">sync</span>
+<span class="font-body-md text-body-md">Cargando recursos auditivos verificados...</span>
+</div>
+<!-- Tarjeta esqueleto 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4 animate-pulse">
+<div class="flex justify-between items-center">
+<div class="h-4 bg-surface-container-highest rounded w-1/3"></div>
+<div class="h-6 bg-surface-container-highest rounded-lg w-24"></div>
+</div>
+<div class="h-8 bg-surface-container-highest rounded w-2/3"></div>
+<div class="h-48 bg-surface-container-highest rounded-xl w-full"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-20 bg-surface-container-highest rounded-xl"></div>
+<div class="h-20 bg-surface-container-highest rounded-xl"></div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<div class="h-4 bg-surface-container-highest rounded w-1/4"></div>
+<div class="h-12 bg-surface-container-highest rounded-xl w-48"></div>
+</div>
+</div>
+<!-- Tarjeta esqueleto 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4 animate-pulse">
+<div class="flex justify-between items-center">
+<div class="h-4 bg-surface-container-highest rounded w-1/3"></div>
+<div class="h-6 bg-surface-container-highest rounded-lg w-24"></div>
+</div>
+<div class="h-8 bg-surface-container-highest rounded w-1/2"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-20 bg-surface-container-highest rounded-xl"></div>
+<div class="h-20 bg-surface-container-highest rounded-xl"></div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<div class="h-4 bg-surface-container-highest rounded w-1/4"></div>
+<div class="h-12 bg-surface-container-highest rounded-xl w-48"></div>
+</div>
+</div>
+</div>
+<!-- CONTENIDO CONDICIONAL: 4. ESTADO ERROR DE CONEXIÓN -->
+<div class="hidden flex-col items-center justify-center p-12 bg-surface-container-lowest rounded-2xl shadow-sm text-center" id="view-error">
+<div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center mb-4 text-on-error-container">
+<span class="material-symbols-outlined text-[32px]">cloud_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary-container mb-2">
+              No pudimos cargar la información de monumentos
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[540px] mb-6">
+              Comprueba tu conexión o inténtalo de nuevo en unos segundos. La base de datos acústica local de Segovia se sincronizará automáticamente.
+            </p>
+<button class="min-h-[48px] px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors inline-flex items-center gap-2" onclick="setAppState('list')">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Reintentar conexión</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Script interactivo seguro e integrado para la simulación de estados de prototipo -->
+<script>
+    function setAppState(state) {
+      const views = {
+        'list': document.getElementById('view-list'),
+        'empty': document.getElementById('view-empty'),
+        'loading': document.getElementById('view-loading'),
+        'error': document.getElementById('view-error')
+      };
+
+      const buttons = {
+        'list': document.getElementById('btn-state-list'),
+        'empty': document.getElementById('btn-state-empty'),
+        'loading': document.getElementById('btn-state-loading'),
+        'error': document.getElementById('btn-state-error')
+      };
+
+      const counter = document.getElementById('counter-text');
+
+      // Actualizar visibilidad de vistas
+      Object.keys(views).forEach(key => {
+        if (key === state) {
+          views[key].classList.remove('hidden');
+          views[key].classList.add('flex');
+        } else {
+          views[key].classList.add('hidden');
+          views[key].classList.remove('flex');
+        }
+      });
+
+      // Actualizar botones de selector
+      Object.keys(buttons).forEach(key => {
+        if (key === state) {
+          buttons[key].setAttribute('aria-selected', 'true');
+          buttons[key].className = 'h-10 px-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm';
+        } else {
+          buttons[key].setAttribute('aria-selected', 'false');
+          buttons[key].className = 'h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5';
+        }
+      });
+
+      // Actualizar texto del contador según el estado
+      if (state === 'list') {
+        counter.textContent = 'Mostrando 6 monumentos con recursos acústicos en Segovia';
+      } else if (state === 'empty') {
+        counter.textContent = 'Mostrando 0 monumentos (Ajusta los filtros)';
+      } else if (state === 'loading') {
+        counter.textContent = 'Sincronizando catálogo acústico...';
+      } else if (state === 'error') {
+        counter.textContent = 'Error de sincronización con el servidor';
+      }
+    }
+
+    function resetFilters() {
+      const checkboxes = document.querySelectorAll('aside input[type="checkbox"]');
+      checkboxes.forEach(cb => cb.checked = true);
+      setAppState('list');
+    }
+
+    function toggleFilter(checkbox) {
+      const checkboxes = Array.from(document.querySelectorAll('aside input[type="checkbox"]'));
+      const anyChecked = checkboxes.some(cb => cb.checked);
+      if (!anyChecked) {
+        setAppState('empty');
+      } else {
+        setAppState('list');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/30 py-8"><div class="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"><div class="flex flex-col gap-1"><p class="font-caption text-caption text-on-surface-variant">Datos de ejemplo para el prototipo de investigación y accesibilidad. Monumentos reales de Segovia.</p><p class="font-caption text-caption text-outline">Iniciativa técnica adaptada para personas con hipoacusia, audífonos e implantes cocleares.</p></div><div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px] text-secondary">hearing</span><span>Norma de bucle magnético e inteligibilidad UNE-EN 60118-4</span></div></div></footer></body></html>

@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alcalá de Henares — guía accesible | Legado a Tu Paso</title>
+<meta name="description" content="Guía de turismo accesible en Alcalá de Henares: ruta con 8 paradas, audio, clima, emergencias, aparcamiento y transporte.">
+<meta name="theme-color" content="#FAF9F7">
+<meta name="color-scheme" content="light">
+<meta name="application-name" content="Legado a Tu Paso">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Legado">
+<meta name="robots" content="index,follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Legado a Tu Paso">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Alcalá de Henares — guía accesible | Legado a Tu Paso">
+<meta property="og:description" content="Guía de turismo accesible en Alcalá de Henares: ruta con 8 paradas, audio, clima, emergencias, aparcamiento y transporte.">
+
+<meta property="og:image" content="assets/social/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Legado a Tu Paso: turismo accesible en ciudades Patrimonio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alcalá de Henares — guía accesible | Legado a Tu Paso">
+<meta name="twitter:description" content="Guía de turismo accesible en Alcalá de Henares: ruta con 8 paradas, audio, clima, emergencias, aparcamiento y transporte.">
+<meta name="twitter:image" content="assets/social/og.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/iconos/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="assets/fuente/atkinson-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fuente/literata-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/estilos.css?v=6af03f408497">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css?v=6ae9907e39d6">
+<script src="assets/leaflet/leaflet.js?v=6ae9907e24060" defer></script>
+
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor cabecera__interior">
+    <a class="marca" href="index.html">
+      <svg class="marca__logo" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 321 64" width="321" height="64" role="img" aria-labelledby="logo-titulo">
+<title id="logo-titulo">Legado a Tu Paso</title>
+<desc>Emblema con un arco de acceso y el nombre de la marca.</desc>
+<mask id="logo-arco" maskUnits="userSpaceOnUse" x="0" y="0" width="56" height="64"><rect width="56" height="64" fill="#fff"/><path d="M18 64V34a10 10 0 0 1 20 0v30z" fill="#000"/></mask>
+<circle class="logo__emblema" cx="28" cy="32" r="28" fill="#30160D" mask="url(#logo-arco)"/>
+<path class="logo__texto" fill="#30160D" d="M70.47 42.55V40.56L71.78 40.35Q72.34 40.25 72.52 39.97Q72.70 39.69 72.70 38.81V25.03Q72.70 24.26 72.49 23.97Q72.28 23.68 71.71 23.61L70.47 23.43V21.44H80.35V23.42L78.72 23.64Q78.12 23.72 77.91 24.00Q77.71 24.28 77.71 25.04V40.13H80.30Q81.24 40.13 81.88 39.91Q82.52 39.69 83.00 39.15Q83.48 38.62 83.86 37.70Q84.24 36.78 84.66 35.38H87.21L86.42 42.55ZM97.30 42.97Q94.79 42.97 93.04 42.00Q91.29 41.04 90.39 39.29Q89.48 37.54 89.48 35.21Q89.48 32.52 90.53 30.63Q91.59 28.74 93.44 27.74Q95.30 26.74 97.71 26.74Q99.68 26.74 101.14 27.42Q102.60 28.10 103.39 29.39Q104.19 30.69 104.19 32.51Q104.19 33.19 104.11 33.92Q104.04 34.65 103.87 35.34H94.45Q94.52 36.70 95.02 37.65Q95.53 38.60 96.43 39.09Q97.32 39.57 98.52 39.57Q99.88 39.57 100.97 39.14Q102.06 38.71 103.07 37.92L104.41 39.45Q103.25 41.02 101.43 41.99Q99.60 42.97 97.30 42.97ZM94.43 33.17H99.53Q99.59 32.80 99.61 32.43Q99.63 32.07 99.63 31.70Q99.63 30.32 99.08 29.61Q98.53 28.89 97.44 28.89Q96.51 28.89 95.87 29.40Q95.23 29.91 94.88 30.86Q94.52 31.81 94.43 33.17ZM113.23 49.45Q111.29 49.45 109.87 49.20Q108.45 48.95 107.54 48.47Q106.64 47.98 106.19 47.27Q105.75 46.56 105.75 45.62Q105.75 44.67 106.18 44.03Q106.60 43.39 107.36 42.97Q108.12 42.54 109.06 42.24V42.13Q107.91 41.80 107.37 41.09Q106.84 40.39 106.84 39.62Q106.84 38.81 107.27 38.15Q107.70 37.48 108.69 36.63V36.53Q107.61 35.92 107.00 34.89Q106.40 33.86 106.40 32.39Q106.40 30.50 107.36 29.25Q108.32 28.00 109.97 27.37Q111.62 26.73 113.66 26.73Q114.24 26.73 114.95 26.82Q115.66 26.91 116.40 27.09Q117.13 27.27 117.77 27.60Q118.50 25.96 119.36 25.01Q120.22 24.06 121.43 24.06Q122.00 24.06 122.51 24.29Q123.02 24.51 123.33 24.95Q123.65 25.39 123.65 26.06Q123.65 26.87 123.11 27.50Q122.58 28.13 121.75 28.13Q121.30 28.13 120.95 27.88Q120.61 27.62 120.33 27.22L119.99 26.66Q119.71 27.01 119.49 27.45Q119.26 27.89 119.04 28.40Q119.77 29.14 120.28 30.05Q120.79 30.96 120.79 32.26Q120.79 33.81 119.93 35.05Q119.08 36.29 117.50 37.00Q115.91 37.72 113.68 37.72Q112.83 37.72 112.11 37.61Q111.39 37.49 110.84 37.32Q110.51 37.67 110.35 37.94Q110.19 38.21 110.19 38.54Q110.19 38.97 110.43 39.22Q110.68 39.47 111.14 39.56Q111.61 39.65 112.26 39.65H117.19Q119.99 39.65 121.36 40.65Q122.72 41.64 122.72 43.58Q122.72 44.40 122.46 45.22Q122.20 46.05 121.57 46.81Q120.95 47.56 119.87 48.16Q118.79 48.75 117.15 49.10Q115.52 49.45 113.23 49.45ZM113.69 47.16Q114.96 47.16 115.86 46.84Q116.76 46.52 117.23 45.96Q117.70 45.39 117.70 44.66Q117.70 43.89 117.17 43.51Q116.64 43.14 115.58 43.14H111.17Q110.72 43.52 110.47 44.03Q110.21 44.53 110.21 45.11Q110.21 46.19 111.07 46.67Q111.92 47.16 113.69 47.16ZM113.62 35.37Q114.77 35.37 115.37 34.58Q115.97 33.79 115.97 32.27Q115.97 30.59 115.34 29.77Q114.70 28.96 113.52 28.96Q112.30 28.96 111.76 29.84Q111.22 30.73 111.22 32.19Q111.22 33.65 111.85 34.51Q112.48 35.37 113.62 35.37ZM129.00 42.97Q126.85 42.97 125.64 41.85Q124.42 40.74 124.42 38.87Q124.42 37.11 125.33 36.10Q126.23 35.08 128.14 34.61Q130.06 34.13 133.11 34.01V31.83Q133.11 30.71 132.87 30.00Q132.64 29.29 132.08 28.94Q131.53 28.60 130.56 28.60Q129.86 28.60 129.16 28.80Q128.46 29.00 128.05 29.34Q128.38 29.82 128.57 30.19Q128.77 30.56 128.85 30.81Q128.93 31.06 128.93 31.27Q128.93 31.92 128.36 32.37Q127.78 32.81 126.71 32.81Q125.68 32.81 125.17 32.32Q124.65 31.83 124.65 31.00Q124.65 29.83 125.50 28.86Q126.36 27.90 127.87 27.33Q129.39 26.76 131.38 26.76Q133.59 26.76 135.03 27.37Q136.47 27.98 137.17 29.25Q137.88 30.52 137.88 32.48V38.90Q137.88 39.59 138.15 39.92Q138.41 40.25 139.02 40.25Q139.32 40.25 139.61 40.19Q139.91 40.12 140.23 40.03L140.59 41.60Q139.97 42.16 138.99 42.56Q138.01 42.97 136.98 42.97Q135.50 42.97 134.66 42.27Q133.82 41.58 133.59 40.43Q133.18 41.16 132.56 41.73Q131.93 42.30 131.05 42.63Q130.18 42.97 129.00 42.97ZM130.88 40.44Q131.55 40.44 132.05 40.15Q132.55 39.86 132.83 39.32Q133.11 38.79 133.11 38.09V35.84Q131.75 35.85 130.86 36.11Q129.97 36.38 129.55 36.93Q129.13 37.49 129.13 38.39Q129.13 39.33 129.57 39.88Q130.01 40.44 130.88 40.44ZM147.97 42.97Q145.89 42.97 144.46 42.06Q143.02 41.15 142.28 39.44Q141.54 37.73 141.54 35.32Q141.54 32.69 142.44 30.77Q143.34 28.84 145.03 27.79Q146.73 26.74 149.09 26.74Q150.14 26.74 151.03 26.98Q151.91 27.22 152.58 27.62V23.62Q152.58 22.71 152.36 22.39Q152.15 22.07 151.35 21.95L150.17 21.77L150.37 19.74L156.94 19.55L157.35 19.97V39.09Q157.35 39.79 157.52 40.03Q157.69 40.28 158.31 40.40L159.47 40.61V42.58L153.33 42.79L152.96 40.37H152.84Q152.37 41.12 151.69 41.70Q151.02 42.29 150.11 42.63Q149.19 42.97 147.97 42.97ZM149.60 40.17Q150.53 40.17 151.19 39.73Q151.85 39.29 152.21 38.46Q152.58 37.62 152.58 36.47V30.33Q151.96 29.88 151.25 29.64Q150.53 29.40 149.74 29.40Q148.64 29.40 147.94 29.99Q147.23 30.58 146.89 31.82Q146.55 33.05 146.55 34.94Q146.55 36.71 146.89 37.87Q147.24 39.03 147.93 39.60Q148.62 40.17 149.60 40.17ZM169.19 42.97Q166.65 42.97 164.84 42.06Q163.04 41.15 162.08 39.40Q161.12 37.65 161.12 35.15Q161.12 32.35 162.19 30.48Q163.26 28.62 165.21 27.68Q167.16 26.74 169.74 26.74Q172.11 26.74 173.88 27.60Q175.65 28.45 176.65 30.17Q177.65 31.89 177.65 34.51Q177.65 37.19 176.64 39.08Q175.63 40.97 173.74 41.97Q171.85 42.97 169.19 42.97ZM169.60 40.54Q170.67 40.54 171.33 39.95Q171.98 39.37 172.28 38.16Q172.59 36.96 172.59 35.12Q172.59 33.49 172.37 32.35Q172.14 31.21 171.71 30.50Q171.27 29.79 170.66 29.46Q170.05 29.13 169.27 29.13Q168.29 29.13 167.60 29.63Q166.90 30.13 166.53 31.24Q166.16 32.35 166.16 34.20Q166.16 36.34 166.54 37.75Q166.92 39.15 167.69 39.84Q168.46 40.54 169.60 40.54Z"/>
+<path class="logo__texto-suave" fill="#5E2E1B" d="M191.31 42.97Q189.41 42.97 188.26 41.86Q187.11 40.76 187.11 38.91Q187.11 37.28 187.93 36.27Q188.75 35.25 190.63 34.73Q192.52 34.20 195.70 34.05V31.83Q195.70 30.60 195.36 29.82Q195.02 29.05 194.32 28.68Q193.62 28.30 192.49 28.30Q191.65 28.30 190.84 28.57Q190.02 28.83 189.65 29.23Q189.95 29.70 190.14 30.04Q190.33 30.39 190.42 30.61Q190.50 30.83 190.50 31.00Q190.50 31.56 190.04 31.95Q189.57 32.34 188.87 32.34Q188.06 32.34 187.62 31.94Q187.17 31.53 187.17 30.78Q187.17 29.74 187.96 28.86Q188.76 27.97 190.06 27.43Q191.36 26.89 192.89 26.89Q194.78 26.89 196.02 27.48Q197.26 28.06 197.88 29.26Q198.49 30.46 198.49 32.29V39.62Q198.49 40.30 198.84 40.63Q199.19 40.97 199.84 40.97Q200.17 40.97 200.51 40.90Q200.84 40.84 201.26 40.71L201.54 41.74Q200.99 42.29 200.21 42.63Q199.44 42.97 198.77 42.97Q197.48 42.97 196.78 42.28Q196.08 41.60 195.93 40.26Q195.37 41.19 194.68 41.78Q194.00 42.37 193.16 42.67Q192.33 42.97 191.31 42.97ZM192.46 41.00Q193.39 41.00 194.12 40.57Q194.84 40.15 195.27 39.43Q195.70 38.70 195.70 37.79V35.48Q193.77 35.49 192.50 35.82Q191.23 36.15 190.63 36.83Q190.02 37.51 190.02 38.59Q190.02 39.72 190.68 40.36Q191.34 41.00 192.46 41.00ZM213.79 42.55V41.23L216.16 40.89Q216.73 40.81 216.94 40.48Q217.15 40.14 217.15 39.39V22.96H215.46Q214.36 22.96 213.61 23.16Q212.86 23.35 212.31 23.88Q211.76 24.40 211.32 25.35Q210.88 26.29 210.37 27.80L208.88 27.44L210.02 21.44H227.28L228.35 27.44L226.83 27.80Q226.35 26.29 225.91 25.35Q225.47 24.40 224.94 23.88Q224.41 23.35 223.65 23.16Q222.90 22.96 221.83 22.96H220.12V39.51Q220.12 40.24 220.31 40.52Q220.51 40.81 221.14 40.89L223.47 41.23V42.55ZM236.87 42.97Q234.51 42.97 233.30 41.66Q232.09 40.36 232.09 37.84V30.81Q232.09 29.73 231.91 29.40Q231.73 29.06 231.07 28.95L229.77 28.75L229.99 27.44L234.54 27.11L234.88 27.31V37.07Q234.88 38.50 235.15 39.35Q235.42 40.19 236.05 40.56Q236.68 40.92 237.75 40.92Q239.00 40.92 239.89 40.42Q240.79 39.92 241.28 38.98Q241.77 38.04 241.77 36.78V30.81Q241.77 29.76 241.61 29.41Q241.44 29.06 240.75 28.95L239.43 28.75L239.65 27.44L244.22 27.11L244.56 27.31V39.65Q244.56 40.37 244.76 40.63Q244.95 40.89 245.52 41.00L247.02 41.25V42.55L242.34 42.74L241.94 40.28H241.85Q241.10 41.22 240.32 41.81Q239.55 42.40 238.71 42.68Q237.87 42.97 236.87 42.97ZM255.76 42.55V41.23L257.50 40.97Q258.07 40.89 258.25 40.58Q258.43 40.28 258.43 39.44V24.42Q258.43 23.67 258.23 23.38Q258.04 23.10 257.44 23.01L255.76 22.76V21.44H263.14Q264.76 21.44 266.05 21.68Q267.34 21.92 268.31 22.40Q269.29 22.88 269.93 23.59Q270.58 24.29 270.89 25.24Q271.21 26.18 271.21 27.38Q271.21 28.59 270.86 29.63Q270.52 30.66 269.87 31.50Q269.23 32.33 268.31 32.91Q267.40 33.48 266.24 33.79Q265.09 34.10 263.77 34.10Q262.96 34.10 262.30 34.06Q261.64 34.01 261.40 33.95V39.50Q261.40 40.28 261.62 40.61Q261.85 40.95 262.51 41.00L264.61 41.23V42.55ZM263.14 32.61Q265.54 32.61 266.77 31.31Q268.00 30.01 268.00 27.47Q268.00 25.88 267.46 24.88Q266.92 23.88 265.81 23.41Q264.70 22.94 262.93 22.94H261.40V32.46Q261.64 32.52 262.12 32.56Q262.60 32.61 263.14 32.61ZM277.74 42.97Q275.84 42.97 274.69 41.86Q273.54 40.76 273.54 38.91Q273.54 37.28 274.36 36.27Q275.18 35.25 277.06 34.73Q278.95 34.20 282.13 34.05V31.83Q282.13 30.60 281.79 29.82Q281.45 29.05 280.75 28.68Q280.05 28.30 278.92 28.30Q278.08 28.30 277.27 28.57Q276.45 28.83 276.08 29.23Q276.38 29.70 276.57 30.04Q276.76 30.39 276.85 30.61Q276.93 30.83 276.93 31.00Q276.93 31.56 276.47 31.95Q276.00 32.34 275.30 32.34Q274.49 32.34 274.05 31.94Q273.60 31.53 273.60 30.78Q273.60 29.74 274.39 28.86Q275.19 27.97 276.49 27.43Q277.79 26.89 279.32 26.89Q281.21 26.89 282.45 27.48Q283.69 28.06 284.31 29.26Q284.92 30.46 284.92 32.29V39.62Q284.92 40.30 285.27 40.63Q285.62 40.97 286.27 40.97Q286.60 40.97 286.94 40.90Q287.27 40.84 287.69 40.71L287.97 41.74Q287.42 42.29 286.64 42.63Q285.87 42.97 285.20 42.97Q283.91 42.97 283.21 42.28Q282.51 41.60 282.36 40.26Q281.80 41.19 281.11 41.78Q280.43 42.37 279.59 42.67Q278.76 42.97 277.74 42.97ZM278.89 41.00Q279.82 41.00 280.55 40.57Q281.27 40.15 281.70 39.43Q282.13 38.70 282.13 37.79V35.48Q280.20 35.49 278.93 35.82Q277.66 36.15 277.06 36.83Q276.45 37.51 276.45 38.59Q276.45 39.72 277.11 40.36Q277.77 41.00 278.89 41.00ZM289.78 42.97 289.31 37.78 290.85 37.67Q291.28 38.89 291.89 39.70Q292.50 40.51 293.33 40.90Q294.15 41.30 295.13 41.30Q296.48 41.30 297.25 40.60Q298.01 39.90 298.01 38.70Q298.01 38.00 297.68 37.53Q297.34 37.06 296.56 36.69Q295.79 36.32 294.45 35.96Q293.20 35.62 292.29 35.20Q291.37 34.79 290.79 34.25Q290.20 33.72 289.93 33.03Q289.66 32.34 289.66 31.40Q289.66 30.03 290.28 29.02Q290.91 28.01 292.07 27.45Q293.23 26.89 294.80 26.89Q295.78 26.89 296.69 27.19Q297.60 27.49 298.14 27.94L298.40 26.89H299.61L299.99 31.77L298.42 31.63Q298.09 30.16 297.13 29.28Q296.17 28.40 294.85 28.40Q293.55 28.40 292.83 28.98Q292.11 29.57 292.11 30.65Q292.11 31.33 292.43 31.79Q292.76 32.26 293.53 32.62Q294.31 32.97 295.59 33.35Q296.89 33.72 297.81 34.15Q298.73 34.57 299.32 35.11Q299.90 35.65 300.18 36.36Q300.45 37.06 300.45 38.00Q300.45 39.47 299.76 40.59Q299.07 41.71 297.87 42.34Q296.67 42.97 295.07 42.97Q293.90 42.97 292.92 42.69Q291.94 42.41 291.28 41.90L290.94 42.97ZM310.03 42.97Q307.82 42.97 306.17 42.02Q304.53 41.08 303.64 39.35Q302.76 37.62 302.76 35.27Q302.76 32.69 303.69 30.81Q304.62 28.93 306.35 27.91Q308.09 26.89 310.45 26.89Q312.63 26.89 314.22 27.83Q315.80 28.76 316.67 30.47Q317.54 32.18 317.54 34.52Q317.54 37.08 316.61 38.99Q315.69 40.89 314.01 41.93Q312.33 42.97 310.03 42.97ZM310.46 41.25Q311.77 41.25 312.66 40.57Q313.56 39.89 314.02 38.54Q314.48 37.19 314.48 35.25Q314.48 33.66 314.17 32.41Q313.86 31.16 313.27 30.30Q312.69 29.43 311.85 28.98Q311.01 28.53 309.96 28.53Q308.62 28.53 307.69 29.19Q306.77 29.85 306.28 31.15Q305.79 32.44 305.79 34.38Q305.79 36.56 306.36 38.09Q306.93 39.63 307.98 40.44Q309.03 41.25 310.46 41.25Z"/>
+</svg>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html#ciudades" aria-current="page">Ciudades</a>
+      <a href="accesibilidad.html">Accesibilidad</a>
+      <a href="creditos.html">Créditos</a>
+    </nav>
+    <a class="boton-112" href="tel:112">
+      <span class="boton-112__texto">Emergencias</span>
+      <span class="boton-112__num">112</span>
+    </a>
+  </div>
+</header>
+<p class="aviso-conexion" id="aviso-conexion" role="status" hidden>
+  Sin conexión. Las guías descargadas y sus audios siguen disponibles; el mapa
+  y el tiempo no se actualizan.
+</p>
+<main id="contenido">
+<nav class="migas contenedor" aria-label="Migas de pan">
+  <ol>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="index.html#ciudades">Ciudades</a></li>
+    <li aria-current="page">Alcalá de Henares</li>
+  </ol>
+</nav>
+<article class="ficha contenedor">
+  <header class="ficha__cabecera">
+    <p class="eyebrow">Comunidad de Madrid · Patrimonio de la Humanidad desde 1998</p>
+    <h1>Alcalá de Henares</h1>
+    <p class="entradilla grande">Alcalá de Henares es la primera ciudad universitaria planificada del mundo. Lo que empezó en 1499 como un colegio fundado por el cardenal Cisneros creció hasta convertirse en la Universidad de Alcalá, modelo de las universidades americanas. Cervantes nació aquí, y aquí se imprimió la Biblia Políglota Complutense. Su conjunto histórico y su universidad son Patrimonio de la Humanidad desde 1998: una ciudad de calles llanas, soportales y patios que se recorre casi entera a pie.</p>
+    <dl class="datos-clave"><div class="dato"><dt>Tiempo recomendado</dt><dd>2–3 horas para la ruta base.</dd></div><div class="dato"><dt>Mejor momento</dt><dd>Mañana; las calles del centro son estrechas y dan poca sombra.</dd></div></dl>
+  </header>
+  <aside class="aviso" aria-label="Aviso sobre la información">
+  <p><strong>Antes de viajar.</strong> Información orientativa, basada en fuentes oficiales a 2/11/2026. Pendiente de verificación en sitio.</p>
+  <p><strong>Verificación en sitio pendiente.</strong> Responsable: Natalia
+  Blázquez Herrero.</p>
+</aside>
+  <nav class="indice" aria-label="Secciones de esta guía">
+  <h2 class="indice__titulo">En esta guía</h2>
+  <ul><li><a href="#descarga">Sin conexión</a></li><li><a href="#ruta">Ruta y paradas</a></li><li><a href="#accesibilidad">Accesibilidad</a></li><li><a href="#clima">Clima</a></li><li><a href="#emergencias">Emergencias</a></li><li><a href="#aparcamiento">Aparcamiento</a></li><li><a href="#transporte">Transporte</a></li><li><a href="#fotos">Fotos</a></li><li><a href="#fuentes">Fuentes</a></li></ul>
+</nav>
+  <section id="descarga" class="seccion descarga" aria-labelledby="t-descarga">
+  <h2 id="t-descarga">Esta guía sin conexión</h2>
+  <p class="descarga__intro">Guarda las fotos y los audios de
+  Alcalá de Henares (13,5 MB) para consultarlos sin datos. El mapa, el
+  tiempo y los enlaces externos necesitan conexión.</p>
+  <div class="descarga__acciones">
+    <button type="button" class="boton boton--primario" id="descargar-ciudad">
+      Descargar esta ciudad
+    </button>
+    <button type="button" class="boton boton--secundario" id="borrar-descarga" hidden>
+      Borrar la descarga
+    </button>
+  </div>
+  <p class="descarga__estado" id="descarga-estado" role="status" aria-live="polite">
+    Comprobando si esta guía ya está guardada…
+  </p>
+  <progress class="descarga__progreso" id="descarga-progreso" max="100"
+            value="0" aria-label="Progreso de la descarga" hidden>0 %</progress>
+  <p class="descarga__nota">Las fotos y los audios se guardan en este
+  dispositivo. Puedes borrarlos cuando quieras con el botón «Borrar la
+  descarga».</p>
+  <script type="application/json" id="descarga-datos">{"ciudad": "alcala-de-henares", "urls": ["assets/fotos/alcala-de-henares/01.webp", "assets/fotos/alcala-de-henares/02.webp", "assets/fotos/alcala-de-henares/03.webp", "assets/fotos/alcala-de-henares/04.webp", "assets/fotos/alcala-de-henares/05.webp", "assets/fotos/alcala-de-henares/06.webp", "assets/fotos/alcala-de-henares/07.webp", "assets/fotos/alcala-de-henares/08.webp", "audio/alcala-de-henares/01.wav", "audio/alcala-de-henares/02.wav", "audio/alcala-de-henares/03.wav", "audio/alcala-de-henares/04.wav", "audio/alcala-de-henares/05.wav", "audio/alcala-de-henares/06.wav", "audio/alcala-de-henares/07.wav", "audio/alcala-de-henares/08.wav"]}</script>
+</section>
+  <section id="ruta" class="seccion" aria-labelledby="t-ruta">
+  <h2 id="t-ruta">Ruta y paradas</h2>
+  <p class="entradilla">2,0 km aproximados (estimación sobre mapa), 2–3 horas, 8 paradas.</p>
+  <dl class="datos-clave"><div class="dato"><dt>Distancia</dt><dd>2,0 km aproximados (estimación sobre mapa)</dd></div><div class="dato"><dt>Superficie</dt><dd>Losas, adoquín y tramos de asfalto; centro peatonal.</dd></div><div class="dato"><dt>Desnivel</dt><dd>Escaso; el punto más alto es la Plaza de Cervantes.</dd></div></dl>
+  
+  <div class="alternativa"><h3>Alternativa de acceso</h3><p>Si un monumento no es accesible, el exterior y los patios universitarios ya cuentan la historia. La Oficina de Turismo está en la propia Plaza de Cervantes.</p></div>
+  <div class="mapa" role="group" aria-labelledby="t-mapa">
+  <h3 id="t-mapa">Mapa de la ruta</h3>
+  <p class="mapa__nota">Mapa interactivo con Leaflet y cartografía de
+  OpenStreetMap. Las paradas están numeradas en el mismo orden que el recorrido.
+  Los marcadores son una referencia visual; la lista de abajo es la alternativa
+  navegable, con coordenadas y enlaces al mapa.</p>
+  <div class="mapa-marco">
+    <div class="mapa-leaflet" id="mapa-ruta" role="region"
+         aria-label="Mapa del recorrido por Alcalá de Henares"></div>
+  </div>
+  <p class="mapa__leyenda"><span class="punto-mapa" aria-hidden="true"></span>
+  Paradas de la ruta, en orden.</p>
+  <ol class="mapa__lista"><li><span class="mapa__num">1</span><a href="https://www.openstreetmap.org/?mlat=40.4828169&amp;mlon=-3.3644451#map=19/40.4828169/-3.3644451" rel="noopener">Plaza de Cervantes</a><span class="mapa__coords">40.4828169, -3.3644451</span></li><li><span class="mapa__num">2</span><a href="https://www.openstreetmap.org/?mlat=40.4823336&amp;mlon=-3.3630678#map=19/40.4823336/-3.3630678" rel="noopener">Universidad: Colegio de San Ildefonso</a><span class="mapa__coords">40.4823336, -3.3630678</span></li><li><span class="mapa__num">3</span><a href="https://www.openstreetmap.org/?mlat=40.4822146&amp;mlon=-3.3647928#map=19/40.4822146/-3.3647928" rel="noopener">Corral de Comedias</a><span class="mapa__coords">40.4822146, -3.3647928</span></li><li><span class="mapa__num">4</span><a href="https://www.openstreetmap.org/?mlat=40.4804051&amp;mlon=-3.3689808#map=19/40.4804051/-3.3689808" rel="noopener">Catedral Magistral</a><span class="mapa__coords">40.4804051, -3.3689808</span></li><li><span class="mapa__num">5</span><a href="https://www.openstreetmap.org/?mlat=40.4825783&amp;mlon=-3.3702889#map=19/40.4825783/-3.3702889" rel="noopener">Palacio Arzobispal</a><span class="mapa__coords">40.4825783, -3.3702889</span></li><li><span class="mapa__num">6</span><a href="https://www.openstreetmap.org/?mlat=40.4822904&amp;mlon=-3.3671183#map=19/40.4822904/-3.3671183" rel="noopener">Casa Natal de Cervantes</a><span class="mapa__coords">40.4822904, -3.3671183</span></li><li><span class="mapa__num">7</span><a href="https://www.openstreetmap.org/?mlat=40.4821410&amp;mlon=-3.3668750#map=19/40.4821410/-3.3668750" rel="noopener">Calle Mayor</a><span class="mapa__coords">40.4821410, -3.3668750</span></li><li><span class="mapa__num">8</span><a href="https://www.openstreetmap.org/?mlat=40.4806264&amp;mlon=-3.3726373#map=19/40.4806264/-3.3726373" rel="noopener">Puerta de Madrid</a><span class="mapa__coords">40.4806264, -3.3726373</span></li></ol>
+  <p class="mapa__acciones">
+    <a class="boton boton--secundario" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.4818,-3.3643" rel="noopener">
+      Indicaciones en Google Maps</a>
+    <a class="boton boton--secundario" href="https://www.openstreetmap.org/directions?to=40.4818,-3.3643#map=15/40.4818/-3.3643" rel="noopener">
+      Indicaciones en OpenStreetMap</a>
+  </p>
+  <p class="mapa__letra">La cartografía puede no reflejar obras recientes. Para la
+  accesibilidad, vale la lista de paradas y la ficha de cada una.</p>
+</div>
+<script type="application/json" id="mapa-ruta-datos">{"centro": [40.4818, -3.3643], "paradas": [{"n": 1, "nombre": "Plaza de Cervantes", "lat": 40.4828169, "lon": -3.3644451}, {"n": 2, "nombre": "Universidad: Colegio de San Ildefonso", "lat": 40.4823336, "lon": -3.3630678}, {"n": 3, "nombre": "Corral de Comedias", "lat": 40.4822146, "lon": -3.3647928}, {"n": 4, "nombre": "Catedral Magistral", "lat": 40.4804051, "lon": -3.3689808}, {"n": 5, "nombre": "Palacio Arzobispal", "lat": 40.4825783, "lon": -3.3702889}, {"n": 6, "nombre": "Casa Natal de Cervantes", "lat": 40.4822904, "lon": -3.3671183}, {"n": 7, "nombre": "Calle Mayor", "lat": 40.482141, "lon": -3.366875}, {"n": 8, "nombre": "Puerta de Madrid", "lat": 40.4806264, "lon": -3.3726373}]}</script>
+</section>
+  <div class="paradas-lista">
+    <h2 class="sr-only">Paradas de la ruta</h2>
+    <article class="parada" id="p1">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">01</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 1: </span>Plaza de Cervantes</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>20 min</dd></div>
+    <div><dt>Acceso</dt><dd>Llana, pavimento urbano</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4828169&amp;mlon=-3.3644451#map=19/40.4828169/-3.3644451" rel="noopener">40.4828169, -3.3644451</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>La plaza mayor de la ciudad, con soportales, quiosco y el Ayuntamiento.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Es el punto de encuentro y el lugar donde Cervantes tiene su estatua, mirando al paseo.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Llana, pavimento urbano, bancos. Confirmar obras y terrazas.</p></div><div class="parada__campo"><h4>Aseo adaptado</h4><p>No confirmado en la plaza.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/01.wav"
+         aria-label="Audio de la parada 1: Plaza de Cervantes">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/01.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:38 · 1,6 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“Estás en la Plaza de Cervantes, el corazón de Alcalá. Esta plaza fue mercado, escenario y lugar de encuentro durante siglos. Hoy tiene soportales, bancos y sombra parcial. Mira la estatua: Cervantes está de pie, mirando hacia el paseo. Él nació muy cerca de aquí, en la Calle Mayor. Antes de seguir, fíjate en el suelo: es llano y firme, bueno para caminar sin prisa. Si necesitas descansar, hay bancos alrededor.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/01.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p2">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">02</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 2: </span>Universidad: Colegio de San Ildefonso</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>30 min</dd></div>
+    <div><dt>Acceso</dt><dd>Fachada y patio; confirmar umbral</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4823336&amp;mlon=-3.3630678#map=19/40.4823336/-3.3630678" rel="noopener">40.4823336, -3.3630678</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>La fachada renacentista de la Universidad de Alcalá, con su portada plateresca.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Es el símbolo de la ciudad y el modelo de universidad que se exportó a América.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Fachada a nivel de calle; el interior tiene patios y escaleras. Confirmar recorrido adaptado.</p></div><div class="parada__campo"><h4>Aseo adaptado</h4><p>No confirmado.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/02.wav"
+         aria-label="Audio de la parada 2: Universidad: Colegio de San Ildefonso">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/02.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:36 · 1,5 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“Esta es la fachada de la Universidad de Alcalá. Parece una iglesia, pero es una escuela. La mandó construir el cardenal Cisneros en mil cuatrocientos noventa y nueve. Su portada está llena de símbolos: santos, escudos y medallones. Aquí se formaron generaciones de estudiantes, y este modelo viajó a América. La fachada está a nivel de calle. El interior tiene patios y escaleras: pregunta en la entrada por el recorrido más cómodo.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/02.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p3">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">03</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 3: </span>Corral de Comedias</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>15 min</dd></div>
+    <div><dt>Acceso</dt><dd>Entrada estrecha; confirmar</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4822146&amp;mlon=-3.3647928#map=19/40.4822146/-3.3647928" rel="noopener">40.4822146, -3.3647928</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>Uno de los corrales de comedias más antiguos de España, convertido en teatro.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Muestra cómo era el teatro popular del Siglo de Oro.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Entrada estrecha y patio con desnivel; confirmar alternativa.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/03.wav"
+         aria-label="Audio de la parada 3: Corral de Comedias">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/03.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:33 · 1,4 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“Estás ante el Corral de Comedias. En el siglo diecisiete, el teatro no se hacía en edificios como hoy: se hacía en patios rodeados de casas. El público miraba de pie, en los balcones o en el patio. Este corral se conservó y hoy sigue funcionando como teatro. La entrada es estrecha y el patio tiene desnivel. Si vienes en silla de ruedas, pregunta por la puerta y las butacas reservadas antes de la función.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/03.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p4">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">04</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 4: </span>Catedral Magistral</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>20 min</dd></div>
+    <div><dt>Acceso</dt><dd>Confirmar acceso adaptado</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4804051&amp;mlon=-3.3689808#map=19/40.4804051/-3.3689808" rel="noopener">40.4804051, -3.3689808</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>Catedral de los Santos Niños Justo y Pastor, con rango de magistral.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Guarda la memoria de los santos niños y articula el barrio antiguo.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Confirmar rampa o puerta adaptada; la plaza es llana.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/04.wav"
+         aria-label="Audio de la parada 4: Catedral Magistral">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/04.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:33 · 1,4 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“La Catedral Magistral está dedicada a los Santos Niños Justo y Pastor. Según la tradición, murieron aquí siendo niños, en el siglo tres. Por eso la ciudad se llamó Complutum y por eso esta catedral tiene el título de magistral: sus canónigos debían ser maestros en teología. La plaza es llana. Para entrar, confirma en la puerta si hay rampa o acceso adaptado, porque el templo tiene escalones históricos.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/04.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p5">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">05</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 5: </span>Palacio Arzobispal</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>15 min</dd></div>
+    <div><dt>Acceso</dt><dd>Exterior; visitas concertadas</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4825783&amp;mlon=-3.3702889#map=19/40.4825783/-3.3702889" rel="noopener">40.4825783, -3.3702889</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>Antiguo palacio de los arzobispos de Toledo, con torre y fachada monumental.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Fue sede de la imprenta y archivo; aquí se gestó parte de la vida cultural complutense.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Exterior visible desde la calle; visitas concertadas, confirmar accesibilidad.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/05.wav"
+         aria-label="Audio de la parada 5: Palacio Arzobispal">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/05.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:36 · 1,5 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“Este es el Palacio Arzobispal. Fue residencia de los arzobispos de Toledo, que gobernaban también la ciudad. Su torre y su fachada recuerdan que Alcalá fue sede de poder religioso y político. Aquí se alojaron reyes y se tomaron decisiones importantes. Hoy el edificio tiene uso institucional y solo se visita en ocasiones. Desde la calle puedes ver la fachada completa. Si quieres entrar, pregunta en la Oficina de Turismo por las visitas concertadas.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/05.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p6">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">06</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 6: </span>Casa Natal de Cervantes</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>25 min</dd></div>
+    <div><dt>Acceso</dt><dd>Museo; confirmar acceso</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4822904&amp;mlon=-3.3671183#map=19/40.4822904/-3.3671183" rel="noopener">40.4822904, -3.3671183</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>Museo en la casa donde nació Miguel de Cervantes.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Reconstruye la vida de una familia del siglo XVI y el origen del autor del Quijote.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Casa histórica; confirmar escalones, rampa y recorrido.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/06.wav"
+         aria-label="Audio de la parada 6: Casa Natal de Cervantes">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/06.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:33 · 1,4 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“Esta es la Casa Natal de Cervantes. Aquí nació Miguel de Cervantes en mil quinientos cuarenta y siete. La casa se ha reconstruido y hoy es un museo. Sus salas muestran cómo vivía una familia acomodada del siglo dieciséis: muebles, utensilios, libros. Es una casa histórica, con umbrales y escalones. Antes de entrar, pregunta por el recorrido accesible y por los materiales de lectura fácil.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/06.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p7">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">07</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 7: </span>Calle Mayor</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>15 min</dd></div>
+    <div><dt>Acceso</dt><dd>Peatonal y llana</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4821410&amp;mlon=-3.3668750#map=19/40.4821410/-3.3668750" rel="noopener">40.4821410, -3.3668750</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>La calle principal del casco histórico, porticada en buena parte.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Es el eje comercial y social de la ciudad desde la Edad Media.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Peatonal y llana; los soportales tienen columnas que estrechan el paso.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/07.wav"
+         aria-label="Audio de la parada 7: Calle Mayor">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/07.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:31 · 1,3 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“La Calle Mayor es el eje de Alcalá. Une la Puerta de Madrid con la Plaza de Cervantes y ha sido mercado, desfile y paseo durante siglos. Buena parte es peatonal y llana. Los soportales dan sombra, pero sus columnas estrechan el paso: con silla de ruedas o carrito, conviene ir por el centro de la calle. Fíjate en los edificios: algunos conservan escudos y balcones de madera.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/07.wav" download>Descargar audio</a></p>
+</div>
+</article><article class="parada" id="p8">
+  <header class="parada__cabecera">
+    <p class="parada__numero" aria-hidden="true">08</p>
+    <h3 class="parada__titulo"><span class="sr-only">Parada 8: </span>Puerta de Madrid</h3>
+  </header>
+  <dl class="parada__datos">
+    <div><dt>Tiempo</dt><dd>10 min</dd></div>
+    <div><dt>Acceso</dt><dd>Paso urbano; verificar acera</dd></div>
+    <div><dt>Coordenadas</dt><dd><a href="https://www.openstreetmap.org/?mlat=40.4806264&amp;mlon=-3.3726373#map=19/40.4806264/-3.3726373" rel="noopener">40.4806264, -3.3726373</a></dd></div>
+  </dl>
+  <div class="parada__texto"><div class="parada__campo"><h4>Qué es</h4><p>Puerta monumental de entrada a la ciudad, del siglo XVIII.</p></div><div class="parada__campo"><h4>Por qué importa</h4><p>Marca el límite del recinto histórico y el inicio del camino a Madrid.</p></div><div class="parada__campo"><h4>Acceso</h4><p>Paso urbano; verificar acera y tráfico.</p></div></div>
+  <div class="audio">
+  <p class="audio__titulo">Audio de la parada</p>
+  <audio controls preload="none" src="audio/alcala-de-henares/08.wav"
+         aria-label="Audio de la parada 8: Puerta de Madrid">
+    Tu navegador no reproduce audio. Puedes <a href="audio/alcala-de-henares/08.wav">descargar el archivo</a>.
+  </audio>
+  <p class="audio__meta">0:36 · 1,5 MB · voz sintética provisional</p>
+  <details class="transcripcion">
+    <summary>Leer la transcripción</summary>
+    <p>“Terminamos en la Puerta de Madrid. Se construyó en el siglo dieciocho como entrada monumental a la ciudad, en el camino hacia la capital. Su arco y sus columnas anunciaban a los viajeros que llegaban a Alcalá. Hoy es un punto de paso con tráfico. Cruza por los pasos señalizados y mira la puerta desde la acera. Si sigues recto, vuelves al centro. Si necesitas ayuda, la Oficina de Turismo está a pocos minutos, en la Plaza de Cervantes.”</p>
+  </details>
+  <p class="audio__descarga"><a href="audio/alcala-de-henares/08.wav" download>Descargar audio</a></p>
+</div>
+</article>
+  </div>
+  <section id="accesibilidad" class="seccion" aria-labelledby="t-acc">
+  <h2 id="t-acc">Accesibilidad</h2>
+  <p class="entradilla">Datos recogidos de fuentes oficiales y de OpenStreetMap.
+  La columna «Estado» indica si el dato está verificado en sitio.</p>
+  <div class="tabla-envoltorio" tabindex="0" role="region" aria-label="Accesibilidad en Alcalá de Henares">
+  <table class="">
+    <caption class="sr-only">Accesibilidad en Alcalá de Henares</caption>
+    <thead><tr><th scope="col">Campo</th><th scope="col">Valor</th><th scope="col">Fuente</th><th scope="col">Estado</th></tr></thead>
+    <tbody><tr><td>Superficie predominante</td><td>Losas y adoquín; Calle Mayor peatonal</td><td>Observación/OSM</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Pendiente</td><td>Centro histórico mayoritariamente llano</td><td>Observación</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Escalones</td><td>Umbrales en monumentos; calles sin escalones</td><td>Observación</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Aseos adaptados</td><td>Oficina de Turismo y recursos municipales</td><td>Ayuntamiento</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Plazas PMR</td><td>Varias plazas reservadas; ver tabla</td><td>OSM</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Bucle magnético</td><td>No confirmado en monumentos</td><td>—</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Braille</td><td>No confirmado</td><td>—</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Lengua de signos</td><td>Visitas concertadas, consultar</td><td>Turismo</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Lectura fácil</td><td>Consultar en Oficina de Turismo</td><td>Turismo</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Audioguía</td><td>Disponible en varios monumentos</td><td>Turismo</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Perro de asistencia</td><td>Permitido en vía pública; confirmar en monumentos</td><td>—</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Descanso</td><td>Bancos en Plaza de Cervantes y calles peatonales</td><td>Observación</td><td><span class="marca-estado">pendiente</span></td></tr></tbody>
+  </table>
+</div>
+<p class="pista-tabla" aria-hidden="true" hidden>Las tablas de esta página se desplazan en horizontal: desliza o usa las flechas del teclado.</p>
+</section>
+  
+  <section id="clima" class="seccion" aria-labelledby="t-clima">
+  <h2 id="t-clima">Clima</h2>
+  <div class="panel" id="clima-panel" data-lat="40.4818" data-lon="-3.3643" data-ciudad="Alcalá de Henares">
+    <p class="panel__fuente">Open-Meteo, consulta del 2/11/2026 a las 20:45.</p>
+    <dl class="clima"><div><dt>Ahora</dt><dd>13,3 °C; sensación 11,1 °C; despejado; viento 4,5 km/h; humedad 50 %.</dd></div><div><dt>Hoy</dt><dd>mínima 4,5 °C; máxima 19,7 °C.</dd></div><div><dt>Mañana</dt><dd>mínima 5,4 °C; máxima 14,8 °C.</dd></div><div><dt>Pasado mañana</dt><dd>mínima 1,6 °C; máxima 14,3 °C.</dd></div></dl>
+    <p id="clima-estado" class="panel__estado" role="status"></p>
+    <p class="panel__acciones">
+      <button class="boton boton--secundario" type="button" id="clima-actualizar">
+        Actualizar el tiempo ahora
+      </button>
+    </p>
+    <p class="panel__letra">El tiempo se consulta a Open-Meteo al abrir la
+    página y se actualiza cada 5 minutos. La consulta se envía desde tu
+    navegador; no se guardan datos personales.</p>
+  </div>
+  <p class="nota">En invierno las mañanas pueden helar. El centro es llano, pero las losas mojadas resbalan.</p>
+</section>
+  <section id="emergencias" class="seccion" aria-labelledby="t-emerg">
+  <h2 id="t-emerg">Emergencias</h2>
+  <div class="emergencia">
+    <p class="emergencia__etiqueta">Emergencias · 24 horas</p>
+    <a class="emergencia__tel" href="tel:112">112</a>
+    <p>Gratuito desde cualquier teléfono. Funciona sin datos y sin geolocalización.
+    Si no puedes hablar, intenta enviar un mensaje o pedir ayuda a alguien cerca.</p>
+  </div>
+  <div class="tabla-envoltorio" tabindex="0" role="region" aria-label="Teléfonos de emergencia de Alcalá de Henares">
+  <table class="">
+    <caption class="sr-only">Teléfonos de emergencia de Alcalá de Henares</caption>
+    <thead><tr><th scope="col">Categoría</th><th scope="col">Nombre</th><th scope="col">Teléfono</th><th scope="col">Dirección</th><th scope="col">Estado</th></tr></thead>
+    <tbody><tr><td>General</td><td>Emergencias</td><td><a href="tel:112">112</a></td><td>—</td><td>verificado</td></tr><tr><td>Policía Nacional</td><td>Policía Nacional</td><td><a href="tel:091">091</a></td><td>—</td><td>verificado</td></tr><tr><td>Guardia Civil</td><td>Guardia Civil</td><td><a href="tel:062">062</a></td><td>—</td><td>verificado</td></tr><tr><td>Emergencias sanitarias</td><td>SUMMA 112</td><td><a href="tel:061">061</a></td><td>—</td><td>verificado</td></tr><tr><td>Bomberos</td><td>Bomberos</td><td><a href="tel:080">080</a></td><td>—</td><td>verificado</td></tr><tr><td>Policía Local</td><td>Policía Local de Alcalá de Henares</td><td><a href="tel:092">092</a></td><td>—</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Hospital</td><td>Hospital Universitario Príncipe de Asturias</td><td>—</td><td>Ctra. Alcalá-Meco, s/n</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Farmacias</td><td>Colegio Oficial de Farmacéuticos de Madrid</td><td>—</td><td>—</td><td><span class="marca-estado">pendiente</span></td></tr></tbody>
+  </table>
+</div>
+<p class="pista-tabla" aria-hidden="true" hidden>Las tablas de esta página se desplazan en horizontal: desliza o usa las flechas del teclado.</p>
+  <p class="nota">No publicamos teléfonos locales de policía, bomberos u hospitales sin confirmación del ayuntamiento. El 112 y los números nacionales funcionan siempre. Farmacias de guardia: consultar el Colegio Oficial de Farmacéuticos de Madrid.</p>
+</section>
+  <section id="aparcamiento" class="seccion" aria-labelledby="t-park">
+  <h2 id="t-park">Aparcamiento accesible</h2>
+  <p class="entradilla">Datos de OpenStreetMap (Overpass, 2/11/2026). <strong>No verificados.</strong></p>
+  <div class="tabla-envoltorio" tabindex="0" role="region" aria-label="Aparcamientos de Alcalá de Henares">
+  <table class="">
+    <caption class="sr-only">Aparcamientos de Alcalá de Henares</caption>
+    <thead><tr><th scope="col">Nombre</th><th scope="col">Coordenadas</th><th scope="col">Plazas</th><th scope="col">Plazas PMR</th><th scope="col">Coste</th><th scope="col">Tipo / superficie</th><th scope="col">Estado</th></tr></thead>
+    <tbody><tr><td>El Mercado</td><td>40.4818232, -3.3654713</td><td>—</td><td>Sí (etiquetado)</td><td>Pago</td><td>Subterráneo</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Aparcamiento de La Paloma</td><td>40.4802616, -3.3625080</td><td>300</td><td>No consta</td><td>Pago</td><td>Subterráneo</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>Pico del Obispo</td><td>40.4816180, -3.3707101</td><td>—</td><td>No consta</td><td>Gratis</td><td>Superficie</td><td><span class="marca-estado">pendiente</span></td></tr><tr><td>San Lucas (Vía Complutense, 32)</td><td>40.4850313, -3.3636674</td><td>—</td><td>No consta</td><td>Pago</td><td>Subterráneo</td><td><span class="marca-estado">pendiente</span></td></tr></tbody>
+  </table>
+</div>
+<p class="pista-tabla" aria-hidden="true" hidden>Las tablas de esta página se desplazan en horizontal: desliza o usa las flechas del teclado.</p>
+  <p class="nota">Las plazas reservadas requieren tarjeta europea de estacionamiento. El centro es peatonal y tiene zonas de acceso restringido; confirma la ordenanza municipal antes de entrar en coche.</p>
+</section>
+  <section id="transporte" class="seccion" aria-labelledby="t-trans">
+  <h2 id="t-trans">Transporte accesible</h2>
+  <div class="tabla-envoltorio" tabindex="0" role="region" aria-label="Transporte accesible en Alcalá de Henares">
+  <table class="">
+    <caption class="sr-only">Transporte accesible en Alcalá de Henares</caption>
+    <thead><tr><th scope="col">Modo</th><th scope="col">Operador</th><th scope="col">Accesibilidad</th><th scope="col">Contacto</th><th scope="col">Enlace</th><th scope="col">Tiempo real</th></tr></thead>
+    <tbody><tr><td>Autobús urbano</td><td>Servicio municipal</td><td>Flota con rampa, confirmar vehículo</td><td>Ayuntamiento</td><td><a href="https://ayto-alcaladehenares.es" rel="noopener">ayto-alcaladehenares.es</a></td><td>No</td></tr><tr><td>Cercanías</td><td>Renfe C-2 y C-7</td><td>Andenes y trenes adaptados; asistencia Atendo</td><td><a href="tel:912320320">912 320 320</a></td><td><a href="https://renfe.com" rel="noopener">renfe.com</a></td><td>Sí, en app</td></tr><tr><td>Taxi</td><td>Radio Taxi Alcalá</td><td>Confirmar vehículo adaptado</td><td>Consultar</td><td>—</td><td>No</td></tr></tbody>
+  </table>
+</div>
+<p class="pista-tabla" aria-hidden="true" hidden>Las tablas de esta página se desplazan en horizontal: desliza o usa las flechas del teclado.</p>
+  <div class="nota"><p><strong>Recomendación:</strong> Llegar en Cercanías a la estación de Alcalá de Henares y subir por la Calle Mayor, o aparcar en La Paloma y entrar por la Plaza de Cervantes.</p><p><strong>Estado:</strong> Pendiente; confirmar flota y asistencia.</p></div>
+</section>
+  <section id="fotos" class="seccion" aria-labelledby="t-fotos">
+  <h2 id="t-fotos">Fotos</h2>
+  <p class="entradilla">Imágenes de Wikimedia Commons con licencia libre. El
+  crédito aparece bajo cada foto y en la página de <a href="creditos.html">créditos</a>.</p>
+  <div class="galeria"><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/01.webp" alt="Plaza de Cervantes" loading="lazy" decoding="async"
+       width="1200" height="900">
+  <figcaption>
+    <span class="foto__uso">Plaza de Cervantes</span>
+    <span class="foto__credito">Fotografía: Zarateman, CC0, <a href="https://commons.wikimedia.org/wiki/File:Alcal%C3%A1_de_Henares_-_Plaza_de_Cervantes_01.jpg" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/02.webp" alt="Universidad" loading="lazy" decoding="async"
+       width="1200" height="668">
+  <figcaption>
+    <span class="foto__uso">Universidad</span>
+    <span class="foto__credito">Fotografía: Raimundo Pastor, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Alcal%C3%A1_de_Henares_(RPS_08-08-2015)_Colegio_Mayor_de_San_Ildefonso,_fachada.png" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/03.webp" alt="Corral de Comedias" loading="lazy" decoding="async"
+       width="1200" height="1466">
+  <figcaption>
+    <span class="foto__uso">Corral de Comedias</span>
+    <span class="foto__credito">Fotografía: Raimundo Pastor, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Alcal%C3%A1_de_Henares_(RPS_11-01-2014)_Corral_de_Comedias,_fachada.png" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/04.webp" alt="Catedral" loading="lazy" decoding="async"
+       width="1200" height="1500">
+  <figcaption>
+    <span class="foto__uso">Catedral</span>
+    <span class="foto__credito">Fotografía: Fernando, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Alcala_cathedral_2023_-_western_fa%C3%A7ade.jpg" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/05.webp" alt="Palacio Arzobispal" loading="lazy" decoding="async"
+       width="1200" height="675">
+  <figcaption>
+    <span class="foto__uso">Palacio Arzobispal</span>
+    <span class="foto__credito">Fotografía: José Luis Filpo Cabana, CC BY 3.0, <a href="https://commons.wikimedia.org/wiki/File:Palacio_Arzobispal_de_Alcal%C3%A1_de_Henares._Fachada.jpg" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/06.webp" alt="Casa de Cervantes" loading="lazy" decoding="async"
+       width="1200" height="794">
+  <figcaption>
+    <span class="foto__uso">Casa de Cervantes</span>
+    <span class="foto__credito">Fotografía: MottaW, CC BY 4.0, <a href="https://commons.wikimedia.org/wiki/File:Casa-natal-de-cervantes-alcala-de-henares-2021.jpg" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/07.webp" alt="Calle Mayor" loading="lazy" decoding="async"
+       width="1200" height="900">
+  <figcaption>
+    <span class="foto__uso">Calle Mayor</span>
+    <span class="foto__credito">Fotografía: Emilio J. Rodríguez Posada, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/wiki/File:Calle_Mayor,_Alcal%C3%A1_de_Henares,_Espa%C3%B1a_(5).JPG" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure><figure class="foto">
+  <img src="assets/fotos/alcala-de-henares/08.webp" alt="Puerta de Madrid" loading="lazy" decoding="async"
+       width="1200" height="961">
+  <figcaption>
+    <span class="foto__uso">Puerta de Madrid</span>
+    <span class="foto__credito">Fotografía: Raimundo Pastor, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Alcal%C3%A1_de_Henares_(RPS_24-12-2017)_Puerta_de_Madrid.jpg" rel="noopener">Wikimedia Commons</a></span>
+  </figcaption>
+</figure></div>
+</section>
+  <section id="fuentes" class="seccion" aria-labelledby="t-fuentes">
+  <h2 id="t-fuentes">Fuentes</h2>
+  <ul class="fuentes"><li><a href="https://www.ayto-alcaladehenares.es" rel="noopener">Ayuntamiento de Alcalá de Henares</a></li><li><a href="https://www.turismoalcala.es" rel="noopener">Turismo de Alcalá de Henares</a></li><li><a href="https://www.uah.es" rel="noopener">Universidad de Alcalá</a></li><li><a href="https://www.renfe.com" rel="noopener">Renfe Cercanías</a></li><li><a href="https://open-meteo.com" rel="noopener">Open-Meteo</a></li><li><a href="https://www.openstreetmap.org" rel="noopener">OpenStreetMap / Overpass</a></li><li><a href="https://commons.wikimedia.org" rel="noopener">Wikimedia Commons</a></li></ul>
+</section>
+</article>
+</main>
+<footer class="pie">
+  <div class="contenedor pie__interior">
+    <div>
+      <p class="pie__marca">Legado a Tu Paso</p>
+      <p class="pie__claim">Turismo accesible en ciudades Patrimonio.
+      Descúbrelas sin barreras.</p>
+    </div>
+    <nav class="pie__nav" aria-label="Enlaces del pie">
+      <a href="index.html#ciudades">Ciudades</a>
+      <a href="accesibilidad.html">Accesibilidad</a>
+      <a href="verificacion.html">Verificación</a>
+      <a href="creditos.html">Créditos y licencias</a>
+    </nav>
+    <div class="pie__app">
+      <p class="pie__app-titulo">Llévala en el móvil</p>
+      <button type="button" class="boton boton--claro" id="instalar-app" hidden>
+        Instalar la app
+      </button>
+      <p class="pie__app-ayuda" id="instalar-ayuda" hidden></p>
+      <p class="pie__conexion" id="estado-conexion" role="status" aria-live="polite">
+        Comprobando la conexión…
+      </p>
+    </div>
+    <div class="pie__aviso">
+      <p><strong>Información orientativa.</strong> Los datos de accesibilidad están
+      pendientes de verificación en sitio. Responsable: Natalia Blázquez Herrero.
+      Fuentes oficiales consultadas entre el 2 y el 4 de noviembre de 2026.</p>
+      <p>Fotos de Wikimedia Commons con autor y licencia. Audio provisional
+      generado con voz sintética.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js?v=6af03f2469d9" defer></script>
+</body>
+</html>

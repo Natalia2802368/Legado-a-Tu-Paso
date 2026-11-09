@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}:focus-visible{outline:3px solid #825500;outline-offset:2px;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#131b2d", "on-secondary-fixed": "#291800", "inverse-surface": "#30312f", "on-primary-fixed-variant": "#3f465b", "surface-tint": "#565e73", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#633f00", "outline-variant": "#c6c6cd", "surface-container-low": "#f5f3f0", "tertiary-container": "#00210c", "error": "#ba1a1a", "on-surface-variant": "#45464c", "on-background": "#1b1c1a", "on-tertiary-container": "#47935d", "error-container": "#ffdad6", "primary": "#000000", "inverse-on-surface": "#f2f0ed", "surface-dim": "#dbdad7", "on-error-container": "#93000a", "secondary-fixed-dim": "#fabb61", "outline": "#76777d", "inverse-primary": "#bec6df", "secondary-container": "#fdbe63", "on-tertiary-fixed": "#00210c", "tertiary-fixed-dim": "#8ad89c", "secondary": "#825500", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-container": "#131b2d", "primary-fixed": "#dbe2fb", "surface-bright": "#fbf9f6", "surface": "#fbf9f6", "surface-container": "#efeeeb", "tertiary": "#000000", "secondary-fixed": "#ffddb4", "surface-variant": "#e4e2df", "background": "#fbf9f6", "primary-fixed-dim": "#bec6df", "on-primary": "#ffffff", "tertiary-fixed": "#a5f4b6", "on-surface": "#1b1c1a", "surface-container-highest": "#e4e2df", "surface-container-high": "#eae8e5", "on-tertiary-fixed-variant": "#005227", "on-primary-container": "#7c839a", "on-tertiary": "#ffffff", "on-secondary-container": "#754c00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "2.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "caption": [ "Atkinson Hyperlegible Next" ], "display-mobile": [ "\"Source Serif 4\"" ], "label-md": [ "Atkinson Hyperlegible Next" ], "headline-lg": [ "\"Source Serif 4\"" ], "headline-md": [ "\"Source Serif 4\"" ], "headline-lg-mobile": [ "\"Source Serif 4\"" ], "label-lg": [ "Atkinson Hyperlegible Next" ], "headline-sm": [ "\"Source Serif 4\"" ], "display": [ "\"Source Serif 4\"" ], "body-md": [ "Atkinson Hyperlegible Next" ], "body-lg": [ "Atkinson Hyperlegible Next" ], "body-strong": [ "Atkinson Hyperlegible Next" ] }, "fontSize": { "caption": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "fontWeight": "700" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "fontWeight": "600" } ], "label-lg": [ "15px", { "lineHeight": "20px", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "display": [ "44px", { "lineHeight": "52px", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-strong": [ "16px", { "lineHeight": "24px", "fontWeight": "700" } ] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter-mobile flex flex-col justify-between py-1"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><img alt="Logo Legado a tu paso" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrCtqi-Ckqi2aRE_2BCuBQl6enX7qyMD5uwx0UbuuTsDIiv2tu4N7NE2G7M_MfA_sYvcCSGycSxpV9WAsC3RKWT_GzkqA6Vgd8RcLkeJTUSTMVuHiN2LJcqOc8QmYkp9BK7bNhawIDMH7Ty2AKA6ZpBT4zlrIBhMtf7nKRnFNwtmbRQT-W9ZxMYclwt6LFz7jF3U2ivLPwCGkuhGy_7PP2o_EgsKZSyTA8wQk-djsQ"><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-secondary leading-none uppercase tracking-wide truncate">Legado a tu paso</span><span class="font-headline-sm text-headline-sm text-on-surface truncate">Monumentos</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><svg aria-hidden="true" class="w-12 h-6 text-on-surface/15 hidden sm:block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 64 24"><path d="M2 22V10C2 5.58 6 2 11 2s9 3.58 9 8v12M20 22V10C20 5.58 24 2 29 2s9 3.58 9 8v12M38 22V10C38 5.58 42 2 47 2s9 3.58 9 8v12"></path></svg><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center gap-space-sm overflow-x-auto pb-0.5"><a class="min-h-[44px] px-space-sm py-1 flex items-center gap-1 font-label-md text-label-md text-on-surface hover:text-secondary rounded-lg" data-path="monumentos" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span>Monumentos</a><a class="min-h-[44px] px-space-sm py-1 flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-secondary-container rounded-lg bg-surface-container-low" data-path="como-funciona-el-sello" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>¿Cómo funciona el sello?</a></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 px-gutter-mobile bg-surface flex-grow"><div class="flex flex-col w-full">
+<!-- Simulator Control Strip (Prototipo para testeo) -->
+<nav aria-label="Flujo de pantallas de la app" class="mb-3 p-2 bg-surface-container-low rounded-xl flex items-center justify-between gap-1 overflow-x-auto shadow-sm"><a class="min-h-[44px] px-2 py-1 flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex-shrink-0" data-path="monumentos" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-caption text-caption">1</span><span class="">Listado</span></a><span class="text-on-surface-variant/40 material-symbols-outlined text-[16px] flex-shrink-0">chevron_right</span><a aria-current="step" class="min-h-[44px] px-2.5 py-1 flex items-center gap-1 font-body-strong text-label-md bg-secondary-fixed text-on-secondary-fixed rounded-lg shadow-sm flex-shrink-0" data-path="ficha-de-monumento" href="#"><span class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-caption text-caption">2</span><span class="">Ficha</span></a><span class="text-on-surface-variant/40 material-symbols-outlined text-[16px] flex-shrink-0">chevron_right</span><a class="min-h-[44px] px-2 py-1 flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex-shrink-0" data-path="como-funciona-el-sello" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-caption text-caption">3</span><span class="">El Sello</span></a><span class="text-on-surface-variant/40 material-symbols-outlined text-[16px] flex-shrink-0">chevron_right</span><a class="min-h-[44px] px-2 py-1 flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex-shrink-0" data-path="feedback-comunitario" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-caption text-caption">4</span><span class="">Feedback</span></a></nav><div class="mb-4 bg-surface-container p-2 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-1.5 px-1">
+<span class="font-label-md text-label-md text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+        Simulador de estado de ficha
+      </span>
+<span class="font-caption text-caption text-on-surface-variant">4 estados</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5" id="state-selector-group">
+<button aria-pressed="false" class="min-h-[48px] px-2 py-1.5 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-all bg-surface-container-highest text-on-surface" id="tab-verificado" onclick="switchState('verificado')" type="button"><span class="material-symbols-outlined text-[16px]">verified</span><span class="">Verificada</span></button>
+<button aria-pressed="true" class="min-h-[48px] px-2 py-1.5 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-all bg-primary text-on-primary shadow-sm" id="tab-desfasado" onclick="switchState('desfasado')" type="button"><span class="material-symbols-outlined text-[16px]">warning</span><span class="">Con aviso</span></button>
+<button class="min-h-[44px] px-2 py-1.5 bg-surface-container-highest text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-all" id="tab-sin-recursos" onclick="switchState('sin-recursos')" type="button" aria-pressed="false">
+<span class="material-symbols-outlined text-[16px]">hearing_disabled</span>
+<span class="">Sin recursos</span>
+</button>
+<button class="min-h-[44px] px-2 py-1.5 bg-surface-container-highest text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-all" id="tab-error" onclick="switchState('error')" type="button" aria-pressed="false">
+<span class="material-symbols-outlined text-[16px]">sync_problem</span>
+<span class="">Error carga</span>
+</button>
+</div>
+</div>
+<!-- ESTADO 1: VERIFICADO (Alcázar de Segovia) -->
+<div class="flex flex-col w-full space-y-4 hidden" id="view-verificado">
+<!-- Navegación y Volver -->
+<div class="flex items-center justify-between">
+<button class="min-h-[44px] px-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5 active:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Volver al listado
+      </button>
+<button class="min-h-[44px] px-2 py-1 text-secondary font-label-md text-label-md flex items-center gap-1" onclick="openSealModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">help_outline</span>
+        ¿Qué es el sello?
+      </button>
+</div>
+<!-- Fotografía Monumental y Encabezado Principal -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-52 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Alcazar of Segovia exterior with medieval stone fortress towers, turrets, and slate roof against soft warm afternoon light, granite masonry details, serene architectural framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPyjSHiB-7r8EdWjZmHpPRjlxx7uXcj7SnsrzgDDRmLgYhppAOVibdEuu_q2B4Scpn3D5b-C-pjeZMe14DYvG7sr87wN_fVpe6r1jCaR8QadZtEq_rYz6QWhCyxSR2ar9oERC4zW2IKjd0cyYGaMDMszhTwXhzg27UUfCR2vOZbfAq7NwxtzNQ9gfpj70Dhk-dWvCwEPIN4yQhS_905NdtzGZvetI3M8w3baKelA">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md shadow-sm">
+            Monumento histórico y museo
+          </span>
+<span class="px-2 py-1 bg-primary text-on-primary rounded-lg font-caption text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hearing</span>
+            Bucle activo
+          </span>
+</div>
+</div>
+<div class="p-4 flex flex-col space-y-3">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Alcázar de Segovia</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-start gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">location_on</span>
+            Plaza Reina Victoria Eugenia, s/n. Acceso adaptado por rampa empedrada norte y taquillas exteriores.
+          </p>
+</div>
+<!-- Sello Global de Verificación (Doble codificación: color + icono + texto) -->
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-tertiary-fixed-variant leading-none">SELLO VERIFICADO</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Comprobado el 14 oct. 2026 en visita técnica presencial</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+            Todos los bucles inductivos y transcripciones fueron medidos in situ con sonómetro y comprobador de bobina inductiva.
+          </p>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 1: Bucle de inducción magnética -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col space-y-3.5">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">hearing</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Bucle magnético</h2>
+<span class="font-caption text-caption text-on-surface-variant">Telecoil / Posición T</span>
+</div>
+</div>
+<!-- Insignia estado individual -->
+<span class="px-2.5 py-1 bg-surface-container-low text-on-tertiary-fixed-variant font-label-md text-label-md rounded-lg flex items-center gap-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check_circle</span>
+          Disponible: Sí
+        </span>
+</div>
+<!-- Sello individual en dato -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg w-fit">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">verified</span>
+<span class="font-caption text-caption text-on-surface-variant">Dato individual verificado (14 oct. 2026)</span>
+</div>
+<!-- Dónde está exactamente -->
+<div class="flex flex-col space-y-2.5">
+<span class="font-label-md text-label-md text-on-surface">Ubicación exacta y funcionamiento:</span>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">point_of_sale</span>
+<div class="flex flex-col">
+<span class="font-body-strong text-body-strong text-on-surface">Taquilla central y mostrador de atención</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Bucle permanente activo en ventanilla 1 y 2. Señalizado con el pictograma oficial azul y blanco de bucle de inducción.
+            </p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">groups</span>
+<div class="flex flex-col">
+<span class="font-body-strong text-body-strong text-on-surface">Visitas guiadas oficiales</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Lazo de cuello individual inalámbrico disponible sin coste para el grupo en los pases de 11:30 y 16:30. Solicítalo al guía.
+            </p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">castle</span>
+<div class="flex flex-col">
+<span class="font-body-strong text-body-strong text-on-surface">Salas interiores con bucle perimetral</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Cableado perimetral bajo zócalo activo en la Sala del Trono y Sala de Armas. Cobertura uniforme sin puntos ciegos.
+            </p>
+</div>
+</div>
+</div>
+<!-- Consejo práctico para el visitante -->
+<div class="p-3 bg-secondary-fixed text-on-secondary-fixed rounded-xl flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[24px] text-secondary flex-shrink-0">lightbulb</span>
+<p class="font-body-strong text-body-strong text-on-secondary-fixed">
+          Consejo práctico: Pon tu audífono o implante en posición 'T' antes de acercarte a ventanilla para hablar sin reverberación.
+        </p>
+</div>
+</div>
+<!-- SECCIÓN 2: Audioguías y recursos multimedia -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col space-y-3.5">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">headphones</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Audioguías y multimedia</h2>
+<span class="font-caption text-caption text-on-surface-variant">Formatos alternativos y subtítulos</span>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-surface-container-low text-on-tertiary-fixed-variant font-label-md text-label-md rounded-lg flex items-center gap-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check_circle</span>
+          Disponible: Sí
+        </span>
+</div>
+<!-- Sello individual en dato -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg w-fit">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">verified</span>
+<span class="font-caption text-caption text-on-surface-variant">Dato individual verificado (14 oct. 2026)</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="p-3 bg-surface-container-low rounded-xl flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface font-body-strong text-body-strong">
+<span class="material-symbols-outlined text-[18px] text-secondary">cable</span>
+            Conexión mini-jack y lazo inductivo regulable
+          </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Dispositivos con clavija estándar 3.5mm para conectar tu propio streamer o collar magnético. Incluye cordón inductivo sin fianza extra.
+          </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface font-body-strong text-body-strong">
+<span class="material-symbols-outlined text-[18px] text-secondary">subtitles</span>
+            Subtitulado completo en pantallas
+          </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Vídeos explicativos en el Patio de Armas y Sala de Galera con subtítulos sincronizados en castellano e inglés.
+          </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface font-body-strong text-body-strong">
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+            Transcripciones y lectura fácil
+          </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Guía en papel plastificada con la transcripción literal íntegra de la audioguía disponible en el punto de entrega.
+          </p>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 3: Acústica y Reverberación Estimada -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">graphic_eq</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Ambiente sonoro del Alcázar</h2>
+<span class="font-caption text-caption text-on-surface-variant">Previsión para planificar la visita</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-3 bg-surface-container-low rounded-xl flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Reverberación en salas</span>
+<span class="font-body-strong text-body-strong text-on-surface mt-0.5">Media - Alta</span>
+<span class="font-caption text-caption text-on-surface-variant mt-1">Piedra sillar y techos abovedados. Usa telecoil en salas grandes.</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Hora de menor afluencia</span>
+<span class="font-body-strong text-body-strong text-on-surface mt-0.5">14:00 - 15:30</span>
+<span class="font-caption text-caption text-on-surface-variant mt-1">Baja densidad de visitantes y menor ruido de fondo.</span>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 4: Contacto Accesible y Directo -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col space-y-3.5">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Contacto directo con taquilla</h2>
+<span class="font-caption text-caption text-on-surface-variant">Avisa antes de ir si tienes necesidades específicas</span>
+</div>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="min-h-[48px] p-3 bg-surface-container-low text-on-surface rounded-xl flex items-center justify-between hover:bg-surface-container-high transition-colors" href="tel:921460165">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">call</span>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Teléfono directo taquilla</span>
+<span class="font-body-strong text-body-strong text-on-surface">921 46 01 65</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+<a class="min-h-[48px] p-3 bg-surface-container-low text-on-surface rounded-xl flex items-center justify-between hover:bg-surface-container-high transition-colors" href="mailto:patronato@alcazar-segovia.com">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Correo para accesibilidad auditiva</span>
+<span class="font-body-strong text-body-strong text-on-surface truncate max-w-[200px]">patronato@alcazar-segovia.com</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+<a class="min-h-[48px] p-3 bg-surface-container-low text-on-surface rounded-xl flex items-center justify-between hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">language</span>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Web oficial y compra anticipada</span>
+<span class="font-body-strong text-body-strong text-on-surface">alcazardesegovia.com</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">open_in_new</span>
+</a>
+</div>
+<button class="w-full min-h-[48px] px-4 py-2.5 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 active:bg-on-surface-variant transition-colors shadow-sm" onclick="openContactModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+        Enviar aviso previo a taquilla
+      </button>
+</div>
+<!-- SECCIÓN 5: Módulo de Feedback Comunitario -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">forum</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">¿Te ha ahorrado tiempo esta información?</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Tu valoración nos ayuda a auditar con mayor frecuencia los monumentos que generan dudas.
+      </p>
+<!-- Botones de voto táctiles grandes (>44px) -->
+<div class="grid grid-cols-3 gap-2" id="feedback-rating-buttons">
+<button class="min-h-[48px] py-2 px-2 bg-surface-container-low text-on-surface rounded-xl font-label-md text-label-md flex flex-col items-center justify-center gap-0.5 active:bg-secondary-fixed transition-colors" onclick="selectRating(this, 'Sí, mucho')" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">thumb_up</span>
+<span class="">Sí, mucho</span>
+</button>
+<button class="min-h-[48px] py-2 px-2 bg-surface-container-low text-on-surface rounded-xl font-label-md text-label-md flex flex-col items-center justify-center gap-0.5 active:bg-secondary-fixed transition-colors" onclick="selectRating(this, 'Algo')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">sentiment_neutral</span>
+<span class="">Algo</span>
+</button>
+<button class="min-h-[48px] py-2 px-2 bg-surface-container-low text-on-surface rounded-xl font-label-md text-label-md flex flex-col items-center justify-center gap-0.5 active:bg-secondary-fixed transition-colors" onclick="selectRating(this, 'No')" type="button">
+<span class="material-symbols-outlined text-[20px] text-error">thumb_down</span>
+<span class="">No</span>
+</button>
+</div>
+<!-- Comentario Opcional -->
+<div class="flex flex-col space-y-1.5 pt-1">
+<label class="font-label-md text-label-md text-on-surface" for="feedback-comment">Comentario u observación (opcional)</label>
+<textarea class="w-full p-2.5 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-xl font-body-md text-body-md focus:outline-none focus:bg-surface-container" id="feedback-comment" placeholder="Ej. El bucle en ventanilla 2 se oía nítido con implante Cochlear..." rows="2"></textarea>
+</div>
+<button class="w-full min-h-[48px] px-4 py-2.5 bg-secondary text-on-secondary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm" id="btn-submit-feedback" onclick="submitFeedback()" type="button">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+        Enviar valoración
+      </button>
+<div class="hidden p-3 bg-surface-container-low rounded-xl text-center" id="feedback-success-msg">
+<span class="font-label-md text-label-md text-on-tertiary-fixed-variant flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">check_circle</span>
+          ¡Gracias! Tu valoración se ha registrado para la próxima ronda técnica.
+        </span>
+</div>
+</div>
+</div>
+<!-- ESTADO 2: DATO DESFASADO / CON AVISO (Ej. Acueducto Romano) -->
+<div class="flex flex-col w-full space-y-4" id="view-desfasado">
+<div class="flex items-center justify-between">
+<button class="min-h-[44px] px-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5" onclick="switchState('verificado')" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Volver a la ficha verificada
+      </button>
+<span class="px-2.5 py-1 bg-error-container text-on-error-container font-label-md text-label-md rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+        Aviso activo
+      </span>
+</div>
+<!-- Banner Desfasado con doble codificación -->
+<div role="alert" aria-live="polite" class="bg-error-container p-4 rounded-xl flex flex-col space-y-2.5 shadow-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-[24px]">warning</span><span class="font-headline-sm text-headline-sm text-on-error-container">En revisión / Dato desfasado</span></div><span class="px-2.5 py-1 bg-error text-on-error font-label-md text-label-md rounded-full shadow-sm">+12 meses</span></div><p class="font-body-md text-body-md text-on-error-container">Advertencia técnica fonoacústica: La última inspección presencial se realizó hace más de un año (octubre de 2025). Los datos sobre bucles y audición asistida necesitan una nueva revisión técnica en el lugar.</p><div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">hearing</span><p class="font-body-strong text-body-strong text-on-surface">Recomendación para la visita: Comprueba la bobina inductiva (posición T) de tu audífono o implante al llegar a taquilla o solicita asistencia al personal.</p></div></div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Roman Aqueduct of Segovia granite double tier arches towering over Plaza del Azoguejo with blue sky and historical stonework" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ux0KK--pKLPQk9iRUfTIUedZXqd_ALm8GiA7IlDLPc7Ld4wD-GxJp_gp15rzmbAdtezpKUgVJrOEZujx_R-2Qb2Xpfl-ZzGhI4F6JSK-89Cn4DQkNImf8BwounGn3RuBk9xuHVxUlazq5y_xfysx4kE5QhuCh6RDjEkjCzaGbz5T4oCPEeJ2DdZkC4XT86NsRlBZBgdUIqspeyCtGydKXZpnKMLa7pu513Cmug">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md">
+            Monumento al aire libre
+          </span>
+</div>
+</div>
+<div class="p-4 flex flex-col space-y-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Acueducto Romano de Segovia</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Plaza del Azoguejo, 1. Entorno peatonal exterior.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col space-y-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Estado acústico actual</h3>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] mt-0.5">info</span>
+<div>
+<span class="font-body-strong text-body-strong text-on-surface">Centro de recepción de visitantes</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Bucle en recepción reportado con ruido estático intermitente en septiembre de 2025. Pendiente de calibración por los técnicos de patrimonio.
+          </p>
+</div>
+</div>
+<button class="w-full min-h-[48px] px-4 py-2 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">notification_add</span>
+        Avisarme cuando se verifique de nuevo
+      </button>
+</div>
+</div>
+<!-- ESTADO 3: SIN RECURSOS ACÚSTICOS -->
+<div class="hidden flex flex-col w-full space-y-4" id="view-sin-recursos">
+<div class="flex items-center justify-between">
+<button class="min-h-[44px] px-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5" onclick="switchState('verificado')" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Volver a la ficha verificada
+      </button>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col items-center text-center space-y-3">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[32px]">hearing_disabled</span>
+</div>
+<div>
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg">
+          Sin bucle ni lazo magnético
+        </span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mt-2">Torreón de Lozoya (Espacio anexo)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Plaza de San Martín, 5.</p>
+</div>
+<div class="p-3.5 bg-surface-container-low rounded-xl text-left w-full">
+<p class="font-body-md text-body-md text-on-surface">
+          Este espacio no dispone actualmente de bucle de inducción magnética ni audioguías adaptadas. La visita es autoguiada con paneles de texto impresos estándar.
+        </p>
+</div>
+<div class="flex flex-col w-full space-y-2 pt-2">
+<a class="w-full min-h-[48px] px-4 py-2 bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2" href="tel:921462461">
+<span class="material-symbols-outlined text-[20px]">call</span>
+          Consultar si hay visita signada previa
+        </a>
+<button class="w-full min-h-[48px] px-4 py-2 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2" onclick="switchState('verificado')" type="button">
+          Ver monumentos con bucle confirmado
+        </button>
+</div>
+</div>
+</div>
+<!-- ESTADO 4: ERROR DE CARGA -->
+<div class="hidden flex flex-col w-full space-y-4" id="view-error">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col items-center text-center space-y-3">
+<div class="w-14 h-14 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[32px]">cloud_off</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">No pudimos conectar con los datos acústicos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        No se ha podido comprobar el estado de los bucles magnéticos en este momento. Comprueba tu conexión a internet o reinténtalo.
+      </p>
+<button class="w-full min-h-[48px] px-4 py-2.5 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 mt-2" onclick="switchState('verificado')" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+        Reintentar carga de la ficha
+      </button>
+</div>
+</div>
+<!-- MODAL: ¿Qué significa este sello? -->
+<div class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-primary/40 backdrop-blur-sm p-3" id="seal-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-sm w-full p-5 shadow-xl flex flex-col space-y-3.5 max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">El Sello Legado</h3>
+</div>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface" onclick="closeSealModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+        Para que un monumento reciba nuestro sello de verificación verde, un técnico especialista en accesibilidad auditiva realiza una auditoría presencial con:
+      </p>
+<div class="space-y-2">
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">network_check</span>
+<p class="font-caption text-caption text-on-surface">Medición de intensidad de campo según norma UNE-EN 60118-4 en bucles magnéticos.</p>
+</div>
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">mic_external_on</span>
+<p class="font-caption text-caption text-on-surface">Prueba de compatibilidad con audífonos retroauriculares y receptores de implante coclear.</p>
+</div>
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">event_repeat</span>
+<p class="font-caption text-caption text-on-surface">Revisión periódica obligatoria cada 6 meses.</p>
+</div>
+</div>
+<button class="w-full min-h-[48px] px-4 py-2 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg" onclick="closeSealModal()" type="button">
+        Entendido
+      </button>
+</div>
+</div>
+<!-- MODAL: Enviar aviso previo a taquilla -->
+<div class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-primary/40 backdrop-blur-sm p-3" id="contact-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-sm w-full p-5 shadow-xl flex flex-col space-y-3.5 max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Aviso previo a taquilla</h3>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface" onclick="closeContactModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Informa al equipo del Alcázar de tu fecha y hora de visita para tener preparado el lazo de cuello individual.
+      </p>
+<div class="flex flex-col space-y-2">
+<label class="font-label-md text-label-md text-on-surface" for="visit-date">Día previsto</label>
+<input class="min-h-[48px] p-2.5 bg-surface-container-low text-on-surface rounded-xl font-body-md text-body-md focus:outline-none" id="visit-date" placeholder="Ej. Mañana a las 11:30" type="text">
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-md text-label-md text-on-surface" for="visit-needs">Dispositivo que utilizas</label>
+<select class="min-h-[48px] p-2.5 bg-surface-container-low text-on-surface rounded-xl font-body-md text-body-md focus:outline-none" id="visit-needs">
+<option>Audífono con bobina inductiva (Telecoil / T)</option>
+<option>Implante Coclear (Telecoil / T)</option>
+<option>Requiero subtitulado / transcripción escrita</option>
+<option>Conexión minijack personal (3.5mm)</option>
+</select>
+</div>
+<button class="w-full min-h-[48px] px-4 py-2.5 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2" id="btn-send-notice" onclick="sendNotice()" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+        Enviar aviso directo
+      </button>
+<div class="hidden p-3 bg-surface-container-low rounded-xl text-center" id="notice-confirm-msg">
+<span class="font-label-md text-label-md text-on-tertiary-fixed-variant flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done_all</span>
+          Aviso enviado al mostrador de acceso del Alcázar.
+        </span>
+</div>
+</div>
+</div>
+<!-- Pie de página discreto metodológico -->
+<div class="py-4 text-center">
+<p class="font-caption text-caption text-on-surface-variant">
+      Datos de ejemplo para el prototipo de investigación y accesibilidad. Monumentos reales de Segovia.
+    </p>
+</div>
+</div>
+<script>
+  function switchState(stateName) {
+    const states = ['verificado', 'desfasado', 'sin-recursos', 'error'];
+    states.forEach(s => {
+      const viewEl = document.getElementById('view-' + s);
+      const tabEl = document.getElementById('tab-' + s);
+      if (viewEl) viewEl.classList.add('hidden');
+      if (tabEl) {
+        tabEl.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        tabEl.classList.add('bg-surface-container-highest', 'text-on-surface');
+      }
+    });
+
+    const activeView = document.getElementById('view-' + stateName);
+    const activeTab = document.getElementById('tab-' + stateName);
+    if (activeView) activeView.classList.remove('hidden');
+    if (activeTab) {
+      activeTab.classList.remove('bg-surface-container-highest', 'text-on-surface');
+      activeTab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    }
+  }
+
+  function openSealModal() {
+    const m = document.getElementById('seal-modal');
+    if (m) m.classList.remove('hidden');
+  }
+
+  function closeSealModal() {
+    const m = document.getElementById('seal-modal');
+    if (m) m.classList.add('hidden');
+  }
+
+  function openContactModal() {
+    const m = document.getElementById('contact-modal');
+    if (m) m.classList.remove('hidden');
+  }
+
+  function closeContactModal() {
+    const m = document.getElementById('contact-modal');
+    if (m) m.classList.add('hidden');
+  }
+
+  function sendNotice() {
+    const btn = document.getElementById('btn-send-notice');
+    const msg = document.getElementById('notice-confirm-msg');
+    if (btn && msg) {
+      btn.classList.add('hidden');
+      msg.classList.remove('hidden');
+      setTimeout(() => {
+        closeContactModal();
+        btn.classList.remove('hidden');
+        msg.classList.add('hidden');
+      }, 1800);
+    }
+  }
+
+  let selectedFeedbackVal = '';
+  function selectRating(buttonEl, ratingValue) {
+    selectedFeedbackVal = ratingValue;
+    const parent = document.getElementById('feedback-rating-buttons');
+    if (parent) {
+      const btns = parent.querySelectorAll('button');
+      btns.forEach(b => {
+        b.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      buttonEl.classList.remove('bg-surface-container-low', 'text-on-surface');
+      buttonEl.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+    }
+  }
+
+  function submitFeedback() {
+    const btn = document.getElementById('btn-submit-feedback');
+    const msg = document.getElementById('feedback-success-msg');
+    const comment = document.getElementById('feedback-comment');
+    if (btn && msg) {
+      btn.classList.add('hidden');
+      msg.classList.remove('hidden');
+      if (comment) comment.value = '';
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-body-strong"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="monumentos" href="#"><span class="material-symbols-outlined text-[24px]">account_balance</span><span class="font-caption text-caption">Monumentos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="como-funciona-el-sello" href="#"><span class="material-symbols-outlined text-[24px]">verified</span><span class="font-caption text-caption">El Sello</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="guia-de-accesibilidad-acustica" href="#"><span class="material-symbols-outlined text-[24px]">hearing</span><span class="font-caption text-caption">Guía Acústica</span></a></div></nav>
+
+
+
+</body></html>

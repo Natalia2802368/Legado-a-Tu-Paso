@@ -1,0 +1,26 @@
+{
+  "name": "legado-a-tu-paso",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App de turismo accesible en las Ciudades Patrimonio de la Humanidad de España",
+  "license": "UNLICENSED",
+  "scripts": {
+    "serve": "python -m http.server 8010 --directory sitio",
+    "cap:sync": "cap sync",
+    "cap:copy": "cap copy",
+    "cap:add:android": "cap add android",
+    "cap:add:ios": "cap add ios",
+    "cap:open:android": "cap open android",
+    "cap:open:ios": "cap open ios",
+    "assets": "capacitor-assets generate --assetPath assets"
+  },
+  "dependencies": {
+    "@capacitor/core": "^8.6.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/ios": "^8.6.0"
+  }
+}
