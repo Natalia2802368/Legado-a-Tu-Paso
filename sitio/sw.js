@@ -8,7 +8,7 @@
      que el audio se pueda reproducir y buscar sin conexión.
    - Mapa, tiempo y enlaces externos: no se interceptan; necesitan conexión. */
 
-const VERSION = "1cdf4095ac9a";
+const VERSION = "a732a9c1b735";
 const SHELL_CACHE = "legado-shell-" + VERSION;
 const MEDIA_CACHE = "legado-media-v1";
 const PRECACHE = [

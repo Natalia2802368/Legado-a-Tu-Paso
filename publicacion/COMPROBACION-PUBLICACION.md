@@ -33,7 +33,7 @@ Marcar cada casilla solo cuando se haya comprobado en la URL real, no en local.
 - [ ] `.webmanifest` se sirve como `application/manifest+json`.
 - [ ] `.woff2` se sirve como `font/woff2`.
 - [ ] `.webp` se sirve como `image/webp`.
-- [ ] `.wav` se sirve como `audio/wav`.
+- [ ] `.mp3` se sirve como `audio/mpeg`.
 - [ ] `.svg` se sirve como `image/svg+xml`.
 - [ ] `.xml` se sirve como `application/xml`.
 - [ ] `.csv` se sirve como `text/csv; charset=utf-8` y se abre con Excel.
@@ -80,7 +80,11 @@ Marcar cada casilla solo cuando se haya comprobado en la URL real, no en local.
 
 ## 4. Audio y contenido multimedia
 
-- [ ] Los 64 audios responden 200 y se pueden reproducir y descargar.
+- [ ] Los 64 audios MP3 responden 200 y se pueden reproducir y descargar.
+- [ ] El audio publicado es MP3 mono, 22.050 Hz y 64 kbps; no queda ningún WAV
+      en `sitio/audio/`.
+- [ ] El tamaño indicado en cada guía coincide con la suma real de sus fotos y
+      audios (3,3–4,1 MB por ciudad).
 - [ ] El servidor admite peticiones `Range` en `/audio/*` (para buscar dentro del
       audio). Probar con un reproductor que permita arrastrar.
 - [ ] Ningún audio se reproduce automáticamente.
@@ -165,7 +169,8 @@ Solo cuando existan cuentas y entorno de compilación. Guía completa en
 - [ ] VoiceOver y TalkBack recorren cabecera, índice, paradas, audio y
       emergencias en orden lógico.
 - [ ] El 112 abre el marcador en ambos sistemas.
-- [ ] Audio convertido a Opus o MP3 y tamaño del binario medido antes de subir.
+- [ ] Audio publicado en MP3 de 64 kbps, sin WAV duplicados, y tamaño del
+      binario medido antes de subir.
 - [ ] Política de privacidad en una URL estable y enlace desde la ficha de
       tienda.
 - [ ] Aviso legal y canal de contacto publicados en la web.

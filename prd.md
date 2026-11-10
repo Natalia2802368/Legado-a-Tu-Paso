@@ -1,9 +1,9 @@
-# PRD: Legado a Tu Paso — v1.6
+# PRD: Legado a Tu Paso — v1.7
 
 **Producto:** aplicación web instalable (PWA) y app para iOS y Android de turismo
 inclusivo en Ciudades Patrimonio de la Humanidad de España.  
-**Versión:** 1.6  
-**Fecha:** 9 de noviembre de 2026  
+**Versión:** 1.7  
+**Fecha:** 10 de noviembre de 2026  
 **Lanzamiento objetivo:** PWA el 2 de diciembre de 2026; apps nativas cuando haya
 cuentas de tienda y toolchain.  
 **Estado:** implementado como web y PWA; empaquetado nativo preparado y pendiente
@@ -146,12 +146,12 @@ Segovia y Toledo.
 - **Sin conexión:** cáscara precargada y caché de medios persistente e
   independiente de la versión del service worker. El mapa, el tiempo y los
   enlaces externos quedan fuera de la caché y se explican como no disponibles.
-- **Almacenamiento:** la descarga de una ciudad ronda 12–15 MB con los WAV
+- **Almacenamiento:** la descarga de una ciudad ronda 3,3–4,1 MB con los MP3
   actuales; se solicita almacenamiento persistente y se avisa si el sistema
   borra la caché. La app nativa incluye el contenido, no lo descarga.
 - **Empaquetado nativo:** `webDir` apunta a `sitio/`; iconos, splash y metadatos
-  se generan desde `assets/`. El binario debe reducir los 89 MB de WAV antes de
-  publicarse en tiendas.
+  se generan desde `assets/`. El sitio publica MP3 mono de 64 kbps y pesa
+  31,6 MB; los WAV de origen (88,9 MB) no se empaquetan.
 - **SEO:** fichas indexables, metadatos, URLs limpias y sitemap.
 - **Seguridad:** HTTPS, sin secretos en cliente, claves restringidas por dominio;
   `sw.js` se sirve sin caché larga y la CSP no bloquea el service worker.
@@ -297,7 +297,7 @@ sigue en `pendiente` hasta la visita.
 **Ruta crítica:** contenido verificado de emergencias, parking y transporte. Si no
 está listo, se publica con 4 ciudades completas y el resto como “próximamente”.
 
-### Estado a 9 de noviembre de 2026
+### Estado a 10 de noviembre de 2026
 
 | Entregable | Estado |
 | --- | --- |
@@ -310,7 +310,7 @@ está listo, se publica con 4 ciudades completas y el resto como “próximament
 | Aparcamiento PMR | Parcial: OSM; Mérida sin datos y Alcalá, Córdoba y Segovia con datos parciales |
 | Transporte | Parcial: operador y contacto; flota sin confirmar |
 | 64 guiones de audio | Hecho |
-| 64 audios TTS provisionales | Hecho |
+| 64 audios TTS provisionales | Hecho: MP3 mono 64 kbps, 22.050 Hz; WAV de origen conservados sin publicar |
 | Grabación con voz humana | Pendiente |
 | Verificación en sitio | Asignada a Natalia Blázquez Herrero; pendiente; plan imprimible, guía de campo y CSV en `verificacion/` |
 | App web implementada | Hecho: sitio estático de 13 páginas en `sitio/`, con 404, manifest y robots |
@@ -368,7 +368,7 @@ abiertas. El plan de publicación está en
 | Audio sin grabar | Medio | Guiones listos; TTS como respaldo |
 | Service worker obsoleto o caché corrupta | Medio | Versión calculada por contenido, cáscara y medios en cachés separadas, borrado por ciudad |
 | Caché borrada por el sistema | Medio | Aviso claro y descarga repetible; almacenamiento persistente cuando se inicia la descarga |
-| App nativa demasiado pesada por los WAV | Medio | Convertir a Opus/MP3 antes de publicar; medir el binario tras `cap sync` |
+| App nativa demasiado pesada | Medio | Audio ya convertido a MP3 de 64 kbps; medir el binario tras `cap sync` |
 | Rechazo en tiendas por privacidad o contenido | Medio | Política de privacidad, aviso legal y declaración de accesibilidad antes de enviar |
 | Sin cuentas o Mac para compilar | Alto | PWA como entregable inmediato; empaquetado preparado para un equipo o CI con el entorno completo |
 

@@ -62,8 +62,9 @@ El contenido de `sitio/` es a la vez la web, la PWA instalable y la app nativa:
 - **App nativa:** se empaqueta con Capacitor desde el mismo `sitio/`. Requiere
   Node 22+, JDK 21, Android SDK y, para iOS, macOS con Xcode 26+. La guía
   completa está en `APP-MOVIL.md`.
-- **Antes de tiendas:** aviso legal y política de privacidad publicados, audio
-  convertido a Opus/MP3 y prueba en dispositivos reales con VoiceOver y TalkBack.
+- **Antes de tiendas:** aviso legal y política de privacidad publicados y prueba
+  en dispositivos reales con VoiceOver y TalkBack. El audio ya se publica en MP3
+  mono de 64 kbps; los WAV de origen no se empaquetan.
 
 ## Tipos MIME imprescindibles
 
@@ -75,7 +76,6 @@ El contenido de `sitio/` es a la vez la web, la PWA instalable y la app nativa:
 | `.webp` | `image/webp` |
 | `.svg` | `image/svg+xml` |
 | `.woff2` | `font/woff2` |
-| `.wav` | `audio/wav` |
 | `.mp3` | `audio/mpeg` |
 | `.webmanifest` | `application/manifest+json` |
 | `.xml` | `application/xml` |

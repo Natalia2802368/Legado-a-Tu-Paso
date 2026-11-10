@@ -38,8 +38,8 @@ completo o en un servicio de integración continua.
   el índice, la verificación, los créditos y los estilos siguen disponibles.
 - **Descargar una ciudad:** cada guía tiene el bloque «Esta guía sin conexión».
   Guarda sus fotos y sus audios, muestra el progreso y permite borrarlos. El
-  tamaño se indica antes de descargar (unos 12–15 MB por ciudad con los WAV
-  actuales).
+  tamaño se indica antes de descargar (unos 3,3–4,1 MB por ciudad con fotos y
+  MP3).
 - **Audio:** se reproduce y se puede buscar dentro del archivo aunque no haya
   conexión, porque el service worker responde a las peticiones `Range` desde la
   caché.
@@ -155,14 +155,30 @@ subir la primera versión.
 
 ## Tamaño y audio
 
-Capacitor copia **todo** `sitio/` dentro de la app. Hoy son unos 104 MB, de los
-cuales 89 MB son los 64 WAV provisionales. Esto es aceptable para una prueba
-interna, pero conviene reducirlo antes de publicar:
+Capacitor copia **todo** `sitio/` dentro de la app. Hoy son unos 31,6 MB, de los
+cuales 14,1 MB son las 64 fotos WebP y 16,2 MB los 64 MP3. Los WAV de origen
+(88,9 MB) se conservan en `audio/` como fuente, pero no se publican ni se
+empaquetan.
 
-- convertir los WAV a Opus o MP3 mono de 64 kbps (la voz se entiende bien y el
-  peso baja aproximadamente 10 veces);
-- regenerar el sitio y comprobar que los reproductores usan el nuevo formato;
-- volver a ejecutar `npm run cap:sync` y medir el tamaño del binario.
+El audio publicado es MP3 mono, 22.050 Hz y 64 kbps. La voz sintética se
+entiende bien en ese formato y el peso queda aproximadamente diez veces por
+debajo del WAV. Para regenerar los MP3 después de cambiar un guion o una
+grabación:
+
+```powershell
+# Necesita ffmpeg en PATH o indicado con --ffmpeg
+python herramientas\convertir_audio.py
+
+# Copia el formato publicado, actualiza duraciones y tamaños
+python herramientas\generar_sitio.py
+
+# Lleva el sitio nuevo al proyecto nativo y mide el binario
+npm run cap:sync
+```
+
+El generador elige un solo formato por parada (MP3 antes que WAV), retira de
+`sitio/audio/` las versiones antiguas y reescribe `sitio/audio/scripts.json` con
+las rutas publicadas. Así el binario nativo no lleva dos copias del mismo audio.
 
 La descarga por ciudad de la PWA no cambia el tamaño del binario nativo: en la
 app nativa todos los audios ya van incluidos. El bloque «Descargar esta ciudad»

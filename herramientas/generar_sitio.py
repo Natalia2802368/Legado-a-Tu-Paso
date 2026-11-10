@@ -26,6 +26,7 @@ SITIO = os.path.join(BASE, "sitio")
 FOTOS = os.path.join(SITIO, "assets", "fotos")
 AUDIO_SRC = os.path.join(BASE, "audio")
 AUDIO_DST = os.path.join(SITIO, "audio")
+EXT_AUDIO = (".mp3", ".wav", ".ogg", ".opus", ".m4a")
 
 SITIO_URL = os.environ.get("LEGADO_URL", "").strip().rstrip("/")
 CIUDADES = [
@@ -326,15 +327,27 @@ def dimensiones_foto(ruta):
         return (1200, 800)
 
 
-def duracion_audio(ruta):
-    """Duración en segundos. Solo se calcula para WAV; para otros formatos, None."""
-    if not ruta.lower().endswith(".wav"):
-        return None
+def duracion_wav(ruta):
     try:
         with wave.open(ruta) as w:
             return w.getnframes() / float(w.getframerate())
     except Exception:
         return None
+
+
+def duracion_audio(ruta):
+    """Duración en segundos.
+
+    Para MP3 se usa el WAV de origen con el mismo nombre si sigue disponible;
+    así la ficha conserva la duración aunque el archivo publicado sea MP3.
+    """
+    if not ruta:
+        return None
+    if ruta.lower().endswith(".wav"):
+        return duracion_wav(ruta)
+    if ruta.lower().endswith(".mp3"):
+        return duracion_wav(os.path.splitext(ruta)[0] + ".wav")
+    return None
 
 
 def mmss(segundos):
@@ -428,7 +441,7 @@ def cargar_ciudad(city_id, nombre, guiones, enlaces):
                 "archivo": (
                     f"audio/{city_id}/{nombre_audio}"
                     if nombre_audio
-                    else f"audio/{city_id}/{n:02d}.wav"
+                    else f"audio/{city_id}/{n:02d}{EXT_AUDIO[0]}"
                 ),
                 "duracion": mmss(segundos) if segundos is not None else "",
                 "tamano": (
@@ -964,13 +977,37 @@ PISTA_TABLA = (
 )
 
 
+def audios_publicados(city_id):
+    """Devuelve {número de parada: archivo} con un solo formato por audio.
+
+    Se publica el primer formato disponible según EXT_AUDIO: MP3 antes que WAV,
+    para no duplicar el peso de los audios en el sitio.
+    """
+    carpeta = os.path.join(AUDIO_SRC, city_id)
+    elegidos = {}
+    if not os.path.isdir(carpeta):
+        return elegidos
+
+    for nombre in os.listdir(carpeta):
+        base, ext = os.path.splitext(nombre)
+        ext = ext.lower()
+        if not base.isdigit() or ext not in EXT_AUDIO:
+            continue
+        numero = int(base)
+        actual = elegidos.get(numero)
+        if actual is None:
+            elegidos[numero] = nombre
+            continue
+        prioridad_actual = EXT_AUDIO.index(os.path.splitext(actual)[1].lower())
+        if EXT_AUDIO.index(ext) < prioridad_actual:
+            elegidos[numero] = nombre
+
+    return elegidos
+
+
 def archivo_audio(city_id, n):
     """Nombre del audio de una parada; MP3 si existe, si no WAV."""
-    carpeta = os.path.join(AUDIO_SRC, city_id)
-    for ext in (".mp3", ".wav", ".ogg", ".opus", ".m4a"):
-        if os.path.exists(os.path.join(carpeta, f"{n:02d}{ext}")):
-            return f"{n:02d}{ext}"
-    return None
+    return audios_publicados(city_id).get(n)
 
 
 def tabla_html(filas, columnas, clases="", etiqueta="Tabla de datos",
@@ -2192,24 +2229,37 @@ def main():
     escribir_robots()
     escribir_sitemap(ciudades)
 
-    # Copia de los audios (solo si faltan o cambian de tamaño)
+    # Copia de los audios (solo el formato publicado y si falta o cambia)
     copiados = 0
     for city_id, _ in CIUDADES:
         origen = os.path.join(AUDIO_SRC, city_id)
         destino = os.path.join(AUDIO_DST, city_id)
         os.makedirs(destino, exist_ok=True)
-        for nombre in os.listdir(origen):
-            if not nombre.lower().endswith((".wav", ".mp3", ".ogg", ".opus", ".m4a")):
-                continue
+        elegidos = audios_publicados(city_id)
+        publicados = set(elegidos.values())
+        for nombre in sorted(publicados):
             src = os.path.join(origen, nombre)
             dst = os.path.join(destino, nombre)
             if not os.path.exists(dst) or os.path.getsize(dst) != os.path.getsize(src):
                 shutil.copy2(src, dst)
                 copiados += 1
-    shutil.copy2(
-        os.path.join(AUDIO_SRC, "scripts.json"),
-        os.path.join(AUDIO_DST, "scripts.json"),
+        # Retira versiones antiguas del mismo audio (por ejemplo, WAV si ya hay MP3).
+        for nombre in os.listdir(destino):
+            if nombre.lower().endswith(EXT_AUDIO) and nombre not in publicados:
+                os.remove(os.path.join(destino, nombre))
+
+    # El JSON que se publica apunta al formato que realmente se sirve.
+    guiones_sitio = json.load(
+        io.open(os.path.join(AUDIO_SRC, "scripts.json"), encoding="utf-8")
     )
+    for guion in guiones_sitio:
+        nombre = audios_publicados(guion["city"]).get(guion["index"])
+        if nombre:
+            guion["file"] = f"audio/{guion['city']}/{nombre}"
+    with io.open(
+        os.path.join(AUDIO_DST, "scripts.json"), "w", encoding="utf-8"
+    ) as archivo:
+        json.dump(guiones_sitio, archivo, ensure_ascii=False, indent=1)
 
     print(f"Páginas generadas: {len(ciudades) + 5}")
     print(f"Audios copiados: {copiados}")
