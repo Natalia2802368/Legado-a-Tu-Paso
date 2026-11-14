@@ -1,0 +1,14 @@
+from fastapi import FastAPI
+
+from app.core.config import settings
+
+app = FastAPI(
+    title=settings.app_name,
+    version=settings.app_version,
+    description="API de turismo inclusivo y accesibilidad.",
+)
+
+
+@app.get("/health", tags=["health"])
+async def health_check():
+    return {"status": "ok"}
